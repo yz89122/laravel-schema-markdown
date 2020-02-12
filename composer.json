@@ -1,0 +1,21 @@
+{
+    "name": "yanzhen0610/laravel-schema-markdown",
+    "description": "Make descriptions of schema with markdown for Laravel migrations.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Yz.",
+            "email": "yanzhen610@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "laravel/framework": "^5.1",
+        "doctrine/dbal": "^2.5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SchemaMarkdown\\": "src/schema-markdown/"
+        }
+    }
+}
