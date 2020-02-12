@@ -1,6 +1,7 @@
 {
     "name": "yanzhen0610/laravel-schema-markdown",
     "description": "Make descriptions of schema with markdown for Laravel migrations.",
+    "license": "MIT",
     "type": "library",
     "authors": [
         {
