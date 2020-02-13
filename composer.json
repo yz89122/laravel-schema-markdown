@@ -3,6 +3,14 @@
     "description": "Make descriptions of schema with markdown for Laravel migrations.",
     "license": "MIT",
     "type": "library",
+    "keywords": [
+        "laravel",
+        "library",
+        "migrations",
+        "schema",
+        "database",
+        "markdown"
+    ],
     "authors": [
         {
             "name": "Yz.",
