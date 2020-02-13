@@ -6,19 +6,6 @@
 composer require yanzhen0610/laravel-schema-markdown
 ```
 
-## Add Service Provider
-
-In `config/app.php`, add
-
-```php
-        /*
-        * Package Service Providers...
-        */
-        SchemaMarkdown/MakeSchemaMarkdownProvider::class,
-```
-
-in the `providers` section.
-
 ## Run
 
 In your Laravel project root

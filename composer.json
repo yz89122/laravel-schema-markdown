@@ -18,5 +18,12 @@
         "psr-4": {
             "SchemaMarkdown\\": "src/schema-markdown/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SchemaMarkdown\\MakeSchemaMarkdownProvider"
+            ]
+        }
     }
 }
