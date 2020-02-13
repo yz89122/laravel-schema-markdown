@@ -2,7 +2,7 @@
 
 namespace SchemaMarkdown;
 
-use Illuminate\Support\ServiceProvider;
+use \Illuminate\Support\ServiceProvider;
 
 class MakeSchemaMarkdownProvider extends ServiceProvider
 {
