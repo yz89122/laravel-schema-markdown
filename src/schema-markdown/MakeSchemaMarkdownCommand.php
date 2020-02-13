@@ -23,7 +23,8 @@ class MakeSchemaMarkdownCommand extends Command
     protected $signature = 'make:schema-md
         {--path=* : The path(s) to the migrations files to be executed}
         {--realpath : Indicate any provided migration file paths are pre-resolved absolute paths}
-        {--step : Force the migrations to be run so they can be rolled back individually}';
+        {--step : Force the migrations to be run so they can be rolled back individually}
+        {--o|output=./schema.md : The output path for the generated markdown}';
 
     /**
      * The console command description.
@@ -89,6 +90,6 @@ class MakeSchemaMarkdownCommand extends Command
     {
         $schema = new Database($this->blueprints);
         $generator = new SchemaMarkdownGenerator('schema-markdown', $schema);
-        file_put_contents('schema.md', $generator->getDatabaseSchemaMarkdown());
+        file_put_contents($this->option('output'), $generator->getDatabaseSchemaMarkdown());
     }
 }
