@@ -59,18 +59,19 @@ class MakeSchemaMarkdownCommand extends Command
     {
         $config = Config::get("database.connections.{$this->option('database')}");
         if ($config['driver'] == 'mysql' && !$this->confirmToProceed(
-            'DDL causes commit in MySQL',
+            'DDL causes commit in MySQL (This will reset your database)',
             function () {
                 return true;
             }
         )) {
             return;
-        } else {
-            $this->resetDatabase();
         }
 
         try {
             DB::transaction(function () {
+                if ($this->option('database') != 'schema-markdown') {
+                    $this->resetDatabase();
+                }
                 $this->prepareDatabase();
                 $this->runMigrations();
                 $this->makeMarkdown();
