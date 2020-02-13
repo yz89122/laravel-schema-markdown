@@ -3,7 +3,7 @@
 ## Install
 
 ```shell
-composer require yanzhen0610/laravel-schema-markdown
+composer require --dev yanzhen0610/laravel-schema-markdown
 ```
 
 ## Run
