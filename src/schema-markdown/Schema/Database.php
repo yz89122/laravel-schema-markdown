@@ -36,7 +36,7 @@ class Database
 
     public function getTable($name)
     {
-        return $this->tables[$name];
+        return $this->tables[$name] ?? null;
     }
 
     public function dropTable($name)

@@ -2,6 +2,7 @@
 
 namespace SchemaMarkdown\Database;
 
+use \Illuminate\Database\Connection;
 use \Illuminate\Database\Schema\SQLiteBuilder;
 use \Illuminate\Database\Schema\Blueprint;
 

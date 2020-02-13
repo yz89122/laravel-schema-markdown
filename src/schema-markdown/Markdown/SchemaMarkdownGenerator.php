@@ -63,10 +63,13 @@ class SchemaMarkdownGenerator
 
     protected function getDatabaseTableColumnsMarkdown($table)
     {
+        if (is_null($table_definition = $this->database->getTable($table))) {
+            return '';
+        }
+
         $result = "| Column | Type | Default | Attributes  | Comment |\n";
         $result .= "| --- | --- | --- | --- | --- |\n";
 
-        $table_definition = $this->database->getTable($table);
         foreach ($this->getDatabaseTableColumns($table) as $column) {
             $column_definition = $table_definition->getColumn($column);
             $result .= $this->getColumnMarkdown($column_definition);
@@ -77,9 +80,10 @@ class SchemaMarkdownGenerator
 
     protected function getDatabaseTableIndicesMarkdown($table)
     {
-        $table_definition = $this->database->getTable($table);
-        $indices = $table_definition->getIndices();
-        if (!$indices) {
+        if (
+            is_null($table_definition = $this->database->getTable($table))
+            || count($indices = $table_definition->getIndices()) < 1
+        ) {
             return '';
         }
 
@@ -120,6 +124,10 @@ class SchemaMarkdownGenerator
         $this->database->processBlueprints();
 
         foreach ($this->getDatabaseTables() as $table) {
+            if ($table == 'migrations') {
+                continue;
+            }
+
             $result .= $this->getDatabaseTableMarkdown($table) . "\n";
         }
 

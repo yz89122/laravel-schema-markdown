@@ -3,7 +3,6 @@
 namespace SchemaMarkdown\Schema;
 
 use \Illuminate\Database\Schema\Blueprint;
-
 use \Illuminate\Support\Fluent;
 
 class Table
