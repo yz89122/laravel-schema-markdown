@@ -73,7 +73,7 @@ class Column
     protected function getAttributesFromDefinition($definition)
     {
         return array_filter($definition->getAttributes(), function ($key) {
-            return !in_array($key, ['name', 'type', 'default', 'comment', 'change', 'length', 'unsigned']);
+            return !in_array($key, ['name', 'type', 'default', 'comment', 'change', 'length', 'unsigned', 'index', 'unique']);
         }, ARRAY_FILTER_USE_KEY);
     }
 
