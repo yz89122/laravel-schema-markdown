@@ -7,40 +7,72 @@ use \Illuminate\Support\Fluent;
 
 class Table
 {
+    /**
+     * @var string
+     */
     protected $database;
 
+    /**
+     * @var string
+     */
     protected $name;
 
+    /**
+     * @var array
+     */
     protected $columns = [];
 
+    /**
+     * @var array
+     */
     protected $indices = [];
 
+    /**
+     * @param \SchemaMarkdown\Schema\Database $database
+     * @param string $name
+     */
     public function __construct(Database $database, string $name)
     {
         $this->database = $database;
         $this->name = $name;
     }
 
+    /**
+     * @return string
+     */
     public function getTableName()
     {
         return $this->name;
     }
 
+    /**
+     * @return void
+     */
     public function setTableName(string $name)
     {
         $this->name = $name;
     }
 
+    /**
+     * @return mixed
+     */
     public function getColumn($column)
     {
         return $this->columns[$column];
     }
 
+    /**
+     * @return array
+     */
     public function getIndices()
     {
         return $this->indices;
     }
 
+    /**
+     * @param \Illuminate\Database\Schema\Blueprint $blueprint
+     * @return void
+     */
     public function applyBlueprint(Blueprint $blueprint)
     {
         foreach ($blueprint->getCommands() as $command) {
@@ -48,6 +80,11 @@ class Table
         }
     }
 
+    /**
+     * @param \Illuminate\Support\Fluent $command
+     * @param \Illuminate\Database\Schema\Blueprint $blueprint
+     * @return void
+     */
     protected function runCommand(Fluent $command, Blueprint $blueprint)
     {
         $method = 'command_'.$command['name'];

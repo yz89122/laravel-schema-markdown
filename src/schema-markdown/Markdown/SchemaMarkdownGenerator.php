@@ -121,8 +121,6 @@ class SchemaMarkdownGenerator
     {
         $result = "# Schema\n\n";
 
-        $this->database->processBlueprints();
-
         foreach ($this->getDatabaseTables() as $table) {
             if ($table == 'migrations') {
                 continue;

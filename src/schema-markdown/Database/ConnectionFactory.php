@@ -4,20 +4,37 @@ namespace SchemaMarkdown\Database;
 
 class ConnectionFactory
 {
+    /**
+     * @var string
+     */
     protected $connection;
 
+    /**
+     * @var string
+     */
     protected $class;
 
+    /**
+     * @param string $connection
+     */
     public function __construct($connection)
     {
         $this->connection = $connection;
     }
 
+    /**
+     * @param mixed ...$args
+     * @return \Illuminate\Database\ConnectionInterface
+     */
     public function __invoke(...$args)
     {
         return $this->make(...$args);
     }
 
+    /**
+     * @param mixed ...$args
+     * @return \Illuminate\Database\ConnectionInterface
+     */
     public function make(...$args)
     {
         if ($this->connection == 'schema-markdown') {
@@ -59,6 +76,9 @@ class ConnectionFactory
         return new $class(...$args);
     }
 
+    /**
+     * @return \Closure
+     */
     public function makeClosure()
     {
         return function (...$args) {
