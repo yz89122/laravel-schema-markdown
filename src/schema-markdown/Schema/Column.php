@@ -94,7 +94,7 @@ class Column
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getDefault()
     {
