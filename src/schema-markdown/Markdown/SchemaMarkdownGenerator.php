@@ -67,7 +67,8 @@ class SchemaMarkdownGenerator
             return '';
         }
 
-        $result = "| Column | Type | Default | Attributes  | Comment |\n";
+        $result = "### Columns\n";
+        $result .= "| Column | Type | Default | Attributes  | Comment |\n";
         $result .= "| --- | --- | --- | --- | --- |\n";
 
         foreach ($this->getDatabaseTableColumns($table) as $column) {
