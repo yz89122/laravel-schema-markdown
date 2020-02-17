@@ -34,7 +34,7 @@ class Table
     public function __construct(Database $database, string $name)
     {
         $this->database = $database;
-        $this->name = $name;
+        $this->setTableName($name);
     }
 
     /**
@@ -62,7 +62,7 @@ class Table
     }
 
     /**
-     * @return array
+     * @return \SchemaMarkdown\Schema\Index[]
      */
     public function getIndices()
     {
