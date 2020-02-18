@@ -11,19 +11,19 @@ trait SQLite
 
     protected function setUpSQLite()
     {
-        $this->db = new DB;
+        $this->db = $db = new DB;
 
-        $this->db->addConnection([
+        $db->addConnection([
             'driver' => 'sqlite',
             'database' => ':memory:',
         ]);
 
-        $this->db->addConnection([
+        $db->addConnection([
             'driver' => 'sqlite',
             'database' => ':memory:',
         ], 'sqlite');
 
-        $this->db->setAsGlobal();
+        $db->setAsGlobal();
     }
 
     /**

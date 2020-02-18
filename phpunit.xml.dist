@@ -22,5 +22,6 @@
         </whitelist>
     </filter>
     <php>
+        <server name="APP_ENV" value="testing"/>
     </php>
 </phpunit>
