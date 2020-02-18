@@ -2,8 +2,12 @@
 
 namespace SchemaMarkdown\Schema;
 
+use \SchemaMarkdown\Utils\LazyLoading;
+
 class Database
 {
+    use LazyLoading;
+    
     /**
      * @var \Illuminate\Database\Schema\Blueprint[]
      */
@@ -13,11 +17,6 @@ class Database
      * @var \SchemaMarkdown\Schema\Table[]
      */
     protected $tables = [];
-
-    /**
-     * @var boolean
-     */
-    private $is_processed = false;
 
     /**
      * @param \Illuminate\Database\Schema\Blueprint[] $blueprints
@@ -33,7 +32,7 @@ class Database
      */
     public function setBlueprints(array $blueprints)
     {
-        $this->is_processed = false;
+        $this->resetLoadingKey('is_processed');
         $this->blueprints = $blueprints;
     }
 
@@ -48,26 +47,15 @@ class Database
     /**
      * @return void
      */
-    protected function processBlueprints()
+    public function processBlueprints()
     {
-        foreach ($this->blueprints as $blueprint) {
-            $table_name = $blueprint->getTable();
-            if (!array_key_exists($table_name, $this->tables)) {
-                $this->tables[$table_name] = new Table($this, $table_name);
+        $this->lazyLoad('processs_blueprints', function () {
+            foreach ($this->blueprints as $blueprint) {
+                $table_name = $blueprint->getTable();
+                $table = $this->tables[$table_name] ?? new Table($this, $table_name);
+                $table->applyBlueprint($blueprint);
             }
-            $this->tables[$table_name]->applyBlueprint($blueprint);
-        }
-    }
-
-    /**
-     * @return void
-     */
-    protected function checkIsProcessed()
-    {
-        if (!$this->is_processed) {
-            $this->processBlueprints();
-            $this->is_processed = true;
-        }
+        });
     }
 
     /**
@@ -76,7 +64,7 @@ class Database
      */
     public function getTable($name) : ?Table
     {
-        $this->checkIsProcessed();
+        $this->processBlueprints();
         return $this->tables[$name] ?? null;
     }
 
@@ -86,7 +74,6 @@ class Database
      */
     public function dropTable($name)
     {
-        $this->checkIsProcessed();
         unset($this->tables[$name]);
     }
 
@@ -95,9 +82,8 @@ class Database
      * @param \SchemaMarkdown\Schema\Table $table
      * @return void
      */
-    public function addTable($name, Table $table)
+    public function setTable($name, Table $table)
     {
-        $this->checkIsProcessed();
         $this->tables[$name] = $table;
     }
 }
