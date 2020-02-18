@@ -78,7 +78,7 @@ class MakeSchemaMarkdownCommand extends Command
     protected function checkMysqlOK()
     {
         $config = Config::get("database.connections.{$this->option('database')}");
-        return !(is_array($config) && $config['driver'] == 'mysql' && $this->confirmToProceed(
+        return !(is_array($config) && $config['driver'] == 'mysql' && !$this->confirmToProceed(
             'DDL causes commit in MySQL (This will reset your database)',
             function () {
                 return true;
