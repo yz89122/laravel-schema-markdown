@@ -24,6 +24,8 @@ trait SQLite
         ], 'sqlite');
 
         $db->setAsGlobal();
+        
+        $this->getSQLiteConnection()->getSchemaBuilder()->dropAllTables();
     }
 
     /**
