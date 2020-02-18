@@ -57,14 +57,8 @@ class MakeSchemaMarkdownCommand extends Command
      */
     public function handle()
     {
-        $config = Config::get("database.connections.{$this->option('database')}");
-        if ($config['driver'] == 'mysql' && !$this->confirmToProceed(
-            'DDL causes commit in MySQL (This will reset your database)',
-            function () {
-                return true;
-            }
-        )) {
-            return;
+        if (!$this->checkMysqlOK()) {
+            return 1;
         }
 
         try {
@@ -79,6 +73,17 @@ class MakeSchemaMarkdownCommand extends Command
             });
         } catch (ExitTransactionException $e) {
         }
+    }
+
+    protected function checkMysqlOK()
+    {
+        $config = Config::get("database.connections.{$this->option('database')}");
+        return !(is_array($config) && $config['driver'] == 'mysql' && $this->confirmToProceed(
+            'DDL causes commit in MySQL (This will reset your database)',
+            function () {
+                return true;
+            }
+        ));
     }
 
     protected function resetDatabase()
