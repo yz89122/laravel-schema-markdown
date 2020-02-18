@@ -50,28 +50,28 @@ class ConnectionFactory
         $connection = resolve(\Illuminate\Database\Connectors\ConnectionFactory::class)->make($config);
         $schema_builder = $connection->getSchemaBuilder();
 
-        $schema_builder_class = '\\'.get_class($schema_builder);
-        $schema_builder_class_name = str_replace('\\', '_', $schema_builder_class);
+        $builder_parent_class = '\\'.get_class($schema_builder);
+        $builder_class = str_replace('\\', '_', $builder_parent_class);
 
-        if (!class_exists($schema_builder_class_name)) {
-            $code = file_get_contents(__DIR__.'/SchemaBuilder.php');
-            $code = str_replace('class SchemaBuilder', "class {$schema_builder_class_name}", $code);
-            $code = str_replace('extends SQLiteBuilder', "extends {$schema_builder_class}", $code);
+        if (!class_exists($builder_class)) {
+            $code = file_get_contents(__DIR__.DIRECTORY_SEPARATOR.'SchemaBuilder.php');
+            $code = str_replace('class SchemaBuilder', "class {$builder_class}", $code);
+            $code = str_replace('extends SQLiteBuilder', "extends {$builder_parent_class}", $code);
             eval('?>'.$code);
         }
 
-        $connection_class = '\\'.get_class($connection);
-        $connection_class_name = str_replace('\\', '_', $connection_class);
+        $connection_parent_class = '\\'.get_class($connection);
+        $connection_class = str_replace('\\', '_', $connection_parent_class);
 
-        if (!class_exists($connection_class_name)) {
-            $code = file_get_contents(__DIR__.'/Connection.php');
-            $code = str_replace('class Connection', "class {$connection_class_name}", $code);
-            $code = str_replace('extends SQLiteConnection', "extends {$connection_class}", $code);
-            $code = str_replace('return new SchemaBuilder', "return new {$schema_builder_class_name}", $code);
+        if (!class_exists($connection_class)) {
+            $code = file_get_contents(__DIR__.DIRECTORY_SEPARATOR.'Connection.php');
+            $code = str_replace('class Connection', "class {$connection_class}", $code);
+            $code = str_replace('extends SQLiteConnection', "extends {$connection_parent_class}", $code);
+            $code = str_replace('return new SchemaBuilder', "return new {$builder_class}", $code);
             eval('?>'.$code);
         }
 
-        $this->class = $class = __NAMESPACE__.'\\'.$connection_class_name;
+        $this->class = $class = __NAMESPACE__.'\\'.$connection_class;
 
         return new $class(...$args);
     }
@@ -81,8 +81,6 @@ class ConnectionFactory
      */
     public function makeClosure()
     {
-        return function (...$args) {
-            return $this->make(...$args);
-        };
+        return \Closure::fromCallable($this);
     }
 }

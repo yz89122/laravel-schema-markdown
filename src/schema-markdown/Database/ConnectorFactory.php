@@ -45,8 +45,6 @@ class ConnectorFactory
      */
     public function makeClosure()
     {
-        return function (...$args) {
-            return $this->make(...$args);
-        };
+        return \Closure::fromCallable($this);
     }
 }
