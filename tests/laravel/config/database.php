@@ -7,6 +7,9 @@ return [
             'driver' => 'sqlite',
             'database' => ':memory:',
         ],
+        'mysql' => [
+            'driver' => 'mysql',
+        ],
     ],
     'migrations' => 'migrations',
 ];
