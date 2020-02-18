@@ -5,6 +5,8 @@ namespace SchemaMarkdown\Markdown;
 use \Illuminate\Support\Facades\DB;
 
 use \SchemaMarkdown\Schema\Database;
+use \SchemaMarkdown\Schema\Table;
+use \SchemaMarkdown\Schema\Column;
 
 class SchemaMarkdownGenerator
 {
@@ -50,7 +52,7 @@ class SchemaMarkdownGenerator
         return '';
     }
 
-    protected function getColumnMarkdown($column_definition)
+    protected function getColumnMarkdown(Column $column_definition)
     {
         $column_name = $this->chip($column_definition->getName());
         $column_type = $this->chip($column_definition->getType());
@@ -61,15 +63,13 @@ class SchemaMarkdownGenerator
         return "| $column_name | $column_type | $column_default | $column_attributes_markdown | $column_comment |\n";
     }
 
-    protected function getDatabaseTableColumnsMarkdown($table)
+    protected function getDatabaseTableColumnsMarkdown(Table $table_definition)
     {
-        if (is_null($table_definition = $this->database->getTable($table))) {
-            return '';
-        }
-
         $result = "### Columns\n";
         $result .= "| Column | Type | Default | Attributes  | Comment |\n";
         $result .= "| --- | --- | --- | --- | --- |\n";
+
+        $table = $table_definition->getTableName();
 
         foreach ($this->getDatabaseTableColumns($table) as $column) {
             $column_definition = $table_definition->getColumn($column);
@@ -79,12 +79,9 @@ class SchemaMarkdownGenerator
         return $result."\n";
     }
 
-    protected function getDatabaseTableIndicesMarkdown($table)
+    protected function getDatabaseTableIndicesMarkdown(Table $table_definition)
     {
-        if (
-            is_null($table_definition = $this->database->getTable($table))
-            || count($indices = $table_definition->getIndices()) < 1
-        ) {
+        if (count($indices = $table_definition->getIndices()) < 1) {
             return '';
         }
 
@@ -107,18 +104,20 @@ class SchemaMarkdownGenerator
         return $result."\n";
     }
 
-    protected function getDatabaseTableMarkdown($table)
+    protected function getDatabaseTableMarkdown(string $table) : string
     {
         $result = "## $table\n\n";
 
-        $result .= $this->getDatabaseTableColumnsMarkdown($table);
+        if ($table_definition = $this->database->getTable($table)) {
+            $result .= $this->getDatabaseTableColumnsMarkdown($table_definition);
 
-        $result .= $this->getDatabaseTableIndicesMarkdown($table);
+            $result .= $this->getDatabaseTableIndicesMarkdown($table_definition);
+        }
 
         return $result;
     }
 
-    public function getDatabaseSchemaMarkdown()
+    public function getDatabaseSchemaMarkdown() : string
     {
         $result = "# Schema\n\n";
 
@@ -131,10 +130,5 @@ class SchemaMarkdownGenerator
         }
 
         return $result;
-    }
-
-    public function __toString(): string
-    {
-        return $this->getDatabaseSchemaMarkdown();
     }
 }
