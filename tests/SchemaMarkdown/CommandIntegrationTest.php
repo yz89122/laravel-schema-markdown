@@ -30,6 +30,15 @@ class CommandIntegrationTest extends BaseTestCase
         return tempnam(sys_get_temp_dir(), 'laravel-schema-markdown');
     }
 
+    public function testMysqlWarning()
+    {
+        $command = $this->artisan('make:schema-md', [
+            '--database' => 'mysql',
+        ]);
+        $command->expectsQuestion('Do you really wish to run this command?', '');
+        $command->assertExitCode(1);
+    }
+
     public function testMigrate00()
     {
         $this->artisan('make:schema-md', [
@@ -45,6 +54,15 @@ class CommandIntegrationTest extends BaseTestCase
             '--database' => 'sqlite',
             '--output' => $this->getTempFilePath(),
             '--path' => $this->getMigrationPath('00'),
+            '--realpath' => true,
+        ]);
+    }
+
+    public function testMigrate01()
+    {
+        $this->artisan('make:schema-md', [
+            '--output' => $this->getTempFilePath(),
+            '--path' => $this->getMigrationPath('01'),
             '--realpath' => true,
         ]);
     }

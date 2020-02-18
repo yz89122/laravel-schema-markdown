@@ -95,6 +95,7 @@ class Table
 
     protected function command_create(Fluent $command, Blueprint $blueprint)
     {
+        $this->database->setTable($this->getTableName(), $this);
         foreach ($blueprint->getColumns() as $column) {
             $this->columns[$column->get('name')] = new Column($column);
         }
@@ -176,7 +177,7 @@ class Table
         [$from, $to] = [$command['from'], $command['to']];
         $this->database->dropTable($from);
         $this->name = $to;
-        $this->database->addTable($to, $this);
+        $this->database->setTable($to, $this);
     }
 
     protected function command_primary(Fluent $command, Blueprint $blueprint)
