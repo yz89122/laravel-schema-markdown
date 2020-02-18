@@ -36,7 +36,16 @@ class CommandIntegrationTest extends BaseTestCase
             '--output' => $this->getTempFilePath(),
             '--path' => $this->getMigrationPath('00'),
             '--realpath' => true,
-            '--force' => true,
+        ]);
+    }
+
+    public function testMigrate00OnSQLite()
+    {
+        $this->artisan('make:schema-md', [
+            '--database' => 'sqlite',
+            '--output' => $this->getTempFilePath(),
+            '--path' => $this->getMigrationPath('00'),
+            '--realpath' => true,
         ]);
     }
 }
