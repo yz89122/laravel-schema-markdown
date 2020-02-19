@@ -12,12 +12,18 @@ jobs:
   phpunit:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Install Dependencies
-      run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
-    - name: Execute tests via PHPUnit
-      run: vendor/bin/phpunit --coverage-clover clover.xml
-    - name: codecov
-      env:
-        CODECOV_TOKEN:  ${{ secrets.CODECOV_TOKEN }}
-      run: bash <(curl -s https://codecov.io/bash)
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+      - name: Init Database
+        run: mysql -uroot -h127.0.0.1 -proot -e 'CREATE DATABASE IF NOT EXISTS test;'
+      - name: Execute tests via PHPUnit
+        env:
+          DB_USERNAME: root
+          DB_PASSWORD: root
+          DB_DATABASE: test
+        run: vendor/bin/phpunit --coverage-clover clover.xml
+      - name: codecov
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        run: bash <(curl -s https://codecov.io/bash)

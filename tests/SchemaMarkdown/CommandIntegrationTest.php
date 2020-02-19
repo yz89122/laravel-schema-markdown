@@ -2,20 +2,13 @@
 
 namespace SchemaMarkdown;
 
+use \Illuminate\Support\Facades\DB;
+
 use \Tests\BaseTestCase;
-use \Tests\SQLite;
 
 class CommandIntegrationTest extends BaseTestCase
 {
-    use SQLite;
-
     protected static $MIGRATIONS_BASE_PATH = __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'migrations'.DIRECTORY_SEPARATOR;
-
-    protected function setUp() : void
-    {
-        parent::setUp();
-        $this->setUpSQLite();
-    }
 
     protected function getMigrationPath($dir) : string
     {
@@ -41,6 +34,8 @@ class CommandIntegrationTest extends BaseTestCase
 
     public function testMigrate00()
     {
+        $getSchemaBuilder = 'getSchemaBuilder';
+        DB::connection('sqlite')->$getSchemaBuilder()->dropAllTables();
         $this->artisan('make:schema-md', [
             '--output' => $this->getTempFilePath(),
             '--path' => $this->getMigrationPath('00'),
@@ -50,6 +45,8 @@ class CommandIntegrationTest extends BaseTestCase
 
     public function testMigrate00OnSQLite()
     {
+        $getSchemaBuilder = 'getSchemaBuilder';
+        DB::connection('sqlite')->$getSchemaBuilder()->dropAllTables();
         $this->artisan('make:schema-md', [
             '--database' => 'sqlite',
             '--output' => $this->getTempFilePath(),
@@ -60,10 +57,25 @@ class CommandIntegrationTest extends BaseTestCase
 
     public function testMigrate01()
     {
+        $getSchemaBuilder = 'getSchemaBuilder';
+        DB::connection('sqlite')->$getSchemaBuilder()->dropAllTables();
         $this->artisan('make:schema-md', [
             '--output' => $this->getTempFilePath(),
             '--path' => $this->getMigrationPath('01'),
             '--realpath' => true,
+        ]);
+    }
+
+    public function testMigrate02OnMysql()
+    {
+        $getSchemaBuilder = 'getSchemaBuilder';
+        DB::connection('mysql')->$getSchemaBuilder()->dropAllTables();
+        $this->artisan('make:schema-md', [
+            '--database' => 'mysql',
+            '--output' => $this->getTempFilePath(),
+            '--path' => $this->getMigrationPath('02'),
+            '--realpath' => true,
+            '--force' => true,
         ]);
     }
 }
