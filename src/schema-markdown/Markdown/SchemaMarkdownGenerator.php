@@ -7,9 +7,12 @@ use \Illuminate\Support\Facades\DB;
 use \SchemaMarkdown\Schema\Database;
 use \SchemaMarkdown\Schema\Table;
 use \SchemaMarkdown\Schema\Column;
+use \SchemaMarkdown\Utils\LazyLoading;
 
 class SchemaMarkdownGenerator
 {
+    use LazyLoading;
+
     protected $connection;
 
     protected $database;
@@ -22,14 +25,18 @@ class SchemaMarkdownGenerator
 
     protected function getDatabaseTables()
     {
-        $getDoctrineSchemaManager = 'getDoctrineSchemaManager'; // suppress warning
-        return DB::connection($this->connection)->$getDoctrineSchemaManager()->listTableNames();
+        return $this->lazyLoad('tables', function () {
+            $getDoctrineSchemaManager = 'getDoctrineSchemaManager'; // suppress warning
+            return DB::connection($this->connection)->$getDoctrineSchemaManager()->listTableNames();
+        });
     }
 
     protected function getDatabaseTableColumns($table)
     {
-        $getSchemaBuilder = 'getSchemaBuilder'; // suppress warning
-        return DB::connection($this->connection)->$getSchemaBuilder()->getColumnListing($table);
+        return $this->lazyLoad("table-columns-$table", function () use ($table) {
+            $getSchemaBuilder = 'getSchemaBuilder'; // suppress warning
+            return DB::connection($this->connection)->$getSchemaBuilder()->getColumnListing($table);
+        });
     }
 
     protected function getAttributesMarkdown($attributes)
@@ -75,7 +82,7 @@ class SchemaMarkdownGenerator
             $column_definition = $table_definition->getColumn($column);
             $result .= $column_definition
                 ? $this->getColumnMarkdown($column_definition)
-                : "| $column | | | | Not Defined In Blueprints |\n";
+                : "| `$column` | | | | Not Defined In Blueprints |\n";
         }
 
         return $result."\n";
@@ -106,9 +113,20 @@ class SchemaMarkdownGenerator
         return $result."\n";
     }
 
+    protected function getTableOfContents()
+    {
+        $result = '';
+
+        foreach ($this->getDatabaseTables() as $table) {
+            $result .= '- ['.$this->chip($table)."](#table-$table)\n";
+        }
+
+        return $result."\n";
+    }
+
     protected function getDatabaseTableMarkdown(string $table) : string
     {
-        $result = "## $table\n\n";
+        $result = '## Table: '.$this->chip($table)."\n\n";
 
         if ($table_definition = $this->database->getTable($table)) {
             $result .= $this->getDatabaseTableColumnsMarkdown($table_definition);
@@ -122,6 +140,8 @@ class SchemaMarkdownGenerator
     public function getDatabaseSchemaMarkdown() : string
     {
         $result = "# Schema\n\n";
+
+        $result .= $this->getTableOfContents();
 
         foreach ($this->getDatabaseTables() as $table) {
             if ($table == 'migrations') {
