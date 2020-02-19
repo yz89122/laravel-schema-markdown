@@ -78,4 +78,17 @@ class CommandIntegrationTest extends BaseTestCase
             '--force' => true,
         ]);
     }
+
+    public function testMigrate03()
+    {
+        $getSchemaBuilder = 'getSchemaBuilder';
+        DB::connection('03')->$getSchemaBuilder()->dropAllTables();
+        $this->artisan('make:schema-md', [
+            '--database' => '03',
+            '--output' => $this->getTempFilePath(),
+            '--path' => $this->getMigrationPath('03'),
+            '--realpath' => true,
+            '--force' => true,
+        ]);
+    }
 }
