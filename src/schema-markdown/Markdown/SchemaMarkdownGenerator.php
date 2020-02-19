@@ -73,7 +73,9 @@ class SchemaMarkdownGenerator
 
         foreach ($this->getDatabaseTableColumns($table) as $column) {
             $column_definition = $table_definition->getColumn($column);
-            $result .= $this->getColumnMarkdown($column_definition);
+            $result .= $column_definition
+                ? $this->getColumnMarkdown($column_definition)
+                : "| $column | | | | Not Defined In Blueprints |\n";
         }
 
         return $result."\n";

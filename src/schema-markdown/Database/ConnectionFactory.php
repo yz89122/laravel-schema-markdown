@@ -48,7 +48,7 @@ class ConnectionFactory
             $builder_parent_class = '\\'.get_class($schema_builder);
             $builder_class = str_replace('\\', '_', $builder_parent_class);
     
-            if (!class_exists($builder_class)) {
+            if (!class_exists(__NAMESPACE__.'\\'.$builder_class)) {
                 $code = file_get_contents(__DIR__.DIRECTORY_SEPARATOR.'SchemaBuilder.php');
                 $code = str_replace('class SchemaBuilder', "class {$builder_class}", $code);
                 $code = str_replace('extends SQLiteBuilder', "extends {$builder_parent_class}", $code);
@@ -58,7 +58,7 @@ class ConnectionFactory
             $connection_parent_class = '\\'.get_class($connection);
             $connection_class = str_replace('\\', '_', $connection_parent_class);
     
-            if (!class_exists($connection_class)) {
+            if (!class_exists(__NAMESPACE__.'\\'.$connection_class)) {
                 $code = file_get_contents(__DIR__.DIRECTORY_SEPARATOR.'Connection.php');
                 $code = str_replace('class Connection', "class {$connection_class}", $code);
                 $code = str_replace('extends SQLiteConnection', "extends {$connection_parent_class}", $code);

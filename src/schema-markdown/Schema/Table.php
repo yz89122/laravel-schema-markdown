@@ -54,11 +54,11 @@ class Table
     }
 
     /**
-     * @return mixed
+     * @return \SchemaMarkdown\Schema\Column|null
      */
     public function getColumn($column)
     {
-        return $this->columns[$column];
+        return $this->columns[$column] ?? null;
     }
 
     /**
