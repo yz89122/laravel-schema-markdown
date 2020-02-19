@@ -3,22 +3,15 @@
 namespace Tests\SchemaMarkdown\Schema;
 
 use \Illuminate\Database\Schema\Blueprint;
+use \Illuminate\Database\Schema\Grammars\SQLiteGrammar;
+use \Illuminate\Support\Facades\DB;
 
 use \SchemaMarkdown\Schema\Database;
 
 use \Tests\BaseTestCase;
-use \Tests\SQLite;
 
 class DatabaseTest extends BaseTestCase
 {
-    use SQLite;
-
-    protected function setUp() : void
-    {
-        parent::setUp();
-        $this->setUpSQLite();
-    }
-
     public function testDatabase()
     {
         $blueprint = new Blueprint('test');
@@ -28,7 +21,7 @@ class DatabaseTest extends BaseTestCase
         $blueprint->string('column_1')->index()->default('default')->comment('Column 1');
         $blueprint->timestamps();
         $blueprint->softDeletes();
-        $blueprint->toSql($this->getSQLiteConnection(), $this->getSQLiteSchemaGrammar());
+        $blueprint->toSql(DB::connection('sqlite'), new SQLiteGrammar);
         $blueprints = [$blueprint];
         $database = new Database($blueprints);
 
