@@ -75,7 +75,7 @@ class SchemaMarkdownGenerator
             $column_definition = $table_definition->getColumn($column);
             $result .= $column_definition
                 ? $this->getColumnMarkdown($column_definition)
-                : "| $column | | | | Not Defined In Blueprints |\n";
+                : "| `$column` | | | | Not Defined In Blueprints |\n";
         }
 
         return $result."\n";
