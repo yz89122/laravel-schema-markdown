@@ -1,6 +1,85 @@
 # Schema
 
-## api_settings
+- [`api_settings`](#table-api_settings)
+- [`banlist`](#table-banlist)
+- [`bar_notifications`](#table-bar_notifications)
+- [`canned_response`](#table-canned_response)
+- [`common_settings`](#table-common_settings)
+- [`conditions`](#table-conditions)
+- [`country_code`](#table-country_code)
+- [`custom_form_fields`](#table-custom_form_fields)
+- [`custom_forms`](#table-custom_forms)
+- [`date_format`](#table-date_format)
+- [`date_time_format`](#table-date_time_format)
+- [`department`](#table-department)
+- [`emails`](#table-emails)
+- [`failed_jobs`](#table-failed_jobs)
+- [`faveo_mails`](#table-faveo_mails)
+- [`faveo_queues`](#table-faveo_queues)
+- [`field_values`](#table-field_values)
+- [`group_assign_department`](#table-group_assign_department)
+- [`groups`](#table-groups)
+- [`help_topic`](#table-help_topic)
+- [`jobs`](#table-jobs)
+- [`kb_article`](#table-kb_article)
+- [`kb_article_relationship`](#table-kb_article_relationship)
+- [`kb_category`](#table-kb_category)
+- [`kb_comment`](#table-kb_comment)
+- [`kb_pages`](#table-kb_pages)
+- [`kb_settings`](#table-kb_settings)
+- [`languages`](#table-languages)
+- [`log_notification`](#table-log_notification)
+- [`login_attempts`](#table-login_attempts)
+- [`mail_services`](#table-mail_services)
+- [`mailbox_protocol`](#table-mailbox_protocol)
+- [`migrations`](#table-migrations)
+- [`notification_types`](#table-notification_types)
+- [`notifications`](#table-notifications)
+- [`organization`](#table-organization)
+- [`password_resets`](#table-password_resets)
+- [`plugins`](#table-plugins)
+- [`queue_services`](#table-queue_services)
+- [`rating_ref`](#table-rating_ref)
+- [`ratings`](#table-ratings)
+- [`settings_alert_notice`](#table-settings_alert_notice)
+- [`settings_auto_response`](#table-settings_auto_response)
+- [`settings_company`](#table-settings_company)
+- [`settings_email`](#table-settings_email)
+- [`settings_ratings`](#table-settings_ratings)
+- [`settings_security`](#table-settings_security)
+- [`settings_system`](#table-settings_system)
+- [`settings_ticket`](#table-settings_ticket)
+- [`sla_plan`](#table-sla_plan)
+- [`social_media`](#table-social_media)
+- [`team_assign_agent`](#table-team_assign_agent)
+- [`teams`](#table-teams)
+- [`template`](#table-template)
+- [`template_sets`](#table-template_sets)
+- [`template_types`](#table-template_types)
+- [`templates`](#table-templates)
+- [`ticket_attachment`](#table-ticket_attachment)
+- [`ticket_collaborator`](#table-ticket_collaborator)
+- [`ticket_form_data`](#table-ticket_form_data)
+- [`ticket_priority`](#table-ticket_priority)
+- [`ticket_source`](#table-ticket_source)
+- [`ticket_status`](#table-ticket_status)
+- [`ticket_thread`](#table-ticket_thread)
+- [`ticket_token`](#table-ticket_token)
+- [`tickets`](#table-tickets)
+- [`time_format`](#table-time_format)
+- [`timezone`](#table-timezone)
+- [`user_additional_infos`](#table-user_additional_infos)
+- [`user_assign_organization`](#table-user_assign_organization)
+- [`user_notification`](#table-user_notification)
+- [`users`](#table-users)
+- [`version_check`](#table-version_check)
+- [`widgets`](#table-widgets)
+- [`workflow_action`](#table-workflow_action)
+- [`workflow_close`](#table-workflow_close)
+- [`workflow_name`](#table-workflow_name)
+- [`workflow_rules`](#table-workflow_rules)
+
+## Table: `api_settings`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -12,7 +91,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## banlist
+## Table: `banlist`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -25,7 +104,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## bar_notifications
+## Table: `bar_notifications`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -37,7 +116,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## canned_response
+## Table: `canned_response`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -57,7 +136,7 @@
 | `canned_response_ibfk_1` | `foreign` | `user_id` |  | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"NO ACTION"` |
 
 
-## common_settings
+## Table: `common_settings`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -71,7 +150,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## conditions
+## Table: `conditions`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -83,7 +162,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## country_code
+## Table: `country_code`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -99,7 +178,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## custom_form_fields
+## Table: `custom_form_fields`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -115,7 +194,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## custom_forms
+## Table: `custom_forms`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -126,7 +205,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## date_format
+## Table: `date_format`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -135,7 +214,7 @@
 | `format` | `string(255)` |  |  |  |
 
 
-## date_time_format
+## Table: `date_time_format`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -144,7 +223,7 @@
 | `format` | `string(255)` |  |  |  |
 
 
-## department
+## Table: `department`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -176,7 +255,7 @@
 | `department_ibfk_2` | `foreign` | `manager` |  | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 
-## emails
+## Table: `emails`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -227,7 +306,7 @@
 | `emails_ibfk_3` | `foreign` | `help_topic` |  | `references:"id"`<br/>`on:"help_topic"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 
-## failed_jobs
+## Table: `failed_jobs`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -239,7 +318,7 @@
 | `failed_at` | `timestamp` |  | `precision:0`<br/>`useCurrent:true` |  |
 
 
-## faveo_mails
+## Table: `faveo_mails`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -253,7 +332,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## faveo_queues
+## Table: `faveo_queues`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -266,7 +345,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## field_values
+## Table: `field_values`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -286,7 +365,7 @@
 | `field_values_field_id_foreign` | `foreign` | `field_id` |  | `references:"id"`<br/>`on:"custom_form_fields"` |
 
 
-## group_assign_department
+## Table: `group_assign_department`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -307,7 +386,7 @@
 | `group_assign_department_ibfk_2` | `foreign` | `department_id` |  | `references:"id"`<br/>`on:"department"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 
-## groups
+## Table: `groups`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -332,7 +411,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## help_topic
+## Table: `help_topic`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -373,7 +452,7 @@
 | `help_topic_ibfk_6` | `foreign` | `auto_assign` |  | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"RESTRICT"`<br/>`onDelete:"SET NULL"` |
 
 
-## jobs
+## Table: `jobs`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -394,7 +473,7 @@
 | `jobs_queue_reserved_reserved_at_index` | `index` | `queue`<br/>`reserved`<br/>`reserved_at` |  |  |
 
 
-## kb_article
+## Table: `kb_article`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -410,7 +489,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## kb_article_relationship
+## Table: `kb_article_relationship`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -431,7 +510,7 @@
 | `article_relationship_category_id_foreign` | `foreign` | `category_id` |  | `references:"id"`<br/>`on:"kb_category"`<br/>`onUpdate:"RESTRICT"`<br/>`onDelete:"RESTRICT"` |
 
 
-## kb_category
+## Table: `kb_category`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -446,7 +525,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## kb_comment
+## Table: `kb_comment`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -469,7 +548,7 @@
 | `comment_article_id_foreign` | `foreign` | `article_id` |  | `references:"id"`<br/>`on:"kb_article"`<br/>`onUpdate:"RESTRICT"`<br/>`onDelete:"RESTRICT"` |
 
 
-## kb_pages
+## Table: `kb_pages`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -484,7 +563,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## kb_settings
+## Table: `kb_settings`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -495,7 +574,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## languages
+## Table: `languages`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -505,7 +584,7 @@
 | `locale` | `string(255)` |  |  |  |
 
 
-## log_notification
+## Table: `log_notification`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -516,7 +595,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## login_attempts
+## Table: `login_attempts`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -530,7 +609,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## mail_services
+## Table: `mail_services`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -542,7 +621,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## mailbox_protocol
+## Table: `mailbox_protocol`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -552,7 +631,7 @@
 | `value` | `string(50)` |  | `nullable:true` |  |
 
 
-## notification_types
+## Table: `notification_types`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -565,7 +644,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## notifications
+## Table: `notifications`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -578,7 +657,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## organization
+## Table: `organization`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -601,7 +680,7 @@
 | `organization_ibfk_1` | `foreign` | `head` |  | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"NO ACTION"` |
 
 
-## password_resets
+## Table: `password_resets`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -618,7 +697,7 @@
 | `password_resets_token_index` | `index` | `token` |  |  |
 
 
-## plugins
+## Table: `plugins`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -631,7 +710,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## queue_services
+## Table: `queue_services`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -644,7 +723,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## rating_ref
+## Table: `rating_ref`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -658,7 +737,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## ratings
+## Table: `ratings`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -674,7 +753,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## settings_alert_notice
+## Table: `settings_alert_notice`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -713,7 +792,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## settings_auto_response
+## Table: `settings_auto_response`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -728,7 +807,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## settings_company
+## Table: `settings_company`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -747,7 +826,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## settings_email
+## Table: `settings_email`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -769,7 +848,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## settings_ratings
+## Table: `settings_ratings`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -789,7 +868,7 @@
 | `settings_ratings_slug_unique` | `unique` | `slug` |  |  |
 
 
-## settings_security
+## Table: `settings_security`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -804,7 +883,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## settings_system
+## Table: `settings_system`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -845,7 +924,7 @@
 | `settings_system_ibfk_4` | `foreign` | `date_time_format` |  | `references:"id"`<br/>`on:"date_time_format"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 
-## settings_ticket
+## Table: `settings_ticket`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -872,7 +951,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## sla_plan
+## Table: `sla_plan`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -888,7 +967,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## social_media
+## Table: `social_media`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -901,7 +980,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## team_assign_agent
+## Table: `team_assign_agent`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -922,7 +1001,7 @@
 | `team_assign_agent_ibfk_2` | `foreign` | `agent_id` |  | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 
-## teams
+## Table: `teams`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -944,7 +1023,7 @@
 | `teams_ibfk_1` | `foreign` | `team_lead` |  | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 
-## template
+## Table: `template`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -959,7 +1038,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## template_sets
+## Table: `template_sets`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -971,7 +1050,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## template_types
+## Table: `template_types`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -982,7 +1061,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## templates
+## Table: `templates`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -999,7 +1078,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## ticket_attachment
+## Table: `ticket_attachment`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -1012,7 +1091,7 @@
 | `poster` | `string(255)` |  |  |  |
 | `created_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| file | | | | Not Defined In Blueprints |
+| `file` | | | | Not Defined In Blueprints |
 
 ### Indices
 
@@ -1022,7 +1101,7 @@
 | `ticket_attachment_ibfk_1` | `foreign` | `thread_id` |  | `references:"id"`<br/>`on:"ticket_thread"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 
-## ticket_collaborator
+## Table: `ticket_collaborator`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -1045,7 +1124,7 @@
 | `ticket_collaborator_ibfk_2` | `foreign` | `user_id` |  | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 
-## ticket_form_data
+## Table: `ticket_form_data`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -1065,7 +1144,7 @@
 | `ticket_form_data_ibfk_1` | `foreign` | `ticket_id` |  | `references:"id"`<br/>`on:"tickets"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 
-## ticket_priority
+## Table: `ticket_priority`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -1082,7 +1161,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## ticket_source
+## Table: `ticket_source`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -1093,7 +1172,7 @@
 | `css_class` | `string(255)` |  |  |  |
 
 
-## ticket_status
+## Table: `ticket_status`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -1112,7 +1191,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## ticket_thread
+## Table: `ticket_thread`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -1144,7 +1223,7 @@
 | `ticket_thread_ibfk_3` | `foreign` | `source` |  | `references:"id"`<br/>`on:"ticket_source"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 
-## ticket_token
+## Table: `ticket_token`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -1156,7 +1235,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## tickets
+## Table: `tickets`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -1220,7 +1299,7 @@
 | `tickets_ibfk_9` | `foreign` | `assigned_to` |  | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 
-## time_format
+## Table: `time_format`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -1229,7 +1308,7 @@
 | `format` | `string(255)` |  |  |  |
 
 
-## timezone
+## Table: `timezone`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -1239,7 +1318,7 @@
 | `location` | `string(255)` |  |  |  |
 
 
-## user_additional_infos
+## Table: `user_additional_infos`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -1253,7 +1332,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## user_assign_organization
+## Table: `user_assign_organization`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -1274,7 +1353,7 @@
 | `user_assign_organization_ibfk_2` | `foreign` | `user_id` |  | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 
-## user_notification
+## Table: `user_notification`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -1287,7 +1366,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## users
+## Table: `users`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -1337,7 +1416,7 @@
 | `users_ibfk_2` | `foreign` | `primary_dpt` |  | `references:"id"`<br/>`on:"department"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 
-## version_check
+## Table: `version_check`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -1349,7 +1428,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## widgets
+## Table: `widgets`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -1362,7 +1441,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## workflow_action
+## Table: `workflow_action`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -1381,7 +1460,7 @@
 | `workflow_action_1` | `foreign` | `workflow_id` |  | `references:"id"`<br/>`on:"workflow_name"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 
-## workflow_close
+## Table: `workflow_close`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -1395,7 +1474,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## workflow_name
+## Table: `workflow_name`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
@@ -1410,7 +1489,7 @@
 | `updated_at` | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
 
 
-## workflow_rules
+## Table: `workflow_rules`
 
 ### Columns
 | Column | Type | Default | Attributes  | Comment |
