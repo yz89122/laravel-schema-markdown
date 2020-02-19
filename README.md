@@ -48,4 +48,4 @@ Options:
 
 ## Example
 
-[schema.example.md](./schema.example.md)
+[schema.example.md](./schema.example.md) ([From ladybirdweb/faveo-helpdesk](https://github.com/ladybirdweb/faveo-helpdesk/tree/43cec59e62a9bc1fd69f6127c324f8daf12816eb/database/migrations))
