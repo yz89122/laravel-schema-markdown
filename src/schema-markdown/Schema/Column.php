@@ -5,6 +5,11 @@ namespace SchemaMarkdown\Schema;
 class Column
 {
     /**
+     * @var \SchemaMarkdown\Schema\Table
+     */
+    protected $table;
+
+    /**
      * @var string
      */
     protected $name;
@@ -15,7 +20,7 @@ class Column
     protected $type;
 
     /**
-     * @var string
+     * @var string|null
      */
     protected $default;
 
@@ -35,15 +40,21 @@ class Column
     protected $is_unique;
 
     /**
-     * @var string
+     * @var string|null
      */
     protected $comment;
 
     /**
+     * @var \SchemaMarkdown\Schema\Column|null
+     */
+    protected $references;
+
+    /**
      * @param \Illuminate\Support\Fluent $column_definition
      */
-    public function __construct($column_definition)
+    public function __construct(Table $table, $column_definition)
     {
+        $this->table = $table;
         $this->name = $column_definition['name'];
         $this->update($column_definition);
     }
@@ -78,6 +89,14 @@ class Column
     }
 
     /**
+     * @return \SchemaMarkdown\Schema\Table
+     */
+    public function getTable()
+    {
+        return $this->table;
+    }
+
+    /**
      * @return string
      */
     public function getName()
@@ -94,7 +113,7 @@ class Column
     }
 
     /**
-     * @return mixed
+     * @return string|null
      */
     public function getDefault()
     {
@@ -110,11 +129,19 @@ class Column
     }
 
     /**
-     * @return string
+     * @return string|null
      */
     public function getComment()
     {
         return $this->comment ?? '';
+    }
+
+    /**
+     * @return \SchemaMarkdown\Schema\Column|null
+     */
+    public function getReferences()
+    {
+        return $this->references;
     }
 
     /**
@@ -126,6 +153,17 @@ class Column
         switch ($command['name']) {
             case 'renameColumn':
                 $this->name = $command['to'];
+            break;
+            case 'foreign':
+                [$table, $column] = [$command['on'], $command['references']];
+                if ($table_definition = $this->getTable()->getDatabase()->getTable($table)) {
+                    if ($column_definition = $table_definition->getColumn($column)) {
+                        $this->references = $column_definition;
+                    }
+                }
+            break;
+            case 'dropForeign':
+                $this->references = null;
             break;
         }
     }
