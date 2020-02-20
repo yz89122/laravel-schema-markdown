@@ -73,6 +73,9 @@ class Column
             case 'string':
                 $type .= "({$definition['length']})";
             break;
+            case 'char':
+                $type .= "({$definition['length']})";
+            break;
         }
         return $type;
     }

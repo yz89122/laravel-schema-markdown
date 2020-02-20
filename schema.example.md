@@ -850,10 +850,10 @@
 | Column | Type | Default | Attributes  | Comment |
 | --- | --- | --- | --- | --- |
 | <span id="table-country_code-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-country_code-iso">`iso`</span> | `char` |  |  |  |
+| <span id="table-country_code-iso">`iso`</span> | `char(2)` |  |  |  |
 | <span id="table-country_code-name">`name`</span> | `string(100)` |  |  |  |
 | <span id="table-country_code-nicename">`nicename`</span> | `string(100)` |  |  |  |
-| <span id="table-country_code-iso3">`iso3`</span> | `char` |  |  |  |
+| <span id="table-country_code-iso3">`iso3`</span> | `char(3)` |  |  |  |
 | <span id="table-country_code-numcode">`numcode`</span> | `smallInteger` |  | `autoIncrement:false` |  |
 | <span id="table-country_code-phonecode">`phonecode`</span> | `integer` |  | `autoIncrement:false` |  |
 | <span id="table-country_code-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
