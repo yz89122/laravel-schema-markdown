@@ -15,12 +15,12 @@ class Index
     protected $name;
 
     /**
-     * @var array
+     * @var string[]
      */
     protected $columns;
 
     /**
-     * @var string
+     * @var string|null
      */
     protected $algorithm;
 
@@ -69,7 +69,7 @@ class Index
     }
 
     /**
-     * @return array
+     * @return string[]
      */
     public function getColumns()
     {
@@ -77,7 +77,7 @@ class Index
     }
 
     /**
-     * @return string
+     * @return string|null
      */
     public function getAlgorithm()
     {

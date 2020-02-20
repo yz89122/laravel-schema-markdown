@@ -8,7 +8,7 @@ use \Illuminate\Support\Fluent;
 class Table
 {
     /**
-     * @var string
+     * @var \SchemaMarkdown\Schema\Database
      */
     protected $database;
 
@@ -23,7 +23,7 @@ class Table
     protected $columns = [];
 
     /**
-     * @var array
+     * @var \SchemaMarkdown\Schema\Index[]
      */
     protected $indices = [];
 
@@ -35,6 +35,14 @@ class Table
     {
         $this->database = $database;
         $this->setTableName($name);
+    }
+
+    /**
+     * @return \SchemaMarkdown\Schema\Database
+     */
+    public function getDatabase()
+    {
+        return $this->database;
     }
 
     /**
@@ -97,7 +105,7 @@ class Table
     {
         $this->database->setTable($this->getTableName(), $this);
         foreach ($blueprint->getColumns() as $column) {
-            $this->columns[$column->get('name')] = new Column($column);
+            $this->columns[$column->get('name')] = new Column($this, $column);
         }
     }
 
@@ -130,45 +138,37 @@ class Table
 
     protected function command_dropPrimary(Fluent $command, Blueprint $blueprint)
     {
-        $this->indices = array_filter($this->indices, function ($entry) use ($command) {
-            return !$entry->getName() == $command['index'];
-        });
+        $this->applyDropIndex($command);
     }
 
     protected function command_dropUnique(Fluent $command, Blueprint $blueprint)
     {
-        $this->indices = array_filter($this->indices, function ($entry) use ($command) {
-            return !$entry->getName() == $command['index'];
-        });
+        $this->applyDropIndex($command);
     }
 
     protected function command_dropIndex(Fluent $command, Blueprint $blueprint)
     {
-        $this->indices = array_filter($this->indices, function ($entry) use ($command) {
-            return !$entry->getName() == $command['index'];
-        });
+        $this->applyDropIndex($command);
     }
 
     protected function command_dropSpatialIndex(Fluent $command, Blueprint $blueprint)
     {
-        $this->indices = array_filter($this->indices, function ($entry) use ($command) {
-            return !$entry->getName() == $command['index'];
-        });
+        $this->applyDropIndex($command);
     }
 
     protected function command_dropForeign(Fluent $command, Blueprint $blueprint)
     {
-        $this->indices = array_filter($this->indices, function ($entry) use ($command) {
-            return !$entry->getName() == $command['index'];
-        });
+        $this->applyDropIndex($command);
     }
 
     protected function command_renameIndex(Fluent $command, Blueprint $blueprint)
     {
         foreach ($this->indices as $index) {
-            if ($index->getName() == $command['from']) {
-                $index->updateByCommand($command);
+            if ($index->getName() != $command['from']) {
+                continue;
             }
+            $index->updateByCommand($command);
+            $this->updateIndexRelatedColumnsByCommand($index, $command);
         }
     }
 
@@ -182,33 +182,33 @@ class Table
 
     protected function command_primary(Fluent $command, Blueprint $blueprint)
     {
-        array_push($this->indices, new Index($command));
+        $this->applyIndex($command);
     }
 
     protected function command_unique(Fluent $command, Blueprint $blueprint)
     {
-        array_push($this->indices, new Index($command));
+        $this->applyIndex($command);
     }
 
     protected function command_index(Fluent $command, Blueprint $blueprint)
     {
-        array_push($this->indices, new Index($command));
+        $this->applyIndex($command);
     }
 
     protected function command_spatialIndex(Fluent $command, Blueprint $blueprint)
     {
-        array_push($this->indices, new Index($command));
+        $this->applyIndex($command);
     }
 
     protected function command_foreign(Fluent $command, Blueprint $blueprint)
     {
-        array_push($this->indices, new Index($command));
+        $this->applyIndex($command);
     }
 
     protected function command_add(Fluent $command, Blueprint $blueprint)
     {
         foreach ($blueprint->getAddedColumns() as $column) {
-            $this->columns[$column->get('name')] = new Column($column);
+            $this->columns[$column->get('name')] = new Column($this, $column);
         }
     }
 
@@ -216,6 +216,34 @@ class Table
     {
         foreach ($blueprint->getChangedColumns() as $column) {
             $this->columns[$column->get('name')]->update($column);
+        }
+    }
+
+    protected function applyIndex(Fluent $command)
+    {
+        array_push($this->indices, $index = new Index($command));
+        $this->updateIndexRelatedColumnsByCommand($index, $command);
+    }
+
+    protected function applyDropIndex(Fluent $command)
+    {
+        foreach ($this->indices as $index) {
+            if ($index->getName() != $command['index']) {
+                continue;
+            }
+            $this->updateIndexRelatedColumnsByCommand($index, $command);
+        }
+        $this->indices = array_filter($this->indices, function ($entry) use ($command) {
+            return !$entry->getName() == $command['index'];
+        });
+    }
+
+    protected function updateIndexRelatedColumnsByCommand(Index $index, Fluent $command)
+    {
+        foreach ($index->getColumns() as $column) {
+            if ($column_definition = $this->getColumn($column)) {
+                $column_definition->updateByCommand($command);
+            }
         }
     }
 }

@@ -19,6 +19,11 @@ class Database
     protected $tables = [];
 
     /**
+     * @var boolean
+     */
+    protected $is_processing_blueprints = false;
+
+    /**
      * @param \Illuminate\Database\Schema\Blueprint[] $blueprints
      */
     public function __construct(array $blueprints = [])
@@ -32,7 +37,7 @@ class Database
      */
     public function setBlueprints(array $blueprints)
     {
-        $this->resetLoadingKey('is_processed');
+        $this->resetLoadingKey('processed_blueprints');
         $this->blueprints = $blueprints;
     }
 
@@ -49,13 +54,18 @@ class Database
      */
     public function processBlueprints()
     {
-        $this->lazyLoad('processs_blueprints', function () {
+        if ($this->is_processing_blueprints) {
+            return;
+        }
+        $this->is_processing_blueprints = true;
+        $this->lazyLoad('processed_blueprints', function () {
             foreach ($this->blueprints as $blueprint) {
                 $table_name = $blueprint->getTable();
                 $table = $this->tables[$table_name] ?? new Table($this, $table_name);
                 $table->applyBlueprint($blueprint);
             }
         });
+        $this->is_processing_blueprints = false;
     }
 
     /**
@@ -74,6 +84,7 @@ class Database
      */
     public function dropTable($name)
     {
+        $this->processBlueprints();
         unset($this->tables[$name]);
     }
 
@@ -84,6 +95,7 @@ class Database
      */
     public function setTable($name, Table $table)
     {
+        $this->processBlueprints();
         $this->tables[$name] = $table;
     }
 }

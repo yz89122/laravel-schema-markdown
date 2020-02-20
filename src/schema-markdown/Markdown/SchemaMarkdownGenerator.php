@@ -59,9 +59,23 @@ class SchemaMarkdownGenerator
         return '';
     }
 
+    protected function getTableColumnMarkdownId(string $table, string $column)
+    {
+        return "table-{$table}-{$column}";
+    }
+
+    protected function getTableColumnMarkdown(Column $column_definition)
+    {
+        $table = $column_definition->getTable()->getTableName();
+        $column = $column_definition->getName();
+        $id = $this->getTableColumnMarkdownId($table, $column);
+        $column_chip = $this->chip($column);
+        return "<span id=\"{$id}\">{$column_chip}</span>";
+    }
+
     protected function getColumnMarkdown(Column $column_definition)
     {
-        $column_name = $this->chip($column_definition->getName());
+        $column_name = $this->getTableColumnMarkdown($column_definition);
         $column_type = $this->chip($column_definition->getType());
         $column_default = $this->chip($column_definition->getDefault());
         $column_attributes = $column_definition->getAttributes();
@@ -72,7 +86,7 @@ class SchemaMarkdownGenerator
 
     protected function getDatabaseTableColumnsMarkdown(Table $table_definition)
     {
-        $result = "### Columns\n";
+        $result = "### Columns\n\n";
         $result .= "| Column | Type | Default | Attributes  | Comment |\n";
         $result .= "| --- | --- | --- | --- | --- |\n";
 
@@ -113,12 +127,43 @@ class SchemaMarkdownGenerator
         return $result."\n";
     }
 
+    protected function getTableOfContentsColumnReferences(string $table, string $column)
+    {
+        $references = '';
+        if (($table_definition = $this->database->getTable($table))
+            && ($column_definition = $table_definition->getColumn($column))
+            && ($references_column = $column_definition->getReferences())
+        ) {
+            $references_table_name = $references_column->getTable()->getTableName();
+            $references_column_name = $references_column->getName();
+            $references_column_id = $this->getTableColumnMarkdownId($references_table_name, $references_column_name);
+            $references_chip = $this->chip("{$references_table_name}.{$references_column_name}");
+            $references = " => [{$references_chip}](#{$references_column_id})";
+        }
+        return $references;
+    }
+
+    protected function getTableOfContentsTableColumns(string $table)
+    {
+        $result = '';
+
+        foreach ($this->getDatabaseTableColumns($table) as $column) {
+            $id = $this->getTableColumnMarkdownId($table, $column);
+            $references = $this->getTableOfContentsColumnReferences($table, $column);
+            $column = $this->chip($column);
+            $result .= "&emsp;&emsp;[{$column}](#{$id}){$references}<br/>\n";
+        }
+
+        return $result;
+    }
+
     protected function getTableOfContents()
     {
         $result = '';
 
         foreach ($this->getDatabaseTables() as $table) {
-            $result .= '- ['.$this->chip($table)."](#table-$table)\n";
+            $result .= '['.$this->chip($table)."](#table-$table)<br/>\n";
+            $result .= $this->getTableOfContentsTableColumns($table);
         }
 
         return $result."\n";
