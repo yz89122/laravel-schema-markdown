@@ -234,7 +234,7 @@ class Table
             $this->updateIndexRelatedColumnsByCommand($index, $command);
         }
         $this->indices = array_filter($this->indices, function ($entry) use ($command) {
-            return !$entry->getName() == $command['index'];
+            return $entry->getName() != $command['index'];
         });
     }
 
