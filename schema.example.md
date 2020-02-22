@@ -758,1507 +758,1507 @@
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-api_settings-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-api_settings-key">`key`</span> | `string(255)` |  |  |  |
-| <span id="table-api_settings-value">`value`</span> | `string(255)` |  |  |  |
-| <span id="table-api_settings-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-api_settings-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                       | Type          | Default | Attributes                        | Comment |
+| ------------------------------------------------------------ | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-api_settings-id">`id`</span>                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-api_settings-key">`key`</span>               | `string(255)` |         |                                   |         |
+| <span id="table-api_settings-value">`value`</span>           | `string(255)` |         |                                   |         |
+| <span id="table-api_settings-created_at">`created_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-api_settings-updated_at">`updated_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `banlist`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-banlist-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-banlist-ban_status">`ban_status`</span> | `boolean` |  |  |  |
-| <span id="table-banlist-email_address">`email_address`</span> | `string(255)` |  |  |  |
-| <span id="table-banlist-internal_notes">`internal_notes`</span> | `string(255)` |  |  |  |
-| <span id="table-banlist-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-banlist-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                          | Type          | Default | Attributes                        | Comment |
+| --------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-banlist-id">`id`</span>                         | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-banlist-ban_status">`ban_status`</span>         | `boolean`     |         |                                   |         |
+| <span id="table-banlist-email_address">`email_address`</span>   | `string(255)` |         |                                   |         |
+| <span id="table-banlist-internal_notes">`internal_notes`</span> | `string(255)` |         |                                   |         |
+| <span id="table-banlist-created_at">`created_at`</span>         | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-banlist-updated_at">`updated_at`</span>         | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `bar_notifications`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-bar_notifications-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-bar_notifications-key">`key`</span> | `string(255)` |  |  |  |
-| <span id="table-bar_notifications-value">`value`</span> | `string(255)` |  |  |  |
-| <span id="table-bar_notifications-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-bar_notifications-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                            | Type          | Default | Attributes                        | Comment |
+| ----------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-bar_notifications-id">`id`</span>                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-bar_notifications-key">`key`</span>               | `string(255)` |         |                                   |         |
+| <span id="table-bar_notifications-value">`value`</span>           | `string(255)` |         |                                   |         |
+| <span id="table-bar_notifications-created_at">`created_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-bar_notifications-updated_at">`updated_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `canned_response`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-canned_response-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-canned_response-user_id">`user_id`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-canned_response-title">`title`</span> | `string(255)` |  |  |  |
-| <span id="table-canned_response-message">`message`</span> | `text` |  |  |  |
-| <span id="table-canned_response-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-canned_response-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                          | Type          | Default | Attributes                        | Comment |
+| --------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-canned_response-id">`id`</span>                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-canned_response-user_id">`user_id`</span>       | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-canned_response-title">`title`</span>           | `string(255)` |         |                                   |         |
+| <span id="table-canned_response-message">`message`</span>       | `text`        |         |                                   |         |
+| <span id="table-canned_response-created_at">`created_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-canned_response-updated_at">`updated_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `user_id` | `index` | `user_id` |  |  |
-| `canned_response_ibfk_1` | `foreign` | `user_id` |  | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"NO ACTION"` |
+| Index Name               | Type      | Columns   | Algorithm | Attributes                                                                               |
+| ------------------------ | --------- | --------- | --------- | ---------------------------------------------------------------------------------------- |
+| `user_id`                | `index`   | `user_id` |           |                                                                                          |
+| `canned_response_ibfk_1` | `foreign` | `user_id` |           | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"NO ACTION"` |
 
 
 ## Table: `common_settings`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-common_settings-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-common_settings-option_name">`option_name`</span> | `string(255)` |  |  |  |
-| <span id="table-common_settings-option_value">`option_value`</span> | `string(255)` |  |  |  |
-| <span id="table-common_settings-status">`status`</span> | `string(255)` |  |  |  |
-| <span id="table-common_settings-optional_field">`optional_field`</span> | `string(255)` |  |  |  |
-| <span id="table-common_settings-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-common_settings-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                                  | Type          | Default | Attributes                        | Comment |
+| ----------------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-common_settings-id">`id`</span>                         | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-common_settings-option_name">`option_name`</span>       | `string(255)` |         |                                   |         |
+| <span id="table-common_settings-option_value">`option_value`</span>     | `string(255)` |         |                                   |         |
+| <span id="table-common_settings-status">`status`</span>                 | `string(255)` |         |                                   |         |
+| <span id="table-common_settings-optional_field">`optional_field`</span> | `string(255)` |         |                                   |         |
+| <span id="table-common_settings-created_at">`created_at`</span>         | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-common_settings-updated_at">`updated_at`</span>         | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `conditions`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-conditions-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-conditions-job">`job`</span> | `string(255)` |  |  |  |
-| <span id="table-conditions-value">`value`</span> | `string(255)` |  |  |  |
-| <span id="table-conditions-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-conditions-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                     | Type          | Default | Attributes                        | Comment |
+| ---------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-conditions-id">`id`</span>                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-conditions-job">`job`</span>               | `string(255)` |         |                                   |         |
+| <span id="table-conditions-value">`value`</span>           | `string(255)` |         |                                   |         |
+| <span id="table-conditions-created_at">`created_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-conditions-updated_at">`updated_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `country_code`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-country_code-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-country_code-iso">`iso`</span> | `char(2)` |  |  |  |
-| <span id="table-country_code-name">`name`</span> | `string(100)` |  |  |  |
-| <span id="table-country_code-nicename">`nicename`</span> | `string(100)` |  |  |  |
-| <span id="table-country_code-iso3">`iso3`</span> | `char(3)` |  |  |  |
-| <span id="table-country_code-numcode">`numcode`</span> | `smallInteger` |  | `autoIncrement:false` |  |
-| <span id="table-country_code-phonecode">`phonecode`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-country_code-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-country_code-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                       | Type           | Default | Attributes                        | Comment |
+| ------------------------------------------------------------ | -------------- | ------- | --------------------------------- | ------- |
+| <span id="table-country_code-id">`id`</span>                 | `integer`      |         | `autoIncrement:true`              |         |
+| <span id="table-country_code-iso">`iso`</span>               | `char(2)`      |         |                                   |         |
+| <span id="table-country_code-name">`name`</span>             | `string(100)`  |         |                                   |         |
+| <span id="table-country_code-nicename">`nicename`</span>     | `string(100)`  |         |                                   |         |
+| <span id="table-country_code-iso3">`iso3`</span>             | `char(3)`      |         |                                   |         |
+| <span id="table-country_code-numcode">`numcode`</span>       | `smallInteger` |         | `autoIncrement:false`             |         |
+| <span id="table-country_code-phonecode">`phonecode`</span>   | `integer`      |         | `autoIncrement:false`             |         |
+| <span id="table-country_code-created_at">`created_at`</span> | `timestamp`    |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-country_code-updated_at">`updated_at`</span> | `timestamp`    |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `custom_form_fields`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-custom_form_fields-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-custom_form_fields-forms_id">`forms_id`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-custom_form_fields-label">`label`</span> | `string(255)` |  |  |  |
-| <span id="table-custom_form_fields-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-custom_form_fields-type">`type`</span> | `string(255)` |  |  |  |
-| <span id="table-custom_form_fields-value">`value`</span> | `string(255)` |  |  |  |
-| <span id="table-custom_form_fields-required">`required`</span> | `string(255)` |  |  |  |
-| <span id="table-custom_form_fields-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-custom_form_fields-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                             | Type          | Default | Attributes                        | Comment |
+| ------------------------------------------------------------------ | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-custom_form_fields-id">`id`</span>                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-custom_form_fields-forms_id">`forms_id`</span>     | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-custom_form_fields-label">`label`</span>           | `string(255)` |         |                                   |         |
+| <span id="table-custom_form_fields-name">`name`</span>             | `string(255)` |         |                                   |         |
+| <span id="table-custom_form_fields-type">`type`</span>             | `string(255)` |         |                                   |         |
+| <span id="table-custom_form_fields-value">`value`</span>           | `string(255)` |         |                                   |         |
+| <span id="table-custom_form_fields-required">`required`</span>     | `string(255)` |         |                                   |         |
+| <span id="table-custom_form_fields-created_at">`created_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-custom_form_fields-updated_at">`updated_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `custom_forms`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-custom_forms-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-custom_forms-formname">`formname`</span> | `string(255)` |  |  |  |
-| <span id="table-custom_forms-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-custom_forms-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                       | Type          | Default | Attributes                        | Comment |
+| ------------------------------------------------------------ | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-custom_forms-id">`id`</span>                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-custom_forms-formname">`formname`</span>     | `string(255)` |         |                                   |         |
+| <span id="table-custom_forms-created_at">`created_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-custom_forms-updated_at">`updated_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `date_format`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-date_format-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-date_format-format">`format`</span> | `string(255)` |  |  |  |
+| Column                                              | Type          | Default | Attributes           | Comment |
+| --------------------------------------------------- | ------------- | ------- | -------------------- | ------- |
+| <span id="table-date_format-id">`id`</span>         | `integer`     |         | `autoIncrement:true` |         |
+| <span id="table-date_format-format">`format`</span> | `string(255)` |         |                      |         |
 
 
 ## Table: `date_time_format`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-date_time_format-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-date_time_format-format">`format`</span> | `string(255)` |  |  |  |
+| Column                                                   | Type          | Default | Attributes           | Comment |
+| -------------------------------------------------------- | ------------- | ------- | -------------------- | ------- |
+| <span id="table-date_time_format-id">`id`</span>         | `integer`     |         | `autoIncrement:true` |         |
+| <span id="table-date_time_format-format">`format`</span> | `string(255)` |         |                      |         |
 
 
 ## Table: `department`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-department-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-department-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-department-type">`type`</span> | `string(255)` |  |  |  |
-| <span id="table-department-sla">`sla`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-department-manager">`manager`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-department-ticket_assignment">`ticket_assignment`</span> | `string(255)` |  |  |  |
-| <span id="table-department-outgoing_email">`outgoing_email`</span> | `string(255)` |  |  |  |
-| <span id="table-department-template_set">`template_set`</span> | `string(255)` |  |  |  |
-| <span id="table-department-auto_ticket_response">`auto_ticket_response`</span> | `string(255)` |  |  |  |
-| <span id="table-department-auto_message_response">`auto_message_response`</span> | `string(255)` |  |  |  |
-| <span id="table-department-auto_response_email">`auto_response_email`</span> | `string(255)` |  |  |  |
-| <span id="table-department-recipient">`recipient`</span> | `string(255)` |  |  |  |
-| <span id="table-department-group_access">`group_access`</span> | `string(255)` |  |  |  |
-| <span id="table-department-department_sign">`department_sign`</span> | `string(255)` |  |  |  |
-| <span id="table-department-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-department-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                                           | Type          | Default | Attributes                                | Comment |
+| -------------------------------------------------------------------------------- | ------------- | ------- | ----------------------------------------- | ------- |
+| <span id="table-department-id">`id`</span>                                       | `integer`     |         | `autoIncrement:true`                      |         |
+| <span id="table-department-name">`name`</span>                                   | `string(255)` |         |                                           |         |
+| <span id="table-department-type">`type`</span>                                   | `string(255)` |         |                                           |         |
+| <span id="table-department-sla">`sla`</span>                                     | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-department-manager">`manager`</span>                             | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-department-ticket_assignment">`ticket_assignment`</span>         | `string(255)` |         |                                           |         |
+| <span id="table-department-outgoing_email">`outgoing_email`</span>               | `string(255)` |         |                                           |         |
+| <span id="table-department-template_set">`template_set`</span>                   | `string(255)` |         |                                           |         |
+| <span id="table-department-auto_ticket_response">`auto_ticket_response`</span>   | `string(255)` |         |                                           |         |
+| <span id="table-department-auto_message_response">`auto_message_response`</span> | `string(255)` |         |                                           |         |
+| <span id="table-department-auto_response_email">`auto_response_email`</span>     | `string(255)` |         |                                           |         |
+| <span id="table-department-recipient">`recipient`</span>                         | `string(255)` |         |                                           |         |
+| <span id="table-department-group_access">`group_access`</span>                   | `string(255)` |         |                                           |         |
+| <span id="table-department-department_sign">`department_sign`</span>             | `string(255)` |         |                                           |         |
+| <span id="table-department-created_at">`created_at`</span>                       | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |         |
+| <span id="table-department-updated_at">`updated_at`</span>                       | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |         |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `sla` | `index` | `sla` |  |  |
-| `manager_2` | `index` | `manager` |  |  |
-| `department_ibfk_1` | `foreign` | `sla` |  | `references:"id"`<br/>`on:"sla_plan"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `department_ibfk_2` | `foreign` | `manager` |  | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
+| Index Name          | Type      | Columns   | Algorithm | Attributes                                                                                 |
+| ------------------- | --------- | --------- | --------- | ------------------------------------------------------------------------------------------ |
+| `sla`               | `index`   | `sla`     |           |                                                                                            |
+| `manager_2`         | `index`   | `manager` |           |                                                                                            |
+| `department_ibfk_1` | `foreign` | `sla`     |           | `references:"id"`<br/>`on:"sla_plan"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
+| `department_ibfk_2` | `foreign` | `manager` |           | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"`    |
 
 
 ## Table: `emails`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-emails-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-emails-email_address">`email_address`</span> | `string(255)` |  |  |  |
-| <span id="table-emails-email_name">`email_name`</span> | `string(255)` |  |  |  |
-| <span id="table-emails-department">`department`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-emails-priority">`priority`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-emails-help_topic">`help_topic`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-emails-user_name">`user_name`</span> | `string(255)` |  | `nullable:true` |  |
-| <span id="table-emails-password">`password`</span> | `string(255)` |  |  |  |
-| <span id="table-emails-fetching_host">`fetching_host`</span> | `string(255)` |  |  |  |
-| <span id="table-emails-fetching_port">`fetching_port`</span> | `string(255)` |  |  |  |
-| <span id="table-emails-fetching_protocol">`fetching_protocol`</span> | `string(255)` |  |  |  |
-| <span id="table-emails-fetching_encryption">`fetching_encryption`</span> | `string(255)` |  |  |  |
-| <span id="table-emails-mailbox_protocol">`mailbox_protocol`</span> | `string(255)` |  |  |  |
-| <span id="table-emails-imap_config">`imap_config`</span> | `string(255)` |  |  |  |
-| <span id="table-emails-folder">`folder`</span> | `string(255)` |  |  |  |
-| <span id="table-emails-sending_host">`sending_host`</span> | `string(255)` |  |  |  |
-| <span id="table-emails-sending_port">`sending_port`</span> | `string(255)` |  |  |  |
-| <span id="table-emails-sending_protocol">`sending_protocol`</span> | `string(255)` |  |  |  |
-| <span id="table-emails-sending_encryption">`sending_encryption`</span> | `string(255)` |  |  |  |
-| <span id="table-emails-smtp_validate">`smtp_validate`</span> | `string(255)` |  |  |  |
-| <span id="table-emails-smtp_authentication">`smtp_authentication`</span> | `string(255)` |  |  |  |
-| <span id="table-emails-internal_notes">`internal_notes`</span> | `string(255)` |  |  |  |
-| <span id="table-emails-auto_response">`auto_response`</span> | `boolean` |  |  |  |
-| <span id="table-emails-fetching_status">`fetching_status`</span> | `boolean` |  |  |  |
-| <span id="table-emails-move_to_folder">`move_to_folder`</span> | `boolean` |  |  |  |
-| <span id="table-emails-delete_email">`delete_email`</span> | `boolean` |  |  |  |
-| <span id="table-emails-do_nothing">`do_nothing`</span> | `boolean` |  |  |  |
-| <span id="table-emails-sending_status">`sending_status`</span> | `boolean` |  |  |  |
-| <span id="table-emails-authentication">`authentication`</span> | `boolean` |  |  |  |
-| <span id="table-emails-header_spoofing">`header_spoofing`</span> | `boolean` |  |  |  |
-| <span id="table-emails-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-emails-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                                   | Type          | Default | Attributes                                | Comment |
+| ------------------------------------------------------------------------ | ------------- | ------- | ----------------------------------------- | ------- |
+| <span id="table-emails-id">`id`</span>                                   | `integer`     |         | `autoIncrement:true`                      |         |
+| <span id="table-emails-email_address">`email_address`</span>             | `string(255)` |         |                                           |         |
+| <span id="table-emails-email_name">`email_name`</span>                   | `string(255)` |         |                                           |         |
+| <span id="table-emails-department">`department`</span>                   | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-emails-priority">`priority`</span>                       | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-emails-help_topic">`help_topic`</span>                   | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-emails-user_name">`user_name`</span>                     | `string(255)` |         | `nullable:true`                           |         |
+| <span id="table-emails-password">`password`</span>                       | `string(255)` |         |                                           |         |
+| <span id="table-emails-fetching_host">`fetching_host`</span>             | `string(255)` |         |                                           |         |
+| <span id="table-emails-fetching_port">`fetching_port`</span>             | `string(255)` |         |                                           |         |
+| <span id="table-emails-fetching_protocol">`fetching_protocol`</span>     | `string(255)` |         |                                           |         |
+| <span id="table-emails-fetching_encryption">`fetching_encryption`</span> | `string(255)` |         |                                           |         |
+| <span id="table-emails-mailbox_protocol">`mailbox_protocol`</span>       | `string(255)` |         |                                           |         |
+| <span id="table-emails-imap_config">`imap_config`</span>                 | `string(255)` |         |                                           |         |
+| <span id="table-emails-folder">`folder`</span>                           | `string(255)` |         |                                           |         |
+| <span id="table-emails-sending_host">`sending_host`</span>               | `string(255)` |         |                                           |         |
+| <span id="table-emails-sending_port">`sending_port`</span>               | `string(255)` |         |                                           |         |
+| <span id="table-emails-sending_protocol">`sending_protocol`</span>       | `string(255)` |         |                                           |         |
+| <span id="table-emails-sending_encryption">`sending_encryption`</span>   | `string(255)` |         |                                           |         |
+| <span id="table-emails-smtp_validate">`smtp_validate`</span>             | `string(255)` |         |                                           |         |
+| <span id="table-emails-smtp_authentication">`smtp_authentication`</span> | `string(255)` |         |                                           |         |
+| <span id="table-emails-internal_notes">`internal_notes`</span>           | `string(255)` |         |                                           |         |
+| <span id="table-emails-auto_response">`auto_response`</span>             | `boolean`     |         |                                           |         |
+| <span id="table-emails-fetching_status">`fetching_status`</span>         | `boolean`     |         |                                           |         |
+| <span id="table-emails-move_to_folder">`move_to_folder`</span>           | `boolean`     |         |                                           |         |
+| <span id="table-emails-delete_email">`delete_email`</span>               | `boolean`     |         |                                           |         |
+| <span id="table-emails-do_nothing">`do_nothing`</span>                   | `boolean`     |         |                                           |         |
+| <span id="table-emails-sending_status">`sending_status`</span>           | `boolean`     |         |                                           |         |
+| <span id="table-emails-authentication">`authentication`</span>           | `boolean`     |         |                                           |         |
+| <span id="table-emails-header_spoofing">`header_spoofing`</span>         | `boolean`     |         |                                           |         |
+| <span id="table-emails-created_at">`created_at`</span>                   | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |         |
+| <span id="table-emails-updated_at">`updated_at`</span>                   | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |         |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `department` | `index` | `department`<br/>`priority`<br/>`help_topic` |  |  |
-| `department_2` | `index` | `department`<br/>`priority`<br/>`help_topic` |  |  |
-| `priority` | `index` | `priority` |  |  |
-| `help_topic` | `index` | `help_topic` |  |  |
-| `emails_ibfk_1` | `foreign` | `department` |  | `references:"id"`<br/>`on:"department"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `emails_ibfk_2` | `foreign` | `priority` |  | `references:"priority_id"`<br/>`on:"ticket_priority"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `emails_ibfk_3` | `foreign` | `help_topic` |  | `references:"id"`<br/>`on:"help_topic"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
+| Index Name      | Type      | Columns                                      | Algorithm | Attributes                                                                                                 |
+| --------------- | --------- | -------------------------------------------- | --------- | ---------------------------------------------------------------------------------------------------------- |
+| `department`    | `index`   | `department`<br/>`priority`<br/>`help_topic` |           |                                                                                                            |
+| `department_2`  | `index`   | `department`<br/>`priority`<br/>`help_topic` |           |                                                                                                            |
+| `priority`      | `index`   | `priority`                                   |           |                                                                                                            |
+| `help_topic`    | `index`   | `help_topic`                                 |           |                                                                                                            |
+| `emails_ibfk_1` | `foreign` | `department`                                 |           | `references:"id"`<br/>`on:"department"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"`               |
+| `emails_ibfk_2` | `foreign` | `priority`                                   |           | `references:"priority_id"`<br/>`on:"ticket_priority"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
+| `emails_ibfk_3` | `foreign` | `help_topic`                                 |           | `references:"id"`<br/>`on:"help_topic"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"`               |
 
 
 ## Table: `failed_jobs`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-failed_jobs-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-failed_jobs-connection">`connection`</span> | `text` |  |  |  |
-| <span id="table-failed_jobs-queue">`queue`</span> | `text` |  |  |  |
-| <span id="table-failed_jobs-payload">`payload`</span> | `longText` |  |  |  |
-| <span id="table-failed_jobs-failed_at">`failed_at`</span> | `timestamp` |  | `precision:0`<br/>`useCurrent:true` |  |
+| Column                                                      | Type        | Default | Attributes                          | Comment |
+| ----------------------------------------------------------- | ----------- | ------- | ----------------------------------- | ------- |
+| <span id="table-failed_jobs-id">`id`</span>                 | `integer`   |         | `autoIncrement:true`                |         |
+| <span id="table-failed_jobs-connection">`connection`</span> | `text`      |         |                                     |         |
+| <span id="table-failed_jobs-queue">`queue`</span>           | `text`      |         |                                     |         |
+| <span id="table-failed_jobs-payload">`payload`</span>       | `longText`  |         |                                     |         |
+| <span id="table-failed_jobs-failed_at">`failed_at`</span>   | `timestamp` |         | `precision:0`<br/>`useCurrent:true` |         |
 
 
 ## Table: `faveo_mails`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-faveo_mails-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-faveo_mails-email_id">`email_id`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-faveo_mails-drive">`drive`</span> | `string(255)` |  |  |  |
-| <span id="table-faveo_mails-key">`key`</span> | `string(255)` |  |  |  |
-| <span id="table-faveo_mails-value">`value`</span> | `string(255)` |  |  |  |
-| <span id="table-faveo_mails-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-faveo_mails-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                      | Type          | Default | Attributes                        | Comment |
+| ----------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-faveo_mails-id">`id`</span>                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-faveo_mails-email_id">`email_id`</span>     | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-faveo_mails-drive">`drive`</span>           | `string(255)` |         |                                   |         |
+| <span id="table-faveo_mails-key">`key`</span>               | `string(255)` |         |                                   |         |
+| <span id="table-faveo_mails-value">`value`</span>           | `string(255)` |         |                                   |         |
+| <span id="table-faveo_mails-created_at">`created_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-faveo_mails-updated_at">`updated_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `faveo_queues`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-faveo_queues-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-faveo_queues-service_id">`service_id`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-faveo_queues-key">`key`</span> | `string(255)` |  |  |  |
-| <span id="table-faveo_queues-value">`value`</span> | `string(255)` |  |  |  |
-| <span id="table-faveo_queues-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-faveo_queues-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                       | Type          | Default | Attributes                        | Comment |
+| ------------------------------------------------------------ | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-faveo_queues-id">`id`</span>                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-faveo_queues-service_id">`service_id`</span> | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-faveo_queues-key">`key`</span>               | `string(255)` |         |                                   |         |
+| <span id="table-faveo_queues-value">`value`</span>           | `string(255)` |         |                                   |         |
+| <span id="table-faveo_queues-created_at">`created_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-faveo_queues-updated_at">`updated_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `field_values`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-field_values-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-field_values-field_id">`field_id`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-field_values-child_id">`child_id`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-field_values-field_key">`field_key`</span> | `string(255)` |  | `nullable:true` |  |
-| <span id="table-field_values-field_value">`field_value`</span> | `string(255)` |  | `nullable:true` |  |
-| <span id="table-field_values-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-field_values-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                         | Type          | Default | Attributes                                | Comment |
+| -------------------------------------------------------------- | ------------- | ------- | ----------------------------------------- | ------- |
+| <span id="table-field_values-id">`id`</span>                   | `integer`     |         | `autoIncrement:true`                      |         |
+| <span id="table-field_values-field_id">`field_id`</span>       | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-field_values-child_id">`child_id`</span>       | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-field_values-field_key">`field_key`</span>     | `string(255)` |         | `nullable:true`                           |         |
+| <span id="table-field_values-field_value">`field_value`</span> | `string(255)` |         | `nullable:true`                           |         |
+| <span id="table-field_values-created_at">`created_at`</span>   | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |         |
+| <span id="table-field_values-updated_at">`updated_at`</span>   | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |         |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `field_values_field_id_foreign` | `foreign` | `field_id` |  | `references:"id"`<br/>`on:"custom_form_fields"` |
+| Index Name                      | Type      | Columns    | Algorithm | Attributes                                      |
+| ------------------------------- | --------- | ---------- | --------- | ----------------------------------------------- |
+| `field_values_field_id_foreign` | `foreign` | `field_id` |           | `references:"id"`<br/>`on:"custom_form_fields"` |
 
 
 ## Table: `group_assign_department`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-group_assign_department-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-group_assign_department-group_id">`group_id`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-group_assign_department-department_id">`department_id`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-group_assign_department-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-group_assign_department-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                                        | Type        | Default | Attributes                        | Comment |
+| ----------------------------------------------------------------------------- | ----------- | ------- | --------------------------------- | ------- |
+| <span id="table-group_assign_department-id">`id`</span>                       | `integer`   |         | `autoIncrement:true`              |         |
+| <span id="table-group_assign_department-group_id">`group_id`</span>           | `integer`   |         | `autoIncrement:false`             |         |
+| <span id="table-group_assign_department-department_id">`department_id`</span> | `integer`   |         | `autoIncrement:false`             |         |
+| <span id="table-group_assign_department-created_at">`created_at`</span>       | `timestamp` |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-group_assign_department-updated_at">`updated_at`</span>       | `timestamp` |         | `precision:0`<br/>`nullable:true` |         |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `group_id` | `index` | `group_id` |  |  |
-| `department_id` | `index` | `department_id` |  |  |
-| `group_assign_department_ibfk_1` | `foreign` | `group_id` |  | `references:"id"`<br/>`on:"groups"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `group_assign_department_ibfk_2` | `foreign` | `department_id` |  | `references:"id"`<br/>`on:"department"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
+| Index Name                       | Type      | Columns         | Algorithm | Attributes                                                                                   |
+| -------------------------------- | --------- | --------------- | --------- | -------------------------------------------------------------------------------------------- |
+| `group_id`                       | `index`   | `group_id`      |           |                                                                                              |
+| `department_id`                  | `index`   | `department_id` |           |                                                                                              |
+| `group_assign_department_ibfk_1` | `foreign` | `group_id`      |           | `references:"id"`<br/>`on:"groups"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"`     |
+| `group_assign_department_ibfk_2` | `foreign` | `department_id` |           | `references:"id"`<br/>`on:"department"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 
 ## Table: `groups`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-groups-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-groups-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-groups-group_status">`group_status`</span> | `boolean` |  |  |  |
-| <span id="table-groups-can_create_ticket">`can_create_ticket`</span> | `boolean` |  |  |  |
-| <span id="table-groups-can_edit_ticket">`can_edit_ticket`</span> | `boolean` |  |  |  |
-| <span id="table-groups-can_post_ticket">`can_post_ticket`</span> | `boolean` |  |  |  |
-| <span id="table-groups-can_close_ticket">`can_close_ticket`</span> | `boolean` |  |  |  |
-| <span id="table-groups-can_assign_ticket">`can_assign_ticket`</span> | `boolean` |  |  |  |
-| <span id="table-groups-can_transfer_ticket">`can_transfer_ticket`</span> | `boolean` |  |  |  |
-| <span id="table-groups-can_delete_ticket">`can_delete_ticket`</span> | `boolean` |  |  |  |
-| <span id="table-groups-can_ban_email">`can_ban_email`</span> | `boolean` |  |  |  |
-| <span id="table-groups-can_manage_canned">`can_manage_canned`</span> | `boolean` |  |  |  |
-| <span id="table-groups-can_manage_faq">`can_manage_faq`</span> | `boolean` |  |  |  |
-| <span id="table-groups-can_view_agent_stats">`can_view_agent_stats`</span> | `boolean` |  |  |  |
-| <span id="table-groups-department_access">`department_access`</span> | `boolean` |  |  |  |
-| <span id="table-groups-admin_notes">`admin_notes`</span> | `string(255)` |  |  |  |
-| <span id="table-groups-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-groups-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                                     | Type          | Default | Attributes                        | Comment |
+| -------------------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-groups-id">`id`</span>                                     | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-groups-name">`name`</span>                                 | `string(255)` |         |                                   |         |
+| <span id="table-groups-group_status">`group_status`</span>                 | `boolean`     |         |                                   |         |
+| <span id="table-groups-can_create_ticket">`can_create_ticket`</span>       | `boolean`     |         |                                   |         |
+| <span id="table-groups-can_edit_ticket">`can_edit_ticket`</span>           | `boolean`     |         |                                   |         |
+| <span id="table-groups-can_post_ticket">`can_post_ticket`</span>           | `boolean`     |         |                                   |         |
+| <span id="table-groups-can_close_ticket">`can_close_ticket`</span>         | `boolean`     |         |                                   |         |
+| <span id="table-groups-can_assign_ticket">`can_assign_ticket`</span>       | `boolean`     |         |                                   |         |
+| <span id="table-groups-can_transfer_ticket">`can_transfer_ticket`</span>   | `boolean`     |         |                                   |         |
+| <span id="table-groups-can_delete_ticket">`can_delete_ticket`</span>       | `boolean`     |         |                                   |         |
+| <span id="table-groups-can_ban_email">`can_ban_email`</span>               | `boolean`     |         |                                   |         |
+| <span id="table-groups-can_manage_canned">`can_manage_canned`</span>       | `boolean`     |         |                                   |         |
+| <span id="table-groups-can_manage_faq">`can_manage_faq`</span>             | `boolean`     |         |                                   |         |
+| <span id="table-groups-can_view_agent_stats">`can_view_agent_stats`</span> | `boolean`     |         |                                   |         |
+| <span id="table-groups-department_access">`department_access`</span>       | `boolean`     |         |                                   |         |
+| <span id="table-groups-admin_notes">`admin_notes`</span>                   | `string(255)` |         |                                   |         |
+| <span id="table-groups-created_at">`created_at`</span>                     | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-groups-updated_at">`updated_at`</span>                     | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `help_topic`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-help_topic-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-help_topic-topic">`topic`</span> | `string(255)` |  |  |  |
-| <span id="table-help_topic-parent_topic">`parent_topic`</span> | `string(255)` |  |  |  |
-| <span id="table-help_topic-custom_form">`custom_form`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-help_topic-department">`department`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-help_topic-ticket_status">`ticket_status`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-help_topic-priority">`priority`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-help_topic-sla_plan">`sla_plan`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-help_topic-thank_page">`thank_page`</span> | `string(255)` |  |  |  |
-| <span id="table-help_topic-ticket_num_format">`ticket_num_format`</span> | `string(255)` |  |  |  |
-| <span id="table-help_topic-internal_notes">`internal_notes`</span> | `string(255)` |  |  |  |
-| <span id="table-help_topic-status">`status`</span> | `boolean` |  |  |  |
-| <span id="table-help_topic-type">`type`</span> | `boolean` |  |  |  |
-| <span id="table-help_topic-auto_assign">`auto_assign`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-help_topic-auto_response">`auto_response`</span> | `boolean` |  |  |  |
-| <span id="table-help_topic-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-help_topic-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                                   | Type          | Default | Attributes                                | Comment |
+| ------------------------------------------------------------------------ | ------------- | ------- | ----------------------------------------- | ------- |
+| <span id="table-help_topic-id">`id`</span>                               | `integer`     |         | `autoIncrement:true`                      |         |
+| <span id="table-help_topic-topic">`topic`</span>                         | `string(255)` |         |                                           |         |
+| <span id="table-help_topic-parent_topic">`parent_topic`</span>           | `string(255)` |         |                                           |         |
+| <span id="table-help_topic-custom_form">`custom_form`</span>             | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-help_topic-department">`department`</span>               | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-help_topic-ticket_status">`ticket_status`</span>         | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-help_topic-priority">`priority`</span>                   | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-help_topic-sla_plan">`sla_plan`</span>                   | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-help_topic-thank_page">`thank_page`</span>               | `string(255)` |         |                                           |         |
+| <span id="table-help_topic-ticket_num_format">`ticket_num_format`</span> | `string(255)` |         |                                           |         |
+| <span id="table-help_topic-internal_notes">`internal_notes`</span>       | `string(255)` |         |                                           |         |
+| <span id="table-help_topic-status">`status`</span>                       | `boolean`     |         |                                           |         |
+| <span id="table-help_topic-type">`type`</span>                           | `boolean`     |         |                                           |         |
+| <span id="table-help_topic-auto_assign">`auto_assign`</span>             | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-help_topic-auto_response">`auto_response`</span>         | `boolean`     |         |                                           |         |
+| <span id="table-help_topic-created_at">`created_at`</span>               | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |         |
+| <span id="table-help_topic-updated_at">`updated_at`</span>               | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |         |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `custom_form` | `index` | `custom_form` |  |  |
-| `department` | `index` | `department` |  |  |
-| `ticket_status` | `index` | `ticket_status` |  |  |
-| `priority` | `index` | `priority` |  |  |
-| `sla_plan` | `index` | `sla_plan` |  |  |
-| `auto_assign_2` | `index` | `auto_assign` |  |  |
-| `help_topic_ibfk_1` | `foreign` | `custom_form` |  | `references:"id"`<br/>`on:"custom_forms"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `help_topic_ibfk_2` | `foreign` | `department` |  | `references:"id"`<br/>`on:"department"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `help_topic_ibfk_3` | `foreign` | `ticket_status` |  | `references:"id"`<br/>`on:"ticket_status"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `help_topic_ibfk_4` | `foreign` | `priority` |  | `references:"priority_id"`<br/>`on:"ticket_priority"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `help_topic_ibfk_5` | `foreign` | `sla_plan` |  | `references:"id"`<br/>`on:"sla_plan"`<br/>`onUpdate:"RESTRICT"`<br/>`onDelete:"RESTRICT"` |
-| `help_topic_ibfk_6` | `foreign` | `auto_assign` |  | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"RESTRICT"`<br/>`onDelete:"SET NULL"` |
+| Index Name          | Type      | Columns         | Algorithm | Attributes                                                                                                 |
+| ------------------- | --------- | --------------- | --------- | ---------------------------------------------------------------------------------------------------------- |
+| `custom_form`       | `index`   | `custom_form`   |           |                                                                                                            |
+| `department`        | `index`   | `department`    |           |                                                                                                            |
+| `ticket_status`     | `index`   | `ticket_status` |           |                                                                                                            |
+| `priority`          | `index`   | `priority`      |           |                                                                                                            |
+| `sla_plan`          | `index`   | `sla_plan`      |           |                                                                                                            |
+| `auto_assign_2`     | `index`   | `auto_assign`   |           |                                                                                                            |
+| `help_topic_ibfk_1` | `foreign` | `custom_form`   |           | `references:"id"`<br/>`on:"custom_forms"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"`             |
+| `help_topic_ibfk_2` | `foreign` | `department`    |           | `references:"id"`<br/>`on:"department"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"`               |
+| `help_topic_ibfk_3` | `foreign` | `ticket_status` |           | `references:"id"`<br/>`on:"ticket_status"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"`            |
+| `help_topic_ibfk_4` | `foreign` | `priority`      |           | `references:"priority_id"`<br/>`on:"ticket_priority"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
+| `help_topic_ibfk_5` | `foreign` | `sla_plan`      |           | `references:"id"`<br/>`on:"sla_plan"`<br/>`onUpdate:"RESTRICT"`<br/>`onDelete:"RESTRICT"`                  |
+| `help_topic_ibfk_6` | `foreign` | `auto_assign`   |           | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"RESTRICT"`<br/>`onDelete:"SET NULL"`                     |
 
 
 ## Table: `jobs`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-jobs-id">`id`</span> | `unsignedBigInteger` |  | `autoIncrement:true` |  |
-| <span id="table-jobs-queue">`queue`</span> | `string(255)` |  |  |  |
-| <span id="table-jobs-payload">`payload`</span> | `longText` |  |  |  |
-| <span id="table-jobs-attempts">`attempts`</span> | `tinyInteger` |  | `autoIncrement:false` |  |
-| <span id="table-jobs-reserved">`reserved`</span> | `tinyInteger` |  | `autoIncrement:false` |  |
-| <span id="table-jobs-reserved_at">`reserved_at`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-jobs-available_at">`available_at`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-jobs-created_at">`created_at`</span> | `integer` |  | `autoIncrement:false` |  |
+| Column                                                   | Type                 | Default | Attributes                                | Comment |
+| -------------------------------------------------------- | -------------------- | ------- | ----------------------------------------- | ------- |
+| <span id="table-jobs-id">`id`</span>                     | `unsignedBigInteger` |         | `autoIncrement:true`                      |         |
+| <span id="table-jobs-queue">`queue`</span>               | `string(255)`        |         |                                           |         |
+| <span id="table-jobs-payload">`payload`</span>           | `longText`           |         |                                           |         |
+| <span id="table-jobs-attempts">`attempts`</span>         | `tinyInteger`        |         | `autoIncrement:false`                     |         |
+| <span id="table-jobs-reserved">`reserved`</span>         | `tinyInteger`        |         | `autoIncrement:false`                     |         |
+| <span id="table-jobs-reserved_at">`reserved_at`</span>   | `integer`            |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-jobs-available_at">`available_at`</span> | `integer`            |         | `autoIncrement:false`                     |         |
+| <span id="table-jobs-created_at">`created_at`</span>     | `integer`            |         | `autoIncrement:false`                     |         |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `jobs_queue_reserved_reserved_at_index` | `index` | `queue`<br/>`reserved`<br/>`reserved_at` |  |  |
+| Index Name                              | Type    | Columns                                  | Algorithm | Attributes |
+| --------------------------------------- | ------- | ---------------------------------------- | --------- | ---------- |
+| `jobs_queue_reserved_reserved_at_index` | `index` | `queue`<br/>`reserved`<br/>`reserved_at` |           |            |
 
 
 ## Table: `kb_article`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-kb_article-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-kb_article-name">`name`</span> | `text` |  |  |  |
-| <span id="table-kb_article-slug">`slug`</span> | `string(255)` |  |  |  |
-| <span id="table-kb_article-description">`description`</span> | `text` |  |  |  |
-| <span id="table-kb_article-status">`status`</span> | `boolean` |  |  |  |
-| <span id="table-kb_article-type">`type`</span> | `boolean` |  |  |  |
-| <span id="table-kb_article-publish_time">`publish_time`</span> | `dateTime` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-kb_article-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-kb_article-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                         | Type          | Default | Attributes                        | Comment |
+| -------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-kb_article-id">`id`</span>                     | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-kb_article-name">`name`</span>                 | `text`        |         |                                   |         |
+| <span id="table-kb_article-slug">`slug`</span>                 | `string(255)` |         |                                   |         |
+| <span id="table-kb_article-description">`description`</span>   | `text`        |         |                                   |         |
+| <span id="table-kb_article-status">`status`</span>             | `boolean`     |         |                                   |         |
+| <span id="table-kb_article-type">`type`</span>                 | `boolean`     |         |                                   |         |
+| <span id="table-kb_article-publish_time">`publish_time`</span> | `dateTime`    |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-kb_article-created_at">`created_at`</span>     | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-kb_article-updated_at">`updated_at`</span>     | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `kb_article_relationship`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-kb_article_relationship-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-kb_article_relationship-article_id">`article_id`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-kb_article_relationship-category_id">`category_id`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-kb_article_relationship-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-kb_article_relationship-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                                    | Type        | Default | Attributes                        | Comment |
+| ------------------------------------------------------------------------- | ----------- | ------- | --------------------------------- | ------- |
+| <span id="table-kb_article_relationship-id">`id`</span>                   | `integer`   |         | `autoIncrement:true`              |         |
+| <span id="table-kb_article_relationship-article_id">`article_id`</span>   | `integer`   |         | `autoIncrement:false`             |         |
+| <span id="table-kb_article_relationship-category_id">`category_id`</span> | `integer`   |         | `autoIncrement:false`             |         |
+| <span id="table-kb_article_relationship-created_at">`created_at`</span>   | `timestamp` |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-kb_article_relationship-updated_at">`updated_at`</span>   | `timestamp` |         | `precision:0`<br/>`nullable:true` |         |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `article_relationship_article_id_foreign` | `index` | `article_id` |  |  |
-| `article_relationship_category_id_foreign` | `index` | `category_id` |  |  |
-| `article_relationship_article_id_foreign` | `foreign` | `article_id` |  | `references:"id"`<br/>`on:"kb_article"`<br/>`onUpdate:"RESTRICT"`<br/>`onDelete:"RESTRICT"` |
-| `article_relationship_category_id_foreign` | `foreign` | `category_id` |  | `references:"id"`<br/>`on:"kb_category"`<br/>`onUpdate:"RESTRICT"`<br/>`onDelete:"RESTRICT"` |
+| Index Name                                 | Type      | Columns       | Algorithm | Attributes                                                                                   |
+| ------------------------------------------ | --------- | ------------- | --------- | -------------------------------------------------------------------------------------------- |
+| `article_relationship_article_id_foreign`  | `index`   | `article_id`  |           |                                                                                              |
+| `article_relationship_category_id_foreign` | `index`   | `category_id` |           |                                                                                              |
+| `article_relationship_article_id_foreign`  | `foreign` | `article_id`  |           | `references:"id"`<br/>`on:"kb_article"`<br/>`onUpdate:"RESTRICT"`<br/>`onDelete:"RESTRICT"`  |
+| `article_relationship_category_id_foreign` | `foreign` | `category_id` |           | `references:"id"`<br/>`on:"kb_category"`<br/>`onUpdate:"RESTRICT"`<br/>`onDelete:"RESTRICT"` |
 
 
 ## Table: `kb_category`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-kb_category-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-kb_category-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-kb_category-slug">`slug`</span> | `string(255)` |  |  |  |
-| <span id="table-kb_category-description">`description`</span> | `text` |  |  |  |
-| <span id="table-kb_category-status">`status`</span> | `boolean` |  |  |  |
-| <span id="table-kb_category-parent">`parent`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-kb_category-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-kb_category-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                        | Type          | Default | Attributes                        | Comment |
+| ------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-kb_category-id">`id`</span>                   | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-kb_category-name">`name`</span>               | `string(255)` |         |                                   |         |
+| <span id="table-kb_category-slug">`slug`</span>               | `string(255)` |         |                                   |         |
+| <span id="table-kb_category-description">`description`</span> | `text`        |         |                                   |         |
+| <span id="table-kb_category-status">`status`</span>           | `boolean`     |         |                                   |         |
+| <span id="table-kb_category-parent">`parent`</span>           | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-kb_category-created_at">`created_at`</span>   | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-kb_category-updated_at">`updated_at`</span>   | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `kb_comment`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-kb_comment-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-kb_comment-article_id">`article_id`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-kb_comment-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-kb_comment-email">`email`</span> | `string(255)` |  |  |  |
-| <span id="table-kb_comment-website">`website`</span> | `string(255)` |  |  |  |
-| <span id="table-kb_comment-comment">`comment`</span> | `string(255)` |  |  |  |
-| <span id="table-kb_comment-status">`status`</span> | `boolean` |  |  |  |
-| <span id="table-kb_comment-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-kb_comment-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                     | Type          | Default | Attributes                        | Comment |
+| ---------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-kb_comment-id">`id`</span>                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-kb_comment-article_id">`article_id`</span> | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-kb_comment-name">`name`</span>             | `string(255)` |         |                                   |         |
+| <span id="table-kb_comment-email">`email`</span>           | `string(255)` |         |                                   |         |
+| <span id="table-kb_comment-website">`website`</span>       | `string(255)` |         |                                   |         |
+| <span id="table-kb_comment-comment">`comment`</span>       | `string(255)` |         |                                   |         |
+| <span id="table-kb_comment-status">`status`</span>         | `boolean`     |         |                                   |         |
+| <span id="table-kb_comment-created_at">`created_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-kb_comment-updated_at">`updated_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `comment_article_id_foreign` | `index` | `article_id` |  |  |
-| `comment_article_id_foreign` | `foreign` | `article_id` |  | `references:"id"`<br/>`on:"kb_article"`<br/>`onUpdate:"RESTRICT"`<br/>`onDelete:"RESTRICT"` |
+| Index Name                   | Type      | Columns      | Algorithm | Attributes                                                                                  |
+| ---------------------------- | --------- | ------------ | --------- | ------------------------------------------------------------------------------------------- |
+| `comment_article_id_foreign` | `index`   | `article_id` |           |                                                                                             |
+| `comment_article_id_foreign` | `foreign` | `article_id` |           | `references:"id"`<br/>`on:"kb_article"`<br/>`onUpdate:"RESTRICT"`<br/>`onDelete:"RESTRICT"` |
 
 
 ## Table: `kb_pages`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-kb_pages-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-kb_pages-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-kb_pages-status">`status`</span> | `boolean` |  |  |  |
-| <span id="table-kb_pages-visibility">`visibility`</span> | `boolean` |  |  |  |
-| <span id="table-kb_pages-slug">`slug`</span> | `string(255)` |  |  |  |
-| <span id="table-kb_pages-description">`description`</span> | `text` |  |  |  |
-| <span id="table-kb_pages-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-kb_pages-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                     | Type          | Default | Attributes                        | Comment |
+| ---------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-kb_pages-id">`id`</span>                   | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-kb_pages-name">`name`</span>               | `string(255)` |         |                                   |         |
+| <span id="table-kb_pages-status">`status`</span>           | `boolean`     |         |                                   |         |
+| <span id="table-kb_pages-visibility">`visibility`</span>   | `boolean`     |         |                                   |         |
+| <span id="table-kb_pages-slug">`slug`</span>               | `string(255)` |         |                                   |         |
+| <span id="table-kb_pages-description">`description`</span> | `text`        |         |                                   |         |
+| <span id="table-kb_pages-created_at">`created_at`</span>   | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-kb_pages-updated_at">`updated_at`</span>   | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `kb_settings`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-kb_settings-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-kb_settings-pagination">`pagination`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-kb_settings-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-kb_settings-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                      | Type        | Default | Attributes                        | Comment |
+| ----------------------------------------------------------- | ----------- | ------- | --------------------------------- | ------- |
+| <span id="table-kb_settings-id">`id`</span>                 | `integer`   |         | `autoIncrement:true`              |         |
+| <span id="table-kb_settings-pagination">`pagination`</span> | `integer`   |         | `autoIncrement:false`             |         |
+| <span id="table-kb_settings-created_at">`created_at`</span> | `timestamp` |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-kb_settings-updated_at">`updated_at`</span> | `timestamp` |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `languages`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-languages-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-languages-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-languages-locale">`locale`</span> | `string(255)` |  |  |  |
+| Column                                            | Type          | Default | Attributes           | Comment |
+| ------------------------------------------------- | ------------- | ------- | -------------------- | ------- |
+| <span id="table-languages-id">`id`</span>         | `integer`     |         | `autoIncrement:true` |         |
+| <span id="table-languages-name">`name`</span>     | `string(255)` |         |                      |         |
+| <span id="table-languages-locale">`locale`</span> | `string(255)` |         |                      |         |
 
 
 ## Table: `log_notification`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-log_notification-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-log_notification-log">`log`</span> | `string(255)` |  |  |  |
-| <span id="table-log_notification-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-log_notification-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                           | Type          | Default | Attributes                        | Comment |
+| ---------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-log_notification-id">`id`</span>                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-log_notification-log">`log`</span>               | `string(255)` |         |                                   |         |
+| <span id="table-log_notification-created_at">`created_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-log_notification-updated_at">`updated_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `login_attempts`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-login_attempts-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-login_attempts-User">`User`</span> | `string(255)` |  |  |  |
-| <span id="table-login_attempts-IP">`IP`</span> | `string(255)` |  |  |  |
-| <span id="table-login_attempts-Attempts">`Attempts`</span> | `string(255)` |  |  |  |
-| <span id="table-login_attempts-LastLogin">`LastLogin`</span> | `dateTime` |  | `precision:0` |  |
-| <span id="table-login_attempts-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-login_attempts-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                         | Type          | Default | Attributes                        | Comment |
+| -------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-login_attempts-id">`id`</span>                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-login_attempts-User">`User`</span>             | `string(255)` |         |                                   |         |
+| <span id="table-login_attempts-IP">`IP`</span>                 | `string(255)` |         |                                   |         |
+| <span id="table-login_attempts-Attempts">`Attempts`</span>     | `string(255)` |         |                                   |         |
+| <span id="table-login_attempts-LastLogin">`LastLogin`</span>   | `dateTime`    |         | `precision:0`                     |         |
+| <span id="table-login_attempts-created_at">`created_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-login_attempts-updated_at">`updated_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `mail_services`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-mail_services-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-mail_services-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-mail_services-short_name">`short_name`</span> | `string(255)` |  |  |  |
-| <span id="table-mail_services-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-mail_services-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                        | Type          | Default | Attributes                        | Comment |
+| ------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-mail_services-id">`id`</span>                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-mail_services-name">`name`</span>             | `string(255)` |         |                                   |         |
+| <span id="table-mail_services-short_name">`short_name`</span> | `string(255)` |         |                                   |         |
+| <span id="table-mail_services-created_at">`created_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-mail_services-updated_at">`updated_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `mailbox_protocol`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-mailbox_protocol-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-mailbox_protocol-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-mailbox_protocol-value">`value`</span> | `string(50)` |  | `nullable:true` |  |
+| Column                                                 | Type          | Default | Attributes           | Comment |
+| ------------------------------------------------------ | ------------- | ------- | -------------------- | ------- |
+| <span id="table-mailbox_protocol-id">`id`</span>       | `integer`     |         | `autoIncrement:true` |         |
+| <span id="table-mailbox_protocol-name">`name`</span>   | `string(255)` |         |                      |         |
+| <span id="table-mailbox_protocol-value">`value`</span> | `string(50)`  |         | `nullable:true`      |         |
 
 
 ## Table: `notification_types`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-notification_types-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-notification_types-message">`message`</span> | `string(255)` |  |  |  |
-| <span id="table-notification_types-type">`type`</span> | `string(255)` |  |  |  |
-| <span id="table-notification_types-icon_class">`icon_class`</span> | `string(255)` |  |  |  |
-| <span id="table-notification_types-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-notification_types-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                             | Type          | Default | Attributes                        | Comment |
+| ------------------------------------------------------------------ | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-notification_types-id">`id`</span>                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-notification_types-message">`message`</span>       | `string(255)` |         |                                   |         |
+| <span id="table-notification_types-type">`type`</span>             | `string(255)` |         |                                   |         |
+| <span id="table-notification_types-icon_class">`icon_class`</span> | `string(255)` |         |                                   |         |
+| <span id="table-notification_types-created_at">`created_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-notification_types-updated_at">`updated_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `notifications`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-notifications-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-notifications-model_id">`model_id`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-notifications-userid_created">`userid_created`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-notifications-type_id">`type_id`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-notifications-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-notifications-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                                | Type        | Default | Attributes                        | Comment |
+| --------------------------------------------------------------------- | ----------- | ------- | --------------------------------- | ------- |
+| <span id="table-notifications-id">`id`</span>                         | `integer`   |         | `autoIncrement:true`              |         |
+| <span id="table-notifications-model_id">`model_id`</span>             | `integer`   |         | `autoIncrement:false`             |         |
+| <span id="table-notifications-userid_created">`userid_created`</span> | `integer`   |         | `autoIncrement:false`             |         |
+| <span id="table-notifications-type_id">`type_id`</span>               | `integer`   |         | `autoIncrement:false`             |         |
+| <span id="table-notifications-created_at">`created_at`</span>         | `timestamp` |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-notifications-updated_at">`updated_at`</span>         | `timestamp` |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `organization`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-organization-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-organization-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-organization-phone">`phone`</span> | `string(255)` |  |  |  |
-| <span id="table-organization-website">`website`</span> | `string(255)` |  |  |  |
-| <span id="table-organization-address">`address`</span> | `string(255)` |  |  |  |
-| <span id="table-organization-head">`head`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-organization-internal_notes">`internal_notes`</span> | `string(255)` |  |  |  |
-| <span id="table-organization-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-organization-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                               | Type          | Default | Attributes                                | Comment |
+| -------------------------------------------------------------------- | ------------- | ------- | ----------------------------------------- | ------- |
+| <span id="table-organization-id">`id`</span>                         | `integer`     |         | `autoIncrement:true`                      |         |
+| <span id="table-organization-name">`name`</span>                     | `string(255)` |         |                                           |         |
+| <span id="table-organization-phone">`phone`</span>                   | `string(255)` |         |                                           |         |
+| <span id="table-organization-website">`website`</span>               | `string(255)` |         |                                           |         |
+| <span id="table-organization-address">`address`</span>               | `string(255)` |         |                                           |         |
+| <span id="table-organization-head">`head`</span>                     | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-organization-internal_notes">`internal_notes`</span> | `string(255)` |         |                                           |         |
+| <span id="table-organization-created_at">`created_at`</span>         | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |         |
+| <span id="table-organization-updated_at">`updated_at`</span>         | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |         |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `head` | `index` | `head` |  |  |
-| `organization_ibfk_1` | `foreign` | `head` |  | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"NO ACTION"` |
+| Index Name            | Type      | Columns | Algorithm | Attributes                                                                               |
+| --------------------- | --------- | ------- | --------- | ---------------------------------------------------------------------------------------- |
+| `head`                | `index`   | `head`  |           |                                                                                          |
+| `organization_ibfk_1` | `foreign` | `head`  |           | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"NO ACTION"` |
 
 
 ## Table: `password_resets`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-password_resets-email">`email`</span> | `string(255)` |  |  |  |
-| <span id="table-password_resets-token">`token`</span> | `string(255)` |  |  |  |
-| <span id="table-password_resets-created_at">`created_at`</span> | `dateTime` | `0000-00-00 00:00:00` | `precision:0` |  |
+| Column                                                          | Type          | Default               | Attributes    | Comment |
+| --------------------------------------------------------------- | ------------- | --------------------- | ------------- | ------- |
+| <span id="table-password_resets-email">`email`</span>           | `string(255)` |                       |               |         |
+| <span id="table-password_resets-token">`token`</span>           | `string(255)` |                       |               |         |
+| <span id="table-password_resets-created_at">`created_at`</span> | `dateTime`    | `0000-00-00 00:00:00` | `precision:0` |         |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `password_resets_email_index` | `index` | `email` |  |  |
-| `password_resets_token_index` | `index` | `token` |  |  |
+| Index Name                    | Type    | Columns | Algorithm | Attributes |
+| ----------------------------- | ------- | ------- | --------- | ---------- |
+| `password_resets_email_index` | `index` | `email` |           |            |
+| `password_resets_token_index` | `index` | `token` |           |            |
 
 
 ## Table: `plugins`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-plugins-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-plugins-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-plugins-path">`path`</span> | `string(255)` |  |  |  |
-| <span id="table-plugins-status">`status`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-plugins-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-plugins-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                  | Type          | Default | Attributes                        | Comment |
+| ------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-plugins-id">`id`</span>                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-plugins-name">`name`</span>             | `string(255)` |         |                                   |         |
+| <span id="table-plugins-path">`path`</span>             | `string(255)` |         |                                   |         |
+| <span id="table-plugins-status">`status`</span>         | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-plugins-created_at">`created_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-plugins-updated_at">`updated_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `queue_services`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-queue_services-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-queue_services-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-queue_services-short_name">`short_name`</span> | `string(255)` |  |  |  |
-| <span id="table-queue_services-status">`status`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-queue_services-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-queue_services-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                         | Type          | Default | Attributes                        | Comment |
+| -------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-queue_services-id">`id`</span>                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-queue_services-name">`name`</span>             | `string(255)` |         |                                   |         |
+| <span id="table-queue_services-short_name">`short_name`</span> | `string(255)` |         |                                   |         |
+| <span id="table-queue_services-status">`status`</span>         | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-queue_services-created_at">`created_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-queue_services-updated_at">`updated_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `rating_ref`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-rating_ref-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-rating_ref-rating_id">`rating_id`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-rating_ref-ticket_id">`ticket_id`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-rating_ref-thread_id">`thread_id`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-rating_ref-rating_value">`rating_value`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-rating_ref-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-rating_ref-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                         | Type        | Default | Attributes                        | Comment |
+| -------------------------------------------------------------- | ----------- | ------- | --------------------------------- | ------- |
+| <span id="table-rating_ref-id">`id`</span>                     | `integer`   |         | `autoIncrement:true`              |         |
+| <span id="table-rating_ref-rating_id">`rating_id`</span>       | `integer`   |         | `autoIncrement:false`             |         |
+| <span id="table-rating_ref-ticket_id">`ticket_id`</span>       | `integer`   |         | `autoIncrement:false`             |         |
+| <span id="table-rating_ref-thread_id">`thread_id`</span>       | `integer`   |         | `autoIncrement:false`             |         |
+| <span id="table-rating_ref-rating_value">`rating_value`</span> | `integer`   |         | `autoIncrement:false`             |         |
+| <span id="table-rating_ref-created_at">`created_at`</span>     | `timestamp` |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-rating_ref-updated_at">`updated_at`</span>     | `timestamp` |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `ratings`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-ratings-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-ratings-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-ratings-display_order">`display_order`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-ratings-allow_modification">`allow_modification`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-ratings-rating_scale">`rating_scale`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-ratings-rating_area">`rating_area`</span> | `string(255)` |  |  |  |
-| <span id="table-ratings-restrict">`restrict`</span> | `string(255)` |  |  |  |
-| <span id="table-ratings-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-ratings-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                                  | Type          | Default | Attributes                        | Comment |
+| ----------------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-ratings-id">`id`</span>                                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-ratings-name">`name`</span>                             | `string(255)` |         |                                   |         |
+| <span id="table-ratings-display_order">`display_order`</span>           | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-ratings-allow_modification">`allow_modification`</span> | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-ratings-rating_scale">`rating_scale`</span>             | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-ratings-rating_area">`rating_area`</span>               | `string(255)` |         |                                   |         |
+| <span id="table-ratings-restrict">`restrict`</span>                     | `string(255)` |         |                                   |         |
+| <span id="table-ratings-created_at">`created_at`</span>                 | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-ratings-updated_at">`updated_at`</span>                 | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `settings_alert_notice`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-settings_alert_notice-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-settings_alert_notice-ticket_status">`ticket_status`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-ticket_admin_email">`ticket_admin_email`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-ticket_department_manager">`ticket_department_manager`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-ticket_department_member">`ticket_department_member`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-ticket_organization_accmanager">`ticket_organization_accmanager`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-message_status">`message_status`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-message_last_responder">`message_last_responder`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-message_assigned_agent">`message_assigned_agent`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-message_department_manager">`message_department_manager`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-message_organization_accmanager">`message_organization_accmanager`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-internal_status">`internal_status`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-internal_last_responder">`internal_last_responder`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-internal_assigned_agent">`internal_assigned_agent`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-internal_department_manager">`internal_department_manager`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-assignment_status">`assignment_status`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-assignment_assigned_agent">`assignment_assigned_agent`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-assignment_team_leader">`assignment_team_leader`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-assignment_team_member">`assignment_team_member`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-transfer_status">`transfer_status`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-transfer_assigned_agent">`transfer_assigned_agent`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-transfer_department_manager">`transfer_department_manager`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-transfer_department_member">`transfer_department_member`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-overdue_status">`overdue_status`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-overdue_assigned_agent">`overdue_assigned_agent`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-overdue_department_manager">`overdue_department_manager`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-overdue_department_member">`overdue_department_member`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-system_error">`system_error`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-sql_error">`sql_error`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-excessive_failure">`excessive_failure`</span> | `boolean` |  |  |  |
-| <span id="table-settings_alert_notice-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-settings_alert_notice-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                                                                          | Type        | Default | Attributes                        | Comment |
+| --------------------------------------------------------------------------------------------------------------- | ----------- | ------- | --------------------------------- | ------- |
+| <span id="table-settings_alert_notice-id">`id`</span>                                                           | `integer`   |         | `autoIncrement:true`              |         |
+| <span id="table-settings_alert_notice-ticket_status">`ticket_status`</span>                                     | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-ticket_admin_email">`ticket_admin_email`</span>                           | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-ticket_department_manager">`ticket_department_manager`</span>             | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-ticket_department_member">`ticket_department_member`</span>               | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-ticket_organization_accmanager">`ticket_organization_accmanager`</span>   | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-message_status">`message_status`</span>                                   | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-message_last_responder">`message_last_responder`</span>                   | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-message_assigned_agent">`message_assigned_agent`</span>                   | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-message_department_manager">`message_department_manager`</span>           | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-message_organization_accmanager">`message_organization_accmanager`</span> | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-internal_status">`internal_status`</span>                                 | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-internal_last_responder">`internal_last_responder`</span>                 | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-internal_assigned_agent">`internal_assigned_agent`</span>                 | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-internal_department_manager">`internal_department_manager`</span>         | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-assignment_status">`assignment_status`</span>                             | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-assignment_assigned_agent">`assignment_assigned_agent`</span>             | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-assignment_team_leader">`assignment_team_leader`</span>                   | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-assignment_team_member">`assignment_team_member`</span>                   | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-transfer_status">`transfer_status`</span>                                 | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-transfer_assigned_agent">`transfer_assigned_agent`</span>                 | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-transfer_department_manager">`transfer_department_manager`</span>         | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-transfer_department_member">`transfer_department_member`</span>           | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-overdue_status">`overdue_status`</span>                                   | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-overdue_assigned_agent">`overdue_assigned_agent`</span>                   | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-overdue_department_manager">`overdue_department_manager`</span>           | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-overdue_department_member">`overdue_department_member`</span>             | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-system_error">`system_error`</span>                                       | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-sql_error">`sql_error`</span>                                             | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-excessive_failure">`excessive_failure`</span>                             | `boolean`   |         |                                   |         |
+| <span id="table-settings_alert_notice-created_at">`created_at`</span>                                           | `timestamp` |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-settings_alert_notice-updated_at">`updated_at`</span>                                           | `timestamp` |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `settings_auto_response`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-settings_auto_response-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-settings_auto_response-new_ticket">`new_ticket`</span> | `boolean` |  |  |  |
-| <span id="table-settings_auto_response-agent_new_ticket">`agent_new_ticket`</span> | `boolean` |  |  |  |
-| <span id="table-settings_auto_response-submitter">`submitter`</span> | `boolean` |  |  |  |
-| <span id="table-settings_auto_response-participants">`participants`</span> | `boolean` |  |  |  |
-| <span id="table-settings_auto_response-overlimit">`overlimit`</span> | `boolean` |  |  |  |
-| <span id="table-settings_auto_response-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-settings_auto_response-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                                             | Type        | Default | Attributes                        | Comment |
+| ---------------------------------------------------------------------------------- | ----------- | ------- | --------------------------------- | ------- |
+| <span id="table-settings_auto_response-id">`id`</span>                             | `integer`   |         | `autoIncrement:true`              |         |
+| <span id="table-settings_auto_response-new_ticket">`new_ticket`</span>             | `boolean`   |         |                                   |         |
+| <span id="table-settings_auto_response-agent_new_ticket">`agent_new_ticket`</span> | `boolean`   |         |                                   |         |
+| <span id="table-settings_auto_response-submitter">`submitter`</span>               | `boolean`   |         |                                   |         |
+| <span id="table-settings_auto_response-participants">`participants`</span>         | `boolean`   |         |                                   |         |
+| <span id="table-settings_auto_response-overlimit">`overlimit`</span>               | `boolean`   |         |                                   |         |
+| <span id="table-settings_auto_response-created_at">`created_at`</span>             | `timestamp` |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-settings_auto_response-updated_at">`updated_at`</span>             | `timestamp` |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `settings_company`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-settings_company-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-settings_company-company_name">`company_name`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_company-website">`website`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_company-phone">`phone`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_company-address">`address`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_company-landing_page">`landing_page`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_company-offline_page">`offline_page`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_company-thank_page">`thank_page`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_company-logo">`logo`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_company-use_logo">`use_logo`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_company-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-settings_company-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                               | Type          | Default | Attributes                        | Comment |
+| -------------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-settings_company-id">`id`</span>                     | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-settings_company-company_name">`company_name`</span> | `string(255)` |         |                                   |         |
+| <span id="table-settings_company-website">`website`</span>           | `string(255)` |         |                                   |         |
+| <span id="table-settings_company-phone">`phone`</span>               | `string(255)` |         |                                   |         |
+| <span id="table-settings_company-address">`address`</span>           | `string(255)` |         |                                   |         |
+| <span id="table-settings_company-landing_page">`landing_page`</span> | `string(255)` |         |                                   |         |
+| <span id="table-settings_company-offline_page">`offline_page`</span> | `string(255)` |         |                                   |         |
+| <span id="table-settings_company-thank_page">`thank_page`</span>     | `string(255)` |         |                                   |         |
+| <span id="table-settings_company-logo">`logo`</span>                 | `string(255)` |         |                                   |         |
+| <span id="table-settings_company-use_logo">`use_logo`</span>         | `string(255)` |         |                                   |         |
+| <span id="table-settings_company-created_at">`created_at`</span>     | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-settings_company-updated_at">`updated_at`</span>     | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `settings_email`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-settings_email-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-settings_email-template">`template`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_email-sys_email">`sys_email`</span> | `string(255)` |  | `nullable:true` |  |
-| <span id="table-settings_email-alert_email">`alert_email`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_email-admin_email">`admin_email`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_email-mta">`mta`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_email-email_fetching">`email_fetching`</span> | `boolean` |  |  |  |
-| <span id="table-settings_email-notification_cron">`notification_cron`</span> | `boolean` |  |  |  |
-| <span id="table-settings_email-strip">`strip`</span> | `boolean` |  |  |  |
-| <span id="table-settings_email-separator">`separator`</span> | `boolean` |  |  |  |
-| <span id="table-settings_email-all_emails">`all_emails`</span> | `boolean` |  |  |  |
-| <span id="table-settings_email-email_collaborator">`email_collaborator`</span> | `boolean` |  |  |  |
-| <span id="table-settings_email-attachment">`attachment`</span> | `boolean` |  |  |  |
-| <span id="table-settings_email-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-settings_email-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                                         | Type          | Default | Attributes                        | Comment |
+| ------------------------------------------------------------------------------ | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-settings_email-id">`id`</span>                                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-settings_email-template">`template`</span>                     | `string(255)` |         |                                   |         |
+| <span id="table-settings_email-sys_email">`sys_email`</span>                   | `string(255)` |         | `nullable:true`                   |         |
+| <span id="table-settings_email-alert_email">`alert_email`</span>               | `string(255)` |         |                                   |         |
+| <span id="table-settings_email-admin_email">`admin_email`</span>               | `string(255)` |         |                                   |         |
+| <span id="table-settings_email-mta">`mta`</span>                               | `string(255)` |         |                                   |         |
+| <span id="table-settings_email-email_fetching">`email_fetching`</span>         | `boolean`     |         |                                   |         |
+| <span id="table-settings_email-notification_cron">`notification_cron`</span>   | `boolean`     |         |                                   |         |
+| <span id="table-settings_email-strip">`strip`</span>                           | `boolean`     |         |                                   |         |
+| <span id="table-settings_email-separator">`separator`</span>                   | `boolean`     |         |                                   |         |
+| <span id="table-settings_email-all_emails">`all_emails`</span>                 | `boolean`     |         |                                   |         |
+| <span id="table-settings_email-email_collaborator">`email_collaborator`</span> | `boolean`     |         |                                   |         |
+| <span id="table-settings_email-attachment">`attachment`</span>                 | `boolean`     |         |                                   |         |
+| <span id="table-settings_email-created_at">`created_at`</span>                 | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-settings_email-updated_at">`updated_at`</span>                 | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `settings_ratings`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-settings_ratings-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-settings_ratings-rating_name">`rating_name`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_ratings-publish">`publish`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-settings_ratings-modify">`modify`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-settings_ratings-slug">`slug`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_ratings-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-settings_ratings-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                             | Type          | Default | Attributes                        | Comment |
+| ------------------------------------------------------------------ | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-settings_ratings-id">`id`</span>                   | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-settings_ratings-rating_name">`rating_name`</span> | `string(255)` |         |                                   |         |
+| <span id="table-settings_ratings-publish">`publish`</span>         | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-settings_ratings-modify">`modify`</span>           | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-settings_ratings-slug">`slug`</span>               | `string(255)` |         |                                   |         |
+| <span id="table-settings_ratings-created_at">`created_at`</span>   | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-settings_ratings-updated_at">`updated_at`</span>   | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `settings_ratings_slug_unique` | `unique` | `slug` |  |  |
+| Index Name                     | Type     | Columns | Algorithm | Attributes |
+| ------------------------------ | -------- | ------- | --------- | ---------- |
+| `settings_ratings_slug_unique` | `unique` | `slug`  |           |            |
 
 
 ## Table: `settings_security`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-settings_security-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-settings_security-lockout_message">`lockout_message`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_security-backlist_offender">`backlist_offender`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-settings_security-backlist_threshold">`backlist_threshold`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-settings_security-lockout_period">`lockout_period`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-settings_security-days_to_keep_logs">`days_to_keep_logs`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-settings_security-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-settings_security-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                                            | Type          | Default | Attributes                        | Comment |
+| --------------------------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-settings_security-id">`id`</span>                                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-settings_security-lockout_message">`lockout_message`</span>       | `string(255)` |         |                                   |         |
+| <span id="table-settings_security-backlist_offender">`backlist_offender`</span>   | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-settings_security-backlist_threshold">`backlist_threshold`</span> | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-settings_security-lockout_period">`lockout_period`</span>         | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-settings_security-days_to_keep_logs">`days_to_keep_logs`</span>   | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-settings_security-created_at">`created_at`</span>                 | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-settings_security-updated_at">`updated_at`</span>                 | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `settings_system`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-settings_system-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-settings_system-status">`status`</span> | `boolean` |  |  |  |
-| <span id="table-settings_system-url">`url`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_system-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_system-department">`department`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_system-page_size">`page_size`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_system-log_level">`log_level`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_system-purge_log">`purge_log`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_system-api_enable">`api_enable`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-settings_system-api_key_mandatory">`api_key_mandatory`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-settings_system-api_key">`api_key`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_system-name_format">`name_format`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_system-time_farmat">`time_farmat`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-settings_system-date_format">`date_format`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-settings_system-date_time_format">`date_time_format`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-settings_system-day_date_time">`day_date_time`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_system-time_zone">`time_zone`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-settings_system-content">`content`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_system-version">`version`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_system-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-settings_system-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                                        | Type          | Default | Attributes                                | Comment |
+| ----------------------------------------------------------------------------- | ------------- | ------- | ----------------------------------------- | ------- |
+| <span id="table-settings_system-id">`id`</span>                               | `integer`     |         | `autoIncrement:true`                      |         |
+| <span id="table-settings_system-status">`status`</span>                       | `boolean`     |         |                                           |         |
+| <span id="table-settings_system-url">`url`</span>                             | `string(255)` |         |                                           |         |
+| <span id="table-settings_system-name">`name`</span>                           | `string(255)` |         |                                           |         |
+| <span id="table-settings_system-department">`department`</span>               | `string(255)` |         |                                           |         |
+| <span id="table-settings_system-page_size">`page_size`</span>                 | `string(255)` |         |                                           |         |
+| <span id="table-settings_system-log_level">`log_level`</span>                 | `string(255)` |         |                                           |         |
+| <span id="table-settings_system-purge_log">`purge_log`</span>                 | `string(255)` |         |                                           |         |
+| <span id="table-settings_system-api_enable">`api_enable`</span>               | `integer`     |         | `autoIncrement:false`                     |         |
+| <span id="table-settings_system-api_key_mandatory">`api_key_mandatory`</span> | `integer`     |         | `autoIncrement:false`                     |         |
+| <span id="table-settings_system-api_key">`api_key`</span>                     | `string(255)` |         |                                           |         |
+| <span id="table-settings_system-name_format">`name_format`</span>             | `string(255)` |         |                                           |         |
+| <span id="table-settings_system-time_farmat">`time_farmat`</span>             | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-settings_system-date_format">`date_format`</span>             | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-settings_system-date_time_format">`date_time_format`</span>   | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-settings_system-day_date_time">`day_date_time`</span>         | `string(255)` |         |                                           |         |
+| <span id="table-settings_system-time_zone">`time_zone`</span>                 | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-settings_system-content">`content`</span>                     | `string(255)` |         |                                           |         |
+| <span id="table-settings_system-version">`version`</span>                     | `string(255)` |         |                                           |         |
+| <span id="table-settings_system-created_at">`created_at`</span>               | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |         |
+| <span id="table-settings_system-updated_at">`updated_at`</span>               | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |         |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `time_farmat` | `index` | `time_farmat` |  |  |
-| `date_format` | `index` | `date_format` |  |  |
-| `date_time_format` | `index` | `date_time_format` |  |  |
-| `time_zone` | `index` | `time_zone` |  |  |
-| `settings_system_ibfk_1` | `foreign` | `time_zone` |  | `references:"id"`<br/>`on:"timezone"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `settings_system_ibfk_2` | `foreign` | `time_farmat` |  | `references:"id"`<br/>`on:"time_format"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `settings_system_ibfk_3` | `foreign` | `date_format` |  | `references:"id"`<br/>`on:"date_format"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `settings_system_ibfk_4` | `foreign` | `date_time_format` |  | `references:"id"`<br/>`on:"date_time_format"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
+| Index Name               | Type      | Columns            | Algorithm | Attributes                                                                                         |
+| ------------------------ | --------- | ------------------ | --------- | -------------------------------------------------------------------------------------------------- |
+| `time_farmat`            | `index`   | `time_farmat`      |           |                                                                                                    |
+| `date_format`            | `index`   | `date_format`      |           |                                                                                                    |
+| `date_time_format`       | `index`   | `date_time_format` |           |                                                                                                    |
+| `time_zone`              | `index`   | `time_zone`        |           |                                                                                                    |
+| `settings_system_ibfk_1` | `foreign` | `time_zone`        |           | `references:"id"`<br/>`on:"timezone"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"`         |
+| `settings_system_ibfk_2` | `foreign` | `time_farmat`      |           | `references:"id"`<br/>`on:"time_format"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"`      |
+| `settings_system_ibfk_3` | `foreign` | `date_format`      |           | `references:"id"`<br/>`on:"date_format"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"`      |
+| `settings_system_ibfk_4` | `foreign` | `date_time_format` |           | `references:"id"`<br/>`on:"date_time_format"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 
 ## Table: `settings_ticket`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-settings_ticket-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-settings_ticket-num_format">`num_format`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_ticket-num_sequence">`num_sequence`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_ticket-priority">`priority`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_ticket-sla">`sla`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_ticket-help_topic">`help_topic`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_ticket-max_open_ticket">`max_open_ticket`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_ticket-collision_avoid">`collision_avoid`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_ticket-lock_ticket_frequency">`lock_ticket_frequency`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_ticket-captcha">`captcha`</span> | `string(255)` |  |  |  |
-| <span id="table-settings_ticket-status">`status`</span> | `boolean` |  |  |  |
-| <span id="table-settings_ticket-claim_response">`claim_response`</span> | `boolean` |  |  |  |
-| <span id="table-settings_ticket-assigned_ticket">`assigned_ticket`</span> | `boolean` |  |  |  |
-| <span id="table-settings_ticket-answered_ticket">`answered_ticket`</span> | `boolean` |  |  |  |
-| <span id="table-settings_ticket-agent_mask">`agent_mask`</span> | `boolean` |  |  |  |
-| <span id="table-settings_ticket-html">`html`</span> | `boolean` |  |  |  |
-| <span id="table-settings_ticket-client_update">`client_update`</span> | `boolean` |  |  |  |
-| <span id="table-settings_ticket-max_file_size">`max_file_size`</span> | `boolean` |  |  |  |
-| <span id="table-settings_ticket-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-settings_ticket-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                                                | Type          | Default | Attributes                        | Comment |
+| ------------------------------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-settings_ticket-id">`id`</span>                                       | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-settings_ticket-num_format">`num_format`</span>                       | `string(255)` |         |                                   |         |
+| <span id="table-settings_ticket-num_sequence">`num_sequence`</span>                   | `string(255)` |         |                                   |         |
+| <span id="table-settings_ticket-priority">`priority`</span>                           | `string(255)` |         |                                   |         |
+| <span id="table-settings_ticket-sla">`sla`</span>                                     | `string(255)` |         |                                   |         |
+| <span id="table-settings_ticket-help_topic">`help_topic`</span>                       | `string(255)` |         |                                   |         |
+| <span id="table-settings_ticket-max_open_ticket">`max_open_ticket`</span>             | `string(255)` |         |                                   |         |
+| <span id="table-settings_ticket-collision_avoid">`collision_avoid`</span>             | `string(255)` |         |                                   |         |
+| <span id="table-settings_ticket-lock_ticket_frequency">`lock_ticket_frequency`</span> | `string(255)` |         |                                   |         |
+| <span id="table-settings_ticket-captcha">`captcha`</span>                             | `string(255)` |         |                                   |         |
+| <span id="table-settings_ticket-status">`status`</span>                               | `boolean`     |         |                                   |         |
+| <span id="table-settings_ticket-claim_response">`claim_response`</span>               | `boolean`     |         |                                   |         |
+| <span id="table-settings_ticket-assigned_ticket">`assigned_ticket`</span>             | `boolean`     |         |                                   |         |
+| <span id="table-settings_ticket-answered_ticket">`answered_ticket`</span>             | `boolean`     |         |                                   |         |
+| <span id="table-settings_ticket-agent_mask">`agent_mask`</span>                       | `boolean`     |         |                                   |         |
+| <span id="table-settings_ticket-html">`html`</span>                                   | `boolean`     |         |                                   |         |
+| <span id="table-settings_ticket-client_update">`client_update`</span>                 | `boolean`     |         |                                   |         |
+| <span id="table-settings_ticket-max_file_size">`max_file_size`</span>                 | `boolean`     |         |                                   |         |
+| <span id="table-settings_ticket-created_at">`created_at`</span>                       | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-settings_ticket-updated_at">`updated_at`</span>                       | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `sla_plan`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-sla_plan-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-sla_plan-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-sla_plan-grace_period">`grace_period`</span> | `string(255)` |  |  |  |
-| <span id="table-sla_plan-admin_note">`admin_note`</span> | `string(255)` |  |  |  |
-| <span id="table-sla_plan-status">`status`</span> | `boolean` |  |  |  |
-| <span id="table-sla_plan-transient">`transient`</span> | `boolean` |  |  |  |
-| <span id="table-sla_plan-ticket_overdue">`ticket_overdue`</span> | `boolean` |  |  |  |
-| <span id="table-sla_plan-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-sla_plan-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                           | Type          | Default | Attributes                        | Comment |
+| ---------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-sla_plan-id">`id`</span>                         | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-sla_plan-name">`name`</span>                     | `string(255)` |         |                                   |         |
+| <span id="table-sla_plan-grace_period">`grace_period`</span>     | `string(255)` |         |                                   |         |
+| <span id="table-sla_plan-admin_note">`admin_note`</span>         | `string(255)` |         |                                   |         |
+| <span id="table-sla_plan-status">`status`</span>                 | `boolean`     |         |                                   |         |
+| <span id="table-sla_plan-transient">`transient`</span>           | `boolean`     |         |                                   |         |
+| <span id="table-sla_plan-ticket_overdue">`ticket_overdue`</span> | `boolean`     |         |                                   |         |
+| <span id="table-sla_plan-created_at">`created_at`</span>         | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-sla_plan-updated_at">`updated_at`</span>         | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `social_media`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-social_media-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-social_media-provider">`provider`</span> | `string(255)` |  |  |  |
-| <span id="table-social_media-key">`key`</span> | `string(255)` |  |  |  |
-| <span id="table-social_media-value">`value`</span> | `string(255)` |  |  |  |
-| <span id="table-social_media-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-social_media-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                       | Type          | Default | Attributes                        | Comment |
+| ------------------------------------------------------------ | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-social_media-id">`id`</span>                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-social_media-provider">`provider`</span>     | `string(255)` |         |                                   |         |
+| <span id="table-social_media-key">`key`</span>               | `string(255)` |         |                                   |         |
+| <span id="table-social_media-value">`value`</span>           | `string(255)` |         |                                   |         |
+| <span id="table-social_media-created_at">`created_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-social_media-updated_at">`updated_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `team_assign_agent`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-team_assign_agent-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-team_assign_agent-team_id">`team_id`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-team_assign_agent-agent_id">`agent_id`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-team_assign_agent-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-team_assign_agent-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                            | Type        | Default | Attributes                                | Comment |
+| ----------------------------------------------------------------- | ----------- | ------- | ----------------------------------------- | ------- |
+| <span id="table-team_assign_agent-id">`id`</span>                 | `integer`   |         | `autoIncrement:true`                      |         |
+| <span id="table-team_assign_agent-team_id">`team_id`</span>       | `integer`   |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-team_assign_agent-agent_id">`agent_id`</span>     | `integer`   |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-team_assign_agent-created_at">`created_at`</span> | `timestamp` |         | `precision:0`<br/>`nullable:true`         |         |
+| <span id="table-team_assign_agent-updated_at">`updated_at`</span> | `timestamp` |         | `precision:0`<br/>`nullable:true`         |         |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `team_id` | `index` | `team_id` |  |  |
-| `agent_id` | `index` | `agent_id` |  |  |
-| `team_assign_agent_ibfk_1` | `foreign` | `team_id` |  | `references:"id"`<br/>`on:"teams"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `team_assign_agent_ibfk_2` | `foreign` | `agent_id` |  | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
+| Index Name                 | Type      | Columns    | Algorithm | Attributes                                                                              |
+| -------------------------- | --------- | ---------- | --------- | --------------------------------------------------------------------------------------- |
+| `team_id`                  | `index`   | `team_id`  |           |                                                                                         |
+| `agent_id`                 | `index`   | `agent_id` |           |                                                                                         |
+| `team_assign_agent_ibfk_1` | `foreign` | `team_id`  |           | `references:"id"`<br/>`on:"teams"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
+| `team_assign_agent_ibfk_2` | `foreign` | `agent_id` |           | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 
 ## Table: `teams`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-teams-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-teams-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-teams-status">`status`</span> | `boolean` |  |  |  |
-| <span id="table-teams-team_lead">`team_lead`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-teams-assign_alert">`assign_alert`</span> | `boolean` |  |  |  |
-| <span id="table-teams-admin_notes">`admin_notes`</span> | `string(255)` |  |  |  |
-| <span id="table-teams-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-teams-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                    | Type          | Default | Attributes                                | Comment |
+| --------------------------------------------------------- | ------------- | ------- | ----------------------------------------- | ------- |
+| <span id="table-teams-id">`id`</span>                     | `integer`     |         | `autoIncrement:true`                      |         |
+| <span id="table-teams-name">`name`</span>                 | `string(255)` |         |                                           |         |
+| <span id="table-teams-status">`status`</span>             | `boolean`     |         |                                           |         |
+| <span id="table-teams-team_lead">`team_lead`</span>       | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-teams-assign_alert">`assign_alert`</span> | `boolean`     |         |                                           |         |
+| <span id="table-teams-admin_notes">`admin_notes`</span>   | `string(255)` |         |                                           |         |
+| <span id="table-teams-created_at">`created_at`</span>     | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |         |
+| <span id="table-teams-updated_at">`updated_at`</span>     | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |         |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `team_lead` | `index` | `team_lead` |  |  |
-| `teams_ibfk_1` | `foreign` | `team_lead` |  | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
+| Index Name     | Type      | Columns     | Algorithm | Attributes                                                                              |
+| -------------- | --------- | ----------- | --------- | --------------------------------------------------------------------------------------- |
+| `team_lead`    | `index`   | `team_lead` |           |                                                                                         |
+| `teams_ibfk_1` | `foreign` | `team_lead` |           | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 
 ## Table: `template`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-template-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-template-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-template-status">`status`</span> | `boolean` |  |  |  |
-| <span id="table-template-template_set_to_clone">`template_set_to_clone`</span> | `string(255)` |  |  |  |
-| <span id="table-template-language">`language`</span> | `string(255)` |  |  |  |
-| <span id="table-template-internal_note">`internal_note`</span> | `string(255)` |  |  |  |
-| <span id="table-template-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-template-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                                         | Type          | Default | Attributes                        | Comment |
+| ------------------------------------------------------------------------------ | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-template-id">`id`</span>                                       | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-template-name">`name`</span>                                   | `string(255)` |         |                                   |         |
+| <span id="table-template-status">`status`</span>                               | `boolean`     |         |                                   |         |
+| <span id="table-template-template_set_to_clone">`template_set_to_clone`</span> | `string(255)` |         |                                   |         |
+| <span id="table-template-language">`language`</span>                           | `string(255)` |         |                                   |         |
+| <span id="table-template-internal_note">`internal_note`</span>                 | `string(255)` |         |                                   |         |
+| <span id="table-template-created_at">`created_at`</span>                       | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-template-updated_at">`updated_at`</span>                       | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `template_sets`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-template_sets-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-template_sets-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-template_sets-active">`active`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-template_sets-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-template_sets-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                        | Type          | Default | Attributes                        | Comment |
+| ------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-template_sets-id">`id`</span>                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-template_sets-name">`name`</span>             | `string(255)` |         |                                   |         |
+| <span id="table-template_sets-active">`active`</span>         | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-template_sets-created_at">`created_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-template_sets-updated_at">`updated_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `template_types`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-template_types-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-template_types-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-template_types-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-template_types-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                         | Type          | Default | Attributes                        | Comment |
+| -------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-template_types-id">`id`</span>                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-template_types-name">`name`</span>             | `string(255)` |         |                                   |         |
+| <span id="table-template_types-created_at">`created_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-template_types-updated_at">`updated_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `templates`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-templates-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-templates-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-templates-variable">`variable`</span> | `string(255)` |  |  |  |
-| <span id="table-templates-type">`type`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-templates-subject">`subject`</span> | `string(255)` |  |  |  |
-| <span id="table-templates-message">`message`</span> | `text` |  |  |  |
-| <span id="table-templates-description">`description`</span> | `string(255)` |  |  |  |
-| <span id="table-templates-set_id">`set_id`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-templates-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-templates-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                      | Type          | Default | Attributes                        | Comment |
+| ----------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-templates-id">`id`</span>                   | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-templates-name">`name`</span>               | `string(255)` |         |                                   |         |
+| <span id="table-templates-variable">`variable`</span>       | `string(255)` |         |                                   |         |
+| <span id="table-templates-type">`type`</span>               | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-templates-subject">`subject`</span>         | `string(255)` |         |                                   |         |
+| <span id="table-templates-message">`message`</span>         | `text`        |         |                                   |         |
+| <span id="table-templates-description">`description`</span> | `string(255)` |         |                                   |         |
+| <span id="table-templates-set_id">`set_id`</span>           | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-templates-created_at">`created_at`</span>   | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-templates-updated_at">`updated_at`</span>   | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `ticket_attachment`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-ticket_attachment-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-ticket_attachment-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-ticket_attachment-thread_id">`thread_id`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-ticket_attachment-size">`size`</span> | `string(255)` |  |  |  |
-| <span id="table-ticket_attachment-type">`type`</span> | `string(255)` |  |  |  |
-| <span id="table-ticket_attachment-poster">`poster`</span> | `string(255)` |  |  |  |
-| <span id="table-ticket_attachment-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-ticket_attachment-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| `file` | | | | Not Defined In Blueprints |
+| Column                                                            | Type          | Default | Attributes                                | Comment                   |
+| ----------------------------------------------------------------- | ------------- | ------- | ----------------------------------------- | ------------------------- |
+| <span id="table-ticket_attachment-id">`id`</span>                 | `integer`     |         | `autoIncrement:true`                      |                           |
+| <span id="table-ticket_attachment-name">`name`</span>             | `string(255)` |         |                                           |                           |
+| <span id="table-ticket_attachment-thread_id">`thread_id`</span>   | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |                           |
+| <span id="table-ticket_attachment-size">`size`</span>             | `string(255)` |         |                                           |                           |
+| <span id="table-ticket_attachment-type">`type`</span>             | `string(255)` |         |                                           |                           |
+| <span id="table-ticket_attachment-poster">`poster`</span>         | `string(255)` |         |                                           |                           |
+| <span id="table-ticket_attachment-created_at">`created_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |                           |
+| <span id="table-ticket_attachment-updated_at">`updated_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |                           |
+| `file`                                                            |               |         |                                           | Not Defined In Blueprints |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `thread_id` | `index` | `thread_id` |  |  |
-| `ticket_attachment_ibfk_1` | `foreign` | `thread_id` |  | `references:"id"`<br/>`on:"ticket_thread"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
+| Index Name                 | Type      | Columns     | Algorithm | Attributes                                                                                      |
+| -------------------------- | --------- | ----------- | --------- | ----------------------------------------------------------------------------------------------- |
+| `thread_id`                | `index`   | `thread_id` |           |                                                                                                 |
+| `ticket_attachment_ibfk_1` | `foreign` | `thread_id` |           | `references:"id"`<br/>`on:"ticket_thread"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 
 ## Table: `ticket_collaborator`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-ticket_collaborator-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-ticket_collaborator-isactive">`isactive`</span> | `boolean` |  |  |  |
-| <span id="table-ticket_collaborator-ticket_id">`ticket_id`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-ticket_collaborator-user_id">`user_id`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-ticket_collaborator-role">`role`</span> | `string(255)` |  |  |  |
-| <span id="table-ticket_collaborator-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-ticket_collaborator-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                              | Type          | Default | Attributes                                | Comment |
+| ------------------------------------------------------------------- | ------------- | ------- | ----------------------------------------- | ------- |
+| <span id="table-ticket_collaborator-id">`id`</span>                 | `integer`     |         | `autoIncrement:true`                      |         |
+| <span id="table-ticket_collaborator-isactive">`isactive`</span>     | `boolean`     |         |                                           |         |
+| <span id="table-ticket_collaborator-ticket_id">`ticket_id`</span>   | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-ticket_collaborator-user_id">`user_id`</span>       | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-ticket_collaborator-role">`role`</span>             | `string(255)` |         |                                           |         |
+| <span id="table-ticket_collaborator-created_at">`created_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |         |
+| <span id="table-ticket_collaborator-updated_at">`updated_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |         |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `ticket_id` | `index` | `ticket_id` |  |  |
-| `user_id` | `index` | `user_id` |  |  |
-| `ticket_collaborator_ibfk_1` | `foreign` | `ticket_id` |  | `references:"id"`<br/>`on:"tickets"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `ticket_collaborator_ibfk_2` | `foreign` | `user_id` |  | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
+| Index Name                   | Type      | Columns     | Algorithm | Attributes                                                                                |
+| ---------------------------- | --------- | ----------- | --------- | ----------------------------------------------------------------------------------------- |
+| `ticket_id`                  | `index`   | `ticket_id` |           |                                                                                           |
+| `user_id`                    | `index`   | `user_id`   |           |                                                                                           |
+| `ticket_collaborator_ibfk_1` | `foreign` | `ticket_id` |           | `references:"id"`<br/>`on:"tickets"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
+| `ticket_collaborator_ibfk_2` | `foreign` | `user_id`   |           | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"`   |
 
 
 ## Table: `ticket_form_data`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-ticket_form_data-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-ticket_form_data-ticket_id">`ticket_id`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-ticket_form_data-title">`title`</span> | `text` |  |  |  |
-| <span id="table-ticket_form_data-content">`content`</span> | `text` |  |  |  |
-| <span id="table-ticket_form_data-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-ticket_form_data-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                           | Type        | Default | Attributes                                | Comment |
+| ---------------------------------------------------------------- | ----------- | ------- | ----------------------------------------- | ------- |
+| <span id="table-ticket_form_data-id">`id`</span>                 | `integer`   |         | `autoIncrement:true`                      |         |
+| <span id="table-ticket_form_data-ticket_id">`ticket_id`</span>   | `integer`   |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-ticket_form_data-title">`title`</span>           | `text`      |         |                                           |         |
+| <span id="table-ticket_form_data-content">`content`</span>       | `text`      |         |                                           |         |
+| <span id="table-ticket_form_data-created_at">`created_at`</span> | `timestamp` |         | `precision:0`<br/>`nullable:true`         |         |
+| <span id="table-ticket_form_data-updated_at">`updated_at`</span> | `timestamp` |         | `precision:0`<br/>`nullable:true`         |         |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `ticket_id` | `index` | `ticket_id` |  |  |
-| `ticket_form_data_ibfk_1` | `foreign` | `ticket_id` |  | `references:"id"`<br/>`on:"tickets"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
+| Index Name                | Type      | Columns     | Algorithm | Attributes                                                                                |
+| ------------------------- | --------- | ----------- | --------- | ----------------------------------------------------------------------------------------- |
+| `ticket_id`               | `index`   | `ticket_id` |           |                                                                                           |
+| `ticket_form_data_ibfk_1` | `foreign` | `ticket_id` |           | `references:"id"`<br/>`on:"tickets"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 
 ## Table: `ticket_priority`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-ticket_priority-priority_id">`priority_id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-ticket_priority-priority">`priority`</span> | `string(255)` |  |  |  |
-| <span id="table-ticket_priority-status">`status`</span> | `string(255)` |  |  |  |
-| <span id="table-ticket_priority-priority_desc">`priority_desc`</span> | `string(255)` |  |  |  |
-| <span id="table-ticket_priority-priority_color">`priority_color`</span> | `string(255)` |  |  |  |
-| <span id="table-ticket_priority-priority_urgency">`priority_urgency`</span> | `boolean` |  |  |  |
-| <span id="table-ticket_priority-ispublic">`ispublic`</span> | `boolean` |  |  |  |
-| <span id="table-ticket_priority-is_default">`is_default`</span> | `string(255)` |  |  |  |
-| <span id="table-ticket_priority-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-ticket_priority-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                                      | Type          | Default | Attributes                        | Comment |
+| --------------------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-ticket_priority-priority_id">`priority_id`</span>           | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-ticket_priority-priority">`priority`</span>                 | `string(255)` |         |                                   |         |
+| <span id="table-ticket_priority-status">`status`</span>                     | `string(255)` |         |                                   |         |
+| <span id="table-ticket_priority-priority_desc">`priority_desc`</span>       | `string(255)` |         |                                   |         |
+| <span id="table-ticket_priority-priority_color">`priority_color`</span>     | `string(255)` |         |                                   |         |
+| <span id="table-ticket_priority-priority_urgency">`priority_urgency`</span> | `boolean`     |         |                                   |         |
+| <span id="table-ticket_priority-ispublic">`ispublic`</span>                 | `boolean`     |         |                                   |         |
+| <span id="table-ticket_priority-is_default">`is_default`</span>             | `string(255)` |         |                                   |         |
+| <span id="table-ticket_priority-created_at">`created_at`</span>             | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-ticket_priority-updated_at">`updated_at`</span>             | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `ticket_source`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-ticket_source-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-ticket_source-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-ticket_source-value">`value`</span> | `string(255)` |  |  |  |
-| <span id="table-ticket_source-css_class">`css_class`</span> | `string(255)` |  |  |  |
+| Column                                                      | Type          | Default | Attributes           | Comment |
+| ----------------------------------------------------------- | ------------- | ------- | -------------------- | ------- |
+| <span id="table-ticket_source-id">`id`</span>               | `integer`     |         | `autoIncrement:true` |         |
+| <span id="table-ticket_source-name">`name`</span>           | `string(255)` |         |                      |         |
+| <span id="table-ticket_source-value">`value`</span>         | `string(255)` |         |                      |         |
+| <span id="table-ticket_source-css_class">`css_class`</span> | `string(255)` |         |                      |         |
 
 
 ## Table: `ticket_status`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-ticket_status-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-ticket_status-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-ticket_status-state">`state`</span> | `string(255)` |  |  |  |
-| <span id="table-ticket_status-mode">`mode`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-ticket_status-message">`message`</span> | `string(255)` |  |  |  |
-| <span id="table-ticket_status-flags">`flags`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-ticket_status-sort">`sort`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-ticket_status-email_user">`email_user`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-ticket_status-icon_class">`icon_class`</span> | `string(255)` |  |  |  |
-| <span id="table-ticket_status-properties">`properties`</span> | `string(255)` |  |  |  |
-| <span id="table-ticket_status-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-ticket_status-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                        | Type          | Default | Attributes                        | Comment |
+| ------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-ticket_status-id">`id`</span>                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-ticket_status-name">`name`</span>             | `string(255)` |         |                                   |         |
+| <span id="table-ticket_status-state">`state`</span>           | `string(255)` |         |                                   |         |
+| <span id="table-ticket_status-mode">`mode`</span>             | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-ticket_status-message">`message`</span>       | `string(255)` |         |                                   |         |
+| <span id="table-ticket_status-flags">`flags`</span>           | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-ticket_status-sort">`sort`</span>             | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-ticket_status-email_user">`email_user`</span> | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-ticket_status-icon_class">`icon_class`</span> | `string(255)` |         |                                   |         |
+| <span id="table-ticket_status-properties">`properties`</span> | `string(255)` |         |                                   |         |
+| <span id="table-ticket_status-created_at">`created_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-ticket_status-updated_at">`updated_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `ticket_thread`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-ticket_thread-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-ticket_thread-ticket_id">`ticket_id`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-ticket_thread-user_id">`user_id`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-ticket_thread-poster">`poster`</span> | `string(255)` |  |  |  |
-| <span id="table-ticket_thread-source">`source`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-ticket_thread-reply_rating">`reply_rating`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-ticket_thread-rating_count">`rating_count`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-ticket_thread-is_internal">`is_internal`</span> | `boolean` |  |  |  |
-| <span id="table-ticket_thread-title">`title`</span> | `string(255)` |  |  |  |
-| <span id="table-ticket_thread-body">`body`</span> | `text` |  |  |  |
-| <span id="table-ticket_thread-format">`format`</span> | `string(255)` |  |  |  |
-| <span id="table-ticket_thread-ip_address">`ip_address`</span> | `string(255)` |  |  |  |
-| <span id="table-ticket_thread-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-ticket_thread-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                            | Type          | Default | Attributes                                | Comment |
+| ----------------------------------------------------------------- | ------------- | ------- | ----------------------------------------- | ------- |
+| <span id="table-ticket_thread-id">`id`</span>                     | `integer`     |         | `autoIncrement:true`                      |         |
+| <span id="table-ticket_thread-ticket_id">`ticket_id`</span>       | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-ticket_thread-user_id">`user_id`</span>           | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-ticket_thread-poster">`poster`</span>             | `string(255)` |         |                                           |         |
+| <span id="table-ticket_thread-source">`source`</span>             | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-ticket_thread-reply_rating">`reply_rating`</span> | `integer`     |         | `autoIncrement:false`                     |         |
+| <span id="table-ticket_thread-rating_count">`rating_count`</span> | `integer`     |         | `autoIncrement:false`                     |         |
+| <span id="table-ticket_thread-is_internal">`is_internal`</span>   | `boolean`     |         |                                           |         |
+| <span id="table-ticket_thread-title">`title`</span>               | `string(255)` |         |                                           |         |
+| <span id="table-ticket_thread-body">`body`</span>                 | `text`        |         |                                           |         |
+| <span id="table-ticket_thread-format">`format`</span>             | `string(255)` |         |                                           |         |
+| <span id="table-ticket_thread-ip_address">`ip_address`</span>     | `string(255)` |         |                                           |         |
+| <span id="table-ticket_thread-created_at">`created_at`</span>     | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |         |
+| <span id="table-ticket_thread-updated_at">`updated_at`</span>     | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |         |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `ticket_id_2` | `index` | `ticket_id` |  |  |
-| `user_id` | `index` | `user_id` |  |  |
-| `source` | `index` | `source` |  |  |
-| `ticket_thread_ibfk_1` | `foreign` | `ticket_id` |  | `references:"id"`<br/>`on:"tickets"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `ticket_thread_ibfk_2` | `foreign` | `user_id` |  | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `ticket_thread_ibfk_3` | `foreign` | `source` |  | `references:"id"`<br/>`on:"ticket_source"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
+| Index Name             | Type      | Columns     | Algorithm | Attributes                                                                                      |
+| ---------------------- | --------- | ----------- | --------- | ----------------------------------------------------------------------------------------------- |
+| `ticket_id_2`          | `index`   | `ticket_id` |           |                                                                                                 |
+| `user_id`              | `index`   | `user_id`   |           |                                                                                                 |
+| `source`               | `index`   | `source`    |           |                                                                                                 |
+| `ticket_thread_ibfk_1` | `foreign` | `ticket_id` |           | `references:"id"`<br/>`on:"tickets"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"`       |
+| `ticket_thread_ibfk_2` | `foreign` | `user_id`   |           | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"`         |
+| `ticket_thread_ibfk_3` | `foreign` | `source`    |           | `references:"id"`<br/>`on:"ticket_source"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 
 ## Table: `ticket_token`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-ticket_token-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-ticket_token-ticket_id">`ticket_id`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-ticket_token-token">`token`</span> | `string(255)` |  |  |  |
-| <span id="table-ticket_token-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-ticket_token-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                       | Type          | Default | Attributes                        | Comment |
+| ------------------------------------------------------------ | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-ticket_token-id">`id`</span>                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-ticket_token-ticket_id">`ticket_id`</span>   | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-ticket_token-token">`token`</span>           | `string(255)` |         |                                   |         |
+| <span id="table-ticket_token-created_at">`created_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-ticket_token-updated_at">`updated_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `tickets`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-tickets-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-tickets-ticket_number">`ticket_number`</span> | `string(255)` |  |  |  |
-| <span id="table-tickets-user_id">`user_id`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-tickets-dept_id">`dept_id`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-tickets-team_id">`team_id`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-tickets-priority_id">`priority_id`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-tickets-sla">`sla`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-tickets-help_topic_id">`help_topic_id`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-tickets-status">`status`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-tickets-rating">`rating`</span> | `boolean` |  |  |  |
-| <span id="table-tickets-ratingreply">`ratingreply`</span> | `boolean` |  |  |  |
-| <span id="table-tickets-flags">`flags`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-tickets-ip_address">`ip_address`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-tickets-assigned_to">`assigned_to`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-tickets-lock_by">`lock_by`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-tickets-lock_at">`lock_at`</span> | `dateTime` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-tickets-source">`source`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-tickets-isoverdue">`isoverdue`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-tickets-reopened">`reopened`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-tickets-isanswered">`isanswered`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-tickets-html">`html`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-tickets-is_deleted">`is_deleted`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-tickets-closed">`closed`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-tickets-is_transferred">`is_transferred`</span> | `boolean` |  |  |  |
-| <span id="table-tickets-transferred_at">`transferred_at`</span> | `dateTime` |  | `precision:0` |  |
-| <span id="table-tickets-reopened_at">`reopened_at`</span> | `dateTime` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-tickets-duedate">`duedate`</span> | `dateTime` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-tickets-closed_at">`closed_at`</span> | `dateTime` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-tickets-last_message_at">`last_message_at`</span> | `dateTime` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-tickets-last_response_at">`last_response_at`</span> | `dateTime` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-tickets-approval">`approval`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-tickets-follow_up">`follow_up`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-tickets-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-tickets-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                              | Type          | Default | Attributes                                | Comment |
+| ------------------------------------------------------------------- | ------------- | ------- | ----------------------------------------- | ------- |
+| <span id="table-tickets-id">`id`</span>                             | `integer`     |         | `autoIncrement:true`                      |         |
+| <span id="table-tickets-ticket_number">`ticket_number`</span>       | `string(255)` |         |                                           |         |
+| <span id="table-tickets-user_id">`user_id`</span>                   | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-tickets-dept_id">`dept_id`</span>                   | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-tickets-team_id">`team_id`</span>                   | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-tickets-priority_id">`priority_id`</span>           | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-tickets-sla">`sla`</span>                           | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-tickets-help_topic_id">`help_topic_id`</span>       | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-tickets-status">`status`</span>                     | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-tickets-rating">`rating`</span>                     | `boolean`     |         |                                           |         |
+| <span id="table-tickets-ratingreply">`ratingreply`</span>           | `boolean`     |         |                                           |         |
+| <span id="table-tickets-flags">`flags`</span>                       | `integer`     |         | `autoIncrement:false`                     |         |
+| <span id="table-tickets-ip_address">`ip_address`</span>             | `integer`     |         | `autoIncrement:false`                     |         |
+| <span id="table-tickets-assigned_to">`assigned_to`</span>           | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-tickets-lock_by">`lock_by`</span>                   | `integer`     |         | `autoIncrement:false`                     |         |
+| <span id="table-tickets-lock_at">`lock_at`</span>                   | `dateTime`    |         | `precision:0`<br/>`nullable:true`         |         |
+| <span id="table-tickets-source">`source`</span>                     | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-tickets-isoverdue">`isoverdue`</span>               | `integer`     |         | `autoIncrement:false`                     |         |
+| <span id="table-tickets-reopened">`reopened`</span>                 | `integer`     |         | `autoIncrement:false`                     |         |
+| <span id="table-tickets-isanswered">`isanswered`</span>             | `integer`     |         | `autoIncrement:false`                     |         |
+| <span id="table-tickets-html">`html`</span>                         | `integer`     |         | `autoIncrement:false`                     |         |
+| <span id="table-tickets-is_deleted">`is_deleted`</span>             | `integer`     |         | `autoIncrement:false`                     |         |
+| <span id="table-tickets-closed">`closed`</span>                     | `integer`     |         | `autoIncrement:false`                     |         |
+| <span id="table-tickets-is_transferred">`is_transferred`</span>     | `boolean`     |         |                                           |         |
+| <span id="table-tickets-transferred_at">`transferred_at`</span>     | `dateTime`    |         | `precision:0`                             |         |
+| <span id="table-tickets-reopened_at">`reopened_at`</span>           | `dateTime`    |         | `precision:0`<br/>`nullable:true`         |         |
+| <span id="table-tickets-duedate">`duedate`</span>                   | `dateTime`    |         | `precision:0`<br/>`nullable:true`         |         |
+| <span id="table-tickets-closed_at">`closed_at`</span>               | `dateTime`    |         | `precision:0`<br/>`nullable:true`         |         |
+| <span id="table-tickets-last_message_at">`last_message_at`</span>   | `dateTime`    |         | `precision:0`<br/>`nullable:true`         |         |
+| <span id="table-tickets-last_response_at">`last_response_at`</span> | `dateTime`    |         | `precision:0`<br/>`nullable:true`         |         |
+| <span id="table-tickets-approval">`approval`</span>                 | `integer`     |         | `autoIncrement:false`                     |         |
+| <span id="table-tickets-follow_up">`follow_up`</span>               | `integer`     |         | `autoIncrement:false`                     |         |
+| <span id="table-tickets-created_at">`created_at`</span>             | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |         |
+| <span id="table-tickets-updated_at">`updated_at`</span>             | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |         |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `user_id` | `index` | `user_id` |  |  |
-| `dept_id` | `index` | `dept_id` |  |  |
-| `team_id` | `index` | `team_id` |  |  |
-| `priority_id` | `index` | `priority_id` |  |  |
-| `sla` | `index` | `sla` |  |  |
-| `help_topic_id` | `index` | `help_topic_id` |  |  |
-| `status` | `index` | `status` |  |  |
-| `assigned_to` | `index` | `assigned_to` |  |  |
-| `source` | `index` | `source` |  |  |
-| `tickets_ibfk_1` | `foreign` | `user_id` |  | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `tickets_ibfk_2` | `foreign` | `dept_id` |  | `references:"id"`<br/>`on:"department"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `tickets_ibfk_3` | `foreign` | `team_id` |  | `references:"id"`<br/>`on:"teams"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `tickets_ibfk_4` | `foreign` | `priority_id` |  | `references:"priority_id"`<br/>`on:"ticket_priority"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `tickets_ibfk_5` | `foreign` | `sla` |  | `references:"id"`<br/>`on:"sla_plan"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `tickets_ibfk_6` | `foreign` | `help_topic_id` |  | `references:"id"`<br/>`on:"help_topic"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `tickets_ibfk_7` | `foreign` | `status` |  | `references:"id"`<br/>`on:"ticket_status"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `tickets_ibfk_8` | `foreign` | `source` |  | `references:"id"`<br/>`on:"ticket_source"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `tickets_ibfk_9` | `foreign` | `assigned_to` |  | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
+| Index Name       | Type      | Columns         | Algorithm | Attributes                                                                                                 |
+| ---------------- | --------- | --------------- | --------- | ---------------------------------------------------------------------------------------------------------- |
+| `user_id`        | `index`   | `user_id`       |           |                                                                                                            |
+| `dept_id`        | `index`   | `dept_id`       |           |                                                                                                            |
+| `team_id`        | `index`   | `team_id`       |           |                                                                                                            |
+| `priority_id`    | `index`   | `priority_id`   |           |                                                                                                            |
+| `sla`            | `index`   | `sla`           |           |                                                                                                            |
+| `help_topic_id`  | `index`   | `help_topic_id` |           |                                                                                                            |
+| `status`         | `index`   | `status`        |           |                                                                                                            |
+| `assigned_to`    | `index`   | `assigned_to`   |           |                                                                                                            |
+| `source`         | `index`   | `source`        |           |                                                                                                            |
+| `tickets_ibfk_1` | `foreign` | `user_id`       |           | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"`                    |
+| `tickets_ibfk_2` | `foreign` | `dept_id`       |           | `references:"id"`<br/>`on:"department"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"`               |
+| `tickets_ibfk_3` | `foreign` | `team_id`       |           | `references:"id"`<br/>`on:"teams"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"`                    |
+| `tickets_ibfk_4` | `foreign` | `priority_id`   |           | `references:"priority_id"`<br/>`on:"ticket_priority"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
+| `tickets_ibfk_5` | `foreign` | `sla`           |           | `references:"id"`<br/>`on:"sla_plan"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"`                 |
+| `tickets_ibfk_6` | `foreign` | `help_topic_id` |           | `references:"id"`<br/>`on:"help_topic"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"`               |
+| `tickets_ibfk_7` | `foreign` | `status`        |           | `references:"id"`<br/>`on:"ticket_status"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"`            |
+| `tickets_ibfk_8` | `foreign` | `source`        |           | `references:"id"`<br/>`on:"ticket_source"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"`            |
+| `tickets_ibfk_9` | `foreign` | `assigned_to`   |           | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"`                    |
 
 
 ## Table: `time_format`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-time_format-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-time_format-format">`format`</span> | `string(255)` |  |  |  |
+| Column                                              | Type          | Default | Attributes           | Comment |
+| --------------------------------------------------- | ------------- | ------- | -------------------- | ------- |
+| <span id="table-time_format-id">`id`</span>         | `integer`     |         | `autoIncrement:true` |         |
+| <span id="table-time_format-format">`format`</span> | `string(255)` |         |                      |         |
 
 
 ## Table: `timezone`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-timezone-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-timezone-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-timezone-location">`location`</span> | `string(255)` |  |  |  |
+| Column                                               | Type          | Default | Attributes           | Comment |
+| ---------------------------------------------------- | ------------- | ------- | -------------------- | ------- |
+| <span id="table-timezone-id">`id`</span>             | `integer`     |         | `autoIncrement:true` |         |
+| <span id="table-timezone-name">`name`</span>         | `string(255)` |         |                      |         |
+| <span id="table-timezone-location">`location`</span> | `string(255)` |         |                      |         |
 
 
 ## Table: `user_additional_infos`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-user_additional_infos-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-user_additional_infos-owner">`owner`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-user_additional_infos-service">`service`</span> | `string(255)` |  |  |  |
-| <span id="table-user_additional_infos-key">`key`</span> | `string(255)` |  |  |  |
-| <span id="table-user_additional_infos-value">`value`</span> | `string(255)` |  | `nullable:true` |  |
-| <span id="table-user_additional_infos-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-user_additional_infos-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                                | Type          | Default | Attributes                        | Comment |
+| --------------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-user_additional_infos-id">`id`</span>                 | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-user_additional_infos-owner">`owner`</span>           | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-user_additional_infos-service">`service`</span>       | `string(255)` |         |                                   |         |
+| <span id="table-user_additional_infos-key">`key`</span>               | `string(255)` |         |                                   |         |
+| <span id="table-user_additional_infos-value">`value`</span>           | `string(255)` |         | `nullable:true`                   |         |
+| <span id="table-user_additional_infos-created_at">`created_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-user_additional_infos-updated_at">`updated_at`</span> | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `user_assign_organization`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-user_assign_organization-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-user_assign_organization-org_id">`org_id`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-user_assign_organization-user_id">`user_id`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-user_assign_organization-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-user_assign_organization-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                                   | Type        | Default | Attributes                                | Comment |
+| ------------------------------------------------------------------------ | ----------- | ------- | ----------------------------------------- | ------- |
+| <span id="table-user_assign_organization-id">`id`</span>                 | `integer`   |         | `autoIncrement:true`                      |         |
+| <span id="table-user_assign_organization-org_id">`org_id`</span>         | `integer`   |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-user_assign_organization-user_id">`user_id`</span>       | `integer`   |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-user_assign_organization-created_at">`created_at`</span> | `timestamp` |         | `precision:0`<br/>`nullable:true`         |         |
+| <span id="table-user_assign_organization-updated_at">`updated_at`</span> | `timestamp` |         | `precision:0`<br/>`nullable:true`         |         |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `org_id` | `index` | `org_id` |  |  |
-| `user_id` | `index` | `user_id` |  |  |
-| `user_assign_organization_ibfk_1` | `foreign` | `org_id` |  | `references:"id"`<br/>`on:"organization"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `user_assign_organization_ibfk_2` | `foreign` | `user_id` |  | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
+| Index Name                        | Type      | Columns   | Algorithm | Attributes                                                                                     |
+| --------------------------------- | --------- | --------- | --------- | ---------------------------------------------------------------------------------------------- |
+| `org_id`                          | `index`   | `org_id`  |           |                                                                                                |
+| `user_id`                         | `index`   | `user_id` |           |                                                                                                |
+| `user_assign_organization_ibfk_1` | `foreign` | `org_id`  |           | `references:"id"`<br/>`on:"organization"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
+| `user_assign_organization_ibfk_2` | `foreign` | `user_id` |           | `references:"id"`<br/>`on:"users"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"`        |
 
 
 ## Table: `user_notification`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-user_notification-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-user_notification-notification_id">`notification_id`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-user_notification-user_id">`user_id`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-user_notification-is_read">`is_read`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-user_notification-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-user_notification-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                                      | Type        | Default | Attributes                        | Comment |
+| --------------------------------------------------------------------------- | ----------- | ------- | --------------------------------- | ------- |
+| <span id="table-user_notification-id">`id`</span>                           | `integer`   |         | `autoIncrement:true`              |         |
+| <span id="table-user_notification-notification_id">`notification_id`</span> | `integer`   |         | `autoIncrement:false`             |         |
+| <span id="table-user_notification-user_id">`user_id`</span>                 | `integer`   |         | `autoIncrement:false`             |         |
+| <span id="table-user_notification-is_read">`is_read`</span>                 | `integer`   |         | `autoIncrement:false`             |         |
+| <span id="table-user_notification-created_at">`created_at`</span>           | `timestamp` |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-user_notification-updated_at">`updated_at`</span>           | `timestamp` |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `users`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-users-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-users-user_name">`user_name`</span> | `string(255)` |  |  |  |
-| <span id="table-users-first_name">`first_name`</span> | `string(255)` |  |  |  |
-| <span id="table-users-last_name">`last_name`</span> | `string(255)` |  |  |  |
-| <span id="table-users-gender">`gender`</span> | `boolean` |  |  |  |
-| <span id="table-users-email">`email`</span> | `string(255)` |  | `nullable:true` |  |
-| <span id="table-users-ban">`ban`</span> | `boolean` |  |  |  |
-| <span id="table-users-password">`password`</span> | `string(60)` |  |  |  |
-| <span id="table-users-active">`active`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-users-is_delete">`is_delete`</span> | `boolean` |  |  |  |
-| <span id="table-users-ext">`ext`</span> | `string(255)` |  |  |  |
-| <span id="table-users-country_code">`country_code`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-users-phone_number">`phone_number`</span> | `string(255)` |  |  |  |
-| <span id="table-users-mobile">`mobile`</span> | `string(255)` |  | `nullable:true` |  |
-| <span id="table-users-agent_sign">`agent_sign`</span> | `text` |  |  |  |
-| <span id="table-users-account_type">`account_type`</span> | `string(255)` |  |  |  |
-| <span id="table-users-account_status">`account_status`</span> | `string(255)` |  |  |  |
-| <span id="table-users-assign_group">`assign_group`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-users-primary_dpt">`primary_dpt`</span> | `integer` |  | `autoIncrement:false`<br/>`nullable:true` |  |
-| <span id="table-users-agent_tzone">`agent_tzone`</span> | `string(255)` |  |  |  |
-| <span id="table-users-daylight_save">`daylight_save`</span> | `string(255)` |  |  |  |
-| <span id="table-users-limit_access">`limit_access`</span> | `string(255)` |  |  |  |
-| <span id="table-users-directory_listing">`directory_listing`</span> | `string(255)` |  |  |  |
-| <span id="table-users-vacation_mode">`vacation_mode`</span> | `string(255)` |  |  |  |
-| <span id="table-users-company">`company`</span> | `string(255)` |  |  |  |
-| <span id="table-users-role">`role`</span> | `string(255)` |  |  |  |
-| <span id="table-users-internal_note">`internal_note`</span> | `string(255)` |  |  |  |
-| <span id="table-users-profile_pic">`profile_pic`</span> | `string(255)` |  |  |  |
-| <span id="table-users-remember_token">`remember_token`</span> | `string(100)` |  | `nullable:true` |  |
-| <span id="table-users-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-users-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-users-user_language">`user_language`</span> | `string(10)` |  | `nullable:true` |  |
+| Column                                                              | Type          | Default | Attributes                                | Comment |
+| ------------------------------------------------------------------- | ------------- | ------- | ----------------------------------------- | ------- |
+| <span id="table-users-id">`id`</span>                               | `integer`     |         | `autoIncrement:true`                      |         |
+| <span id="table-users-user_name">`user_name`</span>                 | `string(255)` |         |                                           |         |
+| <span id="table-users-first_name">`first_name`</span>               | `string(255)` |         |                                           |         |
+| <span id="table-users-last_name">`last_name`</span>                 | `string(255)` |         |                                           |         |
+| <span id="table-users-gender">`gender`</span>                       | `boolean`     |         |                                           |         |
+| <span id="table-users-email">`email`</span>                         | `string(255)` |         | `nullable:true`                           |         |
+| <span id="table-users-ban">`ban`</span>                             | `boolean`     |         |                                           |         |
+| <span id="table-users-password">`password`</span>                   | `string(60)`  |         |                                           |         |
+| <span id="table-users-active">`active`</span>                       | `integer`     |         | `autoIncrement:false`                     |         |
+| <span id="table-users-is_delete">`is_delete`</span>                 | `boolean`     |         |                                           |         |
+| <span id="table-users-ext">`ext`</span>                             | `string(255)` |         |                                           |         |
+| <span id="table-users-country_code">`country_code`</span>           | `integer`     |         | `autoIncrement:false`                     |         |
+| <span id="table-users-phone_number">`phone_number`</span>           | `string(255)` |         |                                           |         |
+| <span id="table-users-mobile">`mobile`</span>                       | `string(255)` |         | `nullable:true`                           |         |
+| <span id="table-users-agent_sign">`agent_sign`</span>               | `text`        |         |                                           |         |
+| <span id="table-users-account_type">`account_type`</span>           | `string(255)` |         |                                           |         |
+| <span id="table-users-account_status">`account_status`</span>       | `string(255)` |         |                                           |         |
+| <span id="table-users-assign_group">`assign_group`</span>           | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-users-primary_dpt">`primary_dpt`</span>             | `integer`     |         | `autoIncrement:false`<br/>`nullable:true` |         |
+| <span id="table-users-agent_tzone">`agent_tzone`</span>             | `string(255)` |         |                                           |         |
+| <span id="table-users-daylight_save">`daylight_save`</span>         | `string(255)` |         |                                           |         |
+| <span id="table-users-limit_access">`limit_access`</span>           | `string(255)` |         |                                           |         |
+| <span id="table-users-directory_listing">`directory_listing`</span> | `string(255)` |         |                                           |         |
+| <span id="table-users-vacation_mode">`vacation_mode`</span>         | `string(255)` |         |                                           |         |
+| <span id="table-users-company">`company`</span>                     | `string(255)` |         |                                           |         |
+| <span id="table-users-role">`role`</span>                           | `string(255)` |         |                                           |         |
+| <span id="table-users-internal_note">`internal_note`</span>         | `string(255)` |         |                                           |         |
+| <span id="table-users-profile_pic">`profile_pic`</span>             | `string(255)` |         |                                           |         |
+| <span id="table-users-remember_token">`remember_token`</span>       | `string(100)` |         | `nullable:true`                           |         |
+| <span id="table-users-created_at">`created_at`</span>               | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |         |
+| <span id="table-users-updated_at">`updated_at`</span>               | `timestamp`   |         | `precision:0`<br/>`nullable:true`         |         |
+| <span id="table-users-user_language">`user_language`</span>         | `string(10)`  |         | `nullable:true`                           |         |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `users_email_unique` | `unique` | `email` |  |  |
-| `users_mobile_unique` | `unique` | `mobile` |  |  |
-| `assign_group_3` | `index` | `assign_group` |  |  |
-| `primary_dpt_2` | `index` | `primary_dpt` |  |  |
-| `users_ibfk_1` | `foreign` | `assign_group` |  | `references:"id"`<br/>`on:"groups"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
-| `users_ibfk_2` | `foreign` | `primary_dpt` |  | `references:"id"`<br/>`on:"department"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
+| Index Name            | Type      | Columns        | Algorithm | Attributes                                                                                   |
+| --------------------- | --------- | -------------- | --------- | -------------------------------------------------------------------------------------------- |
+| `users_email_unique`  | `unique`  | `email`        |           |                                                                                              |
+| `users_mobile_unique` | `unique`  | `mobile`       |           |                                                                                              |
+| `assign_group_3`      | `index`   | `assign_group` |           |                                                                                              |
+| `primary_dpt_2`       | `index`   | `primary_dpt`  |           |                                                                                              |
+| `users_ibfk_1`        | `foreign` | `assign_group` |           | `references:"id"`<br/>`on:"groups"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"`     |
+| `users_ibfk_2`        | `foreign` | `primary_dpt`  |           | `references:"id"`<br/>`on:"department"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 
 ## Table: `version_check`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-version_check-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-version_check-current_version">`current_version`</span> | `string(255)` |  |  |  |
-| <span id="table-version_check-new_version">`new_version`</span> | `string(255)` |  |  |  |
-| <span id="table-version_check-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-version_check-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                                  | Type          | Default | Attributes                        | Comment |
+| ----------------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-version_check-id">`id`</span>                           | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-version_check-current_version">`current_version`</span> | `string(255)` |         |                                   |         |
+| <span id="table-version_check-new_version">`new_version`</span>         | `string(255)` |         |                                   |         |
+| <span id="table-version_check-created_at">`created_at`</span>           | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-version_check-updated_at">`updated_at`</span>           | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `widgets`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-widgets-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-widgets-name">`name`</span> | `string(30)` |  | `nullable:true` |  |
-| <span id="table-widgets-title">`title`</span> | `string(50)` |  | `nullable:true` |  |
-| <span id="table-widgets-value">`value`</span> | `text` |  | `nullable:true` |  |
-| <span id="table-widgets-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-widgets-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                  | Type         | Default | Attributes                        | Comment |
+| ------------------------------------------------------- | ------------ | ------- | --------------------------------- | ------- |
+| <span id="table-widgets-id">`id`</span>                 | `integer`    |         | `autoIncrement:true`              |         |
+| <span id="table-widgets-name">`name`</span>             | `string(30)` |         | `nullable:true`                   |         |
+| <span id="table-widgets-title">`title`</span>           | `string(50)` |         | `nullable:true`                   |         |
+| <span id="table-widgets-value">`value`</span>           | `text`       |         | `nullable:true`                   |         |
+| <span id="table-widgets-created_at">`created_at`</span> | `timestamp`  |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-widgets-updated_at">`updated_at`</span> | `timestamp`  |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `workflow_action`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-workflow_action-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-workflow_action-workflow_id">`workflow_id`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-workflow_action-condition">`condition`</span> | `string(255)` |  |  |  |
-| <span id="table-workflow_action-action">`action`</span> | `string(255)` |  |  |  |
-| <span id="table-workflow_action-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-workflow_action-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                            | Type          | Default | Attributes                        | Comment |
+| ----------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-workflow_action-id">`id`</span>                   | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-workflow_action-workflow_id">`workflow_id`</span> | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-workflow_action-condition">`condition`</span>     | `string(255)` |         |                                   |         |
+| <span id="table-workflow_action-action">`action`</span>           | `string(255)` |         |                                   |         |
+| <span id="table-workflow_action-created_at">`created_at`</span>   | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-workflow_action-updated_at">`updated_at`</span>   | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `workflow_action_1` | `foreign` | `workflow_id` |  | `references:"id"`<br/>`on:"workflow_name"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
+| Index Name          | Type      | Columns       | Algorithm | Attributes                                                                                      |
+| ------------------- | --------- | ------------- | --------- | ----------------------------------------------------------------------------------------------- |
+| `workflow_action_1` | `foreign` | `workflow_id` |           | `references:"id"`<br/>`on:"workflow_name"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 
 ## Table: `workflow_close`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-workflow_close-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-workflow_close-days">`days`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-workflow_close-condition">`condition`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-workflow_close-send_email">`send_email`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-workflow_close-status">`status`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-workflow_close-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-workflow_close-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                         | Type        | Default | Attributes                        | Comment |
+| -------------------------------------------------------------- | ----------- | ------- | --------------------------------- | ------- |
+| <span id="table-workflow_close-id">`id`</span>                 | `integer`   |         | `autoIncrement:true`              |         |
+| <span id="table-workflow_close-days">`days`</span>             | `integer`   |         | `autoIncrement:false`             |         |
+| <span id="table-workflow_close-condition">`condition`</span>   | `integer`   |         | `autoIncrement:false`             |         |
+| <span id="table-workflow_close-send_email">`send_email`</span> | `integer`   |         | `autoIncrement:false`             |         |
+| <span id="table-workflow_close-status">`status`</span>         | `integer`   |         | `autoIncrement:false`             |         |
+| <span id="table-workflow_close-created_at">`created_at`</span> | `timestamp` |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-workflow_close-updated_at">`updated_at`</span> | `timestamp` |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `workflow_name`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-workflow_name-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-workflow_name-name">`name`</span> | `string(255)` |  |  |  |
-| <span id="table-workflow_name-status">`status`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-workflow_name-order">`order`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-workflow_name-target">`target`</span> | `string(255)` |  |  |  |
-| <span id="table-workflow_name-internal_note">`internal_note`</span> | `text` |  |  |  |
-| <span id="table-workflow_name-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-workflow_name-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                              | Type          | Default | Attributes                        | Comment |
+| ------------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-workflow_name-id">`id`</span>                       | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-workflow_name-name">`name`</span>                   | `string(255)` |         |                                   |         |
+| <span id="table-workflow_name-status">`status`</span>               | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-workflow_name-order">`order`</span>                 | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-workflow_name-target">`target`</span>               | `string(255)` |         |                                   |         |
+| <span id="table-workflow_name-internal_note">`internal_note`</span> | `text`        |         |                                   |         |
+| <span id="table-workflow_name-created_at">`created_at`</span>       | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-workflow_name-updated_at">`updated_at`</span>       | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 
 ## Table: `workflow_rules`
 
 ### Columns
 
-| Column | Type | Default | Attributes  | Comment |
-| --- | --- | --- | --- | --- |
-| <span id="table-workflow_rules-id">`id`</span> | `integer` |  | `autoIncrement:true` |  |
-| <span id="table-workflow_rules-workflow_id">`workflow_id`</span> | `integer` |  | `autoIncrement:false` |  |
-| <span id="table-workflow_rules-matching_criteria">`matching_criteria`</span> | `string(255)` |  |  |  |
-| <span id="table-workflow_rules-matching_scenario">`matching_scenario`</span> | `string(255)` |  |  |  |
-| <span id="table-workflow_rules-matching_relation">`matching_relation`</span> | `string(255)` |  |  |  |
-| <span id="table-workflow_rules-matching_value">`matching_value`</span> | `text` |  |  |  |
-| <span id="table-workflow_rules-created_at">`created_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
-| <span id="table-workflow_rules-updated_at">`updated_at`</span> | `timestamp` |  | `precision:0`<br/>`nullable:true` |  |
+| Column                                                                       | Type          | Default | Attributes                        | Comment |
+| ---------------------------------------------------------------------------- | ------------- | ------- | --------------------------------- | ------- |
+| <span id="table-workflow_rules-id">`id`</span>                               | `integer`     |         | `autoIncrement:true`              |         |
+| <span id="table-workflow_rules-workflow_id">`workflow_id`</span>             | `integer`     |         | `autoIncrement:false`             |         |
+| <span id="table-workflow_rules-matching_criteria">`matching_criteria`</span> | `string(255)` |         |                                   |         |
+| <span id="table-workflow_rules-matching_scenario">`matching_scenario`</span> | `string(255)` |         |                                   |         |
+| <span id="table-workflow_rules-matching_relation">`matching_relation`</span> | `string(255)` |         |                                   |         |
+| <span id="table-workflow_rules-matching_value">`matching_value`</span>       | `text`        |         |                                   |         |
+| <span id="table-workflow_rules-created_at">`created_at`</span>               | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
+| <span id="table-workflow_rules-updated_at">`updated_at`</span>               | `timestamp`   |         | `precision:0`<br/>`nullable:true` |         |
 
 ### Indices
 
-| Index Name | Type | Columns | Algorithm | Attributes |
-| --- | --- | --- | --- | --- |
-| `workflow_rules_1` | `foreign` | `workflow_id` |  | `references:"id"`<br/>`on:"workflow_name"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
+| Index Name         | Type      | Columns       | Algorithm | Attributes                                                                                      |
+| ------------------ | --------- | ------------- | --------- | ----------------------------------------------------------------------------------------------- |
+| `workflow_rules_1` | `foreign` | `workflow_id` |           | `references:"id"`<br/>`on:"workflow_name"`<br/>`onUpdate:"NO ACTION"`<br/>`onDelete:"RESTRICT"` |
 
 

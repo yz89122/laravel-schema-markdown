@@ -53,10 +53,7 @@ class SchemaMarkdownGenerator
 
     protected function chip($value)
     {
-        if ($value) {
-            return '`'.$value.'`';
-        }
-        return '';
+        return $value ? "`{$value}`" : '';
     }
 
     protected function getTableColumnMarkdownId(string $table, string $column)
@@ -73,7 +70,7 @@ class SchemaMarkdownGenerator
         return "<span id=\"{$id}\">{$column_chip}</span>";
     }
 
-    protected function getColumnMarkdown(Column $column_definition)
+    protected function getColumnRow(Column $column_definition)
     {
         $column_name = $this->getTableColumnMarkdown($column_definition);
         $column_type = $this->chip($column_definition->getType());
@@ -81,25 +78,23 @@ class SchemaMarkdownGenerator
         $column_attributes = $column_definition->getAttributes();
         $column_attributes_markdown = $this->getAttributesMarkdown($column_attributes);
         $column_comment = $column_definition->getComment();
-        return "| $column_name | $column_type | $column_default | $column_attributes_markdown | $column_comment |\n";
+        return [$column_name, $column_type, $column_default, $column_attributes_markdown, $column_comment];
     }
 
     protected function getDatabaseTableColumnsMarkdown(Table $table_definition)
     {
-        $result = "### Columns\n\n";
-        $result .= "| Column | Type | Default | Attributes  | Comment |\n";
-        $result .= "| --- | --- | --- | --- | --- |\n";
+        $table = new MarkdownTable(['Column', 'Type', 'Default', 'Attributes', 'Comment']);
 
-        $table = $table_definition->getTableName();
+        $table_name = $table_definition->getTableName();
 
-        foreach ($this->getDatabaseTableColumns($table) as $column) {
+        foreach ($this->getDatabaseTableColumns($table_name) as $column) {
             $column_definition = $table_definition->getColumn($column);
-            $result .= $column_definition
-                ? $this->getColumnMarkdown($column_definition)
-                : "| `$column` | | | | Not Defined In Blueprints |\n";
+            $table->pushRow($column_definition
+                ? $this->getColumnRow($column_definition)
+                : [$this->chip($column), '', '', '', 'Not Defined In Blueprints']);
         }
 
-        return $result."\n";
+        return "### Columns\n\n".$table."\n";
     }
 
     protected function getDatabaseTableIndicesMarkdown(Table $table_definition)
@@ -108,9 +103,7 @@ class SchemaMarkdownGenerator
             return '';
         }
 
-        $result = "### Indices\n\n";
-        $result .= "| Index Name | Type | Columns | Algorithm | Attributes |\n";
-        $result .= "| --- | --- | --- | --- | --- |\n";
+        $table = new MarkdownTable(['Index Name', 'Type', 'Columns', 'Algorithm', 'Attributes']);
         foreach ($indices as $index_definition) {
             $index_name = $this->chip($index_definition->getName());
             $index_type = $this->chip($index_definition->getType());
@@ -121,10 +114,10 @@ class SchemaMarkdownGenerator
             $index_columns = implode('<br/>', $index_columns);
             $index_algorithm = $this->chip($index_definition->getAlgorithm());
             $index_attributes = $this->getAttributesMarkdown($index_definition->getAttributes());
-            $result .= "| $index_name | $index_type | $index_columns | $index_algorithm | $index_attributes |\n";
+            $table->pushRow([$index_name, $index_type, $index_columns, $index_algorithm, $index_attributes]);
         }
 
-        return $result."\n";
+        return "### Indices\n\n".$table."\n";
     }
 
     protected function getTableOfContentsColumnReferences(string $table, string $column)
