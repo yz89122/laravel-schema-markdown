@@ -74,7 +74,7 @@ class SchemaMarkdownGenerator
     {
         $column_name = $this->getTableColumnMarkdown($column_definition);
         $column_type = $this->chip($column_definition->getType());
-        $column_nullable = $this->chip($column_definition->getNullable() ? 'true' : '');
+        $column_nullable = $this->chip($column_definition->isNullable() ? 'true' : '');
         $column_default = $this->chip($column_definition->getDefault());
         $column_attributes = $column_definition->getAttributes();
         $column_attributes_markdown = $this->getAttributesMarkdown($column_attributes);

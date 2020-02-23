@@ -154,7 +154,7 @@ class Column
     /**
      * @return boolean
      */
-    public function getNullable()
+    public function isNullable()
     {
         return $this->nullable;
     }
