@@ -65,16 +65,31 @@ class Column
      */
     protected function getTypeFromDefinition($definition)
     {
-        $type = $definition['type'];
+        $type = $definition['type'] ?? '';
         switch ($type) {
+            case 'float':
+            case 'double':
+            case 'decimal':
+                $type .= "({$definition['total']}, {$definition['places']})";
+                // no break
+            case 'integer':
+            case 'tinyInteger':
+            case 'smallInteger':
+            case 'mediumInteger':
             case 'bigInteger':
-                $type = $definition['unsigned'] ?? false ? 'unsignedBigInteger' : 'bigInteger';
+                $type .= ($definition['unsigned'] ?? false) ? '(unsigned)' : '';
             break;
             case 'string':
-                $type .= "({$definition['length']})";
-            break;
             case 'char':
                 $type .= "({$definition['length']})";
+            break;
+            case 'dateTime':
+            case 'dateTimeTz':
+            case 'time':
+            case 'timeTz':
+            case 'timestamp':
+            case 'timestampTz':
+                $type .= "({$definition['precision']})";
             break;
         }
         return $type;
@@ -86,9 +101,24 @@ class Column
      */
     protected function getAttributesFromDefinition($definition)
     {
-        return array_filter($definition->getAttributes(), function ($key) {
-            return !in_array($key, ['name', 'type', 'default', 'comment', 'change', 'length', 'unsigned', 'index', 'unique']);
-        }, ARRAY_FILTER_USE_KEY);
+        return array_filter($definition->getAttributes(), function ($value, $key) {
+            return ($key == 'autoIncrement' && $value)
+                || !in_array($key, [
+                    'name',
+                    'type',
+                    'default',
+                    'comment',
+                    'change',
+                    'length',
+                    'precision',
+                    'total',
+                    'places',
+                    'unsigned',
+                    'index',
+                    'unique',
+                    'autoIncrement',
+                ]);
+        }, ARRAY_FILTER_USE_BOTH);
     }
 
     /**
@@ -177,15 +207,9 @@ class Column
      */
     public function update($column_definition)
     {
-        if (isset($column_definition['type'])) {
-            $this->type = $this->getTypeFromDefinition($column_definition);
-        }
-        if (isset($column_definition['comment'])) {
-            $this->comment = $column_definition['comment'];
-        }
-        if (isset($column_definition['default'])) {
-            $this->default = $column_definition['default'];
-        }
+        $this->type = $this->getTypeFromDefinition($column_definition);
+        $this->comment = $column_definition['comment'] ?? null;
+        $this->default = $column_definition['default'] ?? null;
         $this->attributes = array_merge(
             $this->attributes,
             $this->getAttributesFromDefinition($column_definition)
