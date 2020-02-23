@@ -20,6 +20,11 @@ class Column
     protected $type;
 
     /**
+     * @var boolean
+     */
+    protected $nullable = false;
+
+    /**
      * @var string|null
      */
     protected $default;
@@ -106,6 +111,7 @@ class Column
                 || !in_array($key, [
                     'name',
                     'type',
+                    'nullable',
                     'default',
                     'comment',
                     'change',
@@ -143,6 +149,14 @@ class Column
     public function getType()
     {
         return $this->type;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getNullable()
+    {
+        return $this->nullable;
     }
 
     /**
@@ -210,6 +224,7 @@ class Column
         $this->type = $this->getTypeFromDefinition($column_definition);
         $this->comment = $column_definition['comment'] ?? null;
         $this->default = $column_definition['default'] ?? null;
+        $this->nullable = $column_definition['nullable'] ?? false;
         $this->attributes = array_merge(
             $this->attributes,
             $this->getAttributesFromDefinition($column_definition)

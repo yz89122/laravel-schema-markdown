@@ -74,16 +74,17 @@ class SchemaMarkdownGenerator
     {
         $column_name = $this->getTableColumnMarkdown($column_definition);
         $column_type = $this->chip($column_definition->getType());
+        $column_nullable = $this->chip($column_definition->getNullable() ? 'true' : '');
         $column_default = $this->chip($column_definition->getDefault());
         $column_attributes = $column_definition->getAttributes();
         $column_attributes_markdown = $this->getAttributesMarkdown($column_attributes);
         $column_comment = $column_definition->getComment();
-        return [$column_name, $column_type, $column_default, $column_attributes_markdown, $column_comment];
+        return [$column_name, $column_type, $column_nullable, $column_default, $column_attributes_markdown, $column_comment];
     }
 
     protected function getDatabaseTableColumnsMarkdown(Table $table_definition)
     {
-        $table = new MarkdownTable(['Column', 'Type', 'Default', 'Attributes', 'Comment']);
+        $table = new MarkdownTable(['Column', 'Type', 'Nullable', 'Default', 'Attributes', 'Comment']);
 
         $table_name = $table_definition->getTableName();
 
@@ -91,7 +92,7 @@ class SchemaMarkdownGenerator
             $column_definition = $table_definition->getColumn($column);
             $table->pushRow($column_definition
                 ? $this->getColumnRow($column_definition)
-                : [$this->chip($column), '', '', '', 'Not Defined In Blueprints']);
+                : [$this->chip($column), '', '', '', '', 'Not Defined In Blueprints']);
         }
 
         return "### Columns\n\n".$table."\n";
